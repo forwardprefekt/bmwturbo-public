@@ -1,0 +1,208 @@
+{
+  "public_edition": {
+    "edition": "sanitized public research summary",
+    "edition_date_utc": "2026-10-14",
+    "source_report": "analysis/derived/review-2026-09-04-load-continuation/findings.json",
+    "source_report_sha256": "dea3021081fea2ccf6ba5302199bd226ee44fceb32f5f3b730c2dbb647241044",
+    "canonical_software_id": "MSV70 0049PP0L921S0AC1S",
+    "canonical_image_sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+    "epistemic_status": "Editorial derivative of the dated private research report. Scientific claims, original review outcomes and source hashes describe that historical review, not newly executed public-edition verification. No tests, builds, lint, firmware execution or vehicle observations were performed for this edition.",
+    "interpretation_boundary": "Original research equations, decoded addresses, scalar observations and engineering interpretations are retained as analysis, not redistributed firmware source or a flash-ready calibration. Static software dataflow is not physical hardware identity, runtime activation, measurement or safety approval.",
+    "private_source_availability": {
+      "included": false,
+      "status": "Original reports and referenced evidence remain outside this public edition. No download, access entitlement, redistribution permission or automatic access-on-request is represented.",
+      "independent_review": "Reproduction requires separately and lawfully obtained source material matching the retained hashes, relevant tools, and sufficient permissions. Hashes and private-source identifiers are provenance locators, not substitutes for the omitted evidence.",
+      "reference_semantics": "Source-evidence and provenance fields document what the original review used. Unless a public URL or a public research-summary path is explicitly given, they do not identify a file distributed here. See evidence/README.md."
+    },
+    "omissions": [
+      {
+        "field": "source_path",
+        "reason": "Private firmware source filename omitted; source SHA-256 and dataset identity retained."
+      },
+      {
+        "field": "calibrations[0].description",
+        "reason": "Verbatim third-party definition description omitted; symbol, location and scalar interpretation retained."
+      },
+      {
+        "field": "calibrations[1].description",
+        "reason": "Verbatim third-party definition description omitted; symbol, location and scalar interpretation retained."
+      },
+      {
+        "field": "calibrations[2].description",
+        "reason": "Verbatim third-party definition description omitted; symbol, location and scalar interpretation retained."
+      },
+      {
+        "field": "calibrations[3].description",
+        "reason": "Verbatim third-party definition description omitted; symbol, location and scalar interpretation retained."
+      },
+      {
+        "field": "calibrations[4].description",
+        "reason": "Verbatim third-party definition description omitted; symbol, location and scalar interpretation retained."
+      },
+      {
+        "field": "calibrations[5].description",
+        "reason": "Verbatim third-party definition description omitted; symbol, location and scalar interpretation retained."
+      },
+      {
+        "field": "calibrations[6].description",
+        "reason": "Verbatim third-party definition description omitted; symbol, location and scalar interpretation retained."
+      },
+      {
+        "field": "referenced source artifacts (all fields)",
+        "reason": "Firmware images, disassembly, reconstructed C, Ghidra projects/logs, extracted definition/fact datasets, manuals, supplier workbooks and characterization projections are not included. Their historical locators do not promise public availability."
+      }
+    ],
+    "rewritten_sections": [
+      {
+        "field": [
+          ".evidence[0].file",
+          ".evidence[1].file",
+          ".conditional_airflow_filling_route.evidence[0].file",
+          ".conditional_airflow_filling_route.evidence[1].file",
+          ".conditional_airflow_filling_route.evidence[2].file"
+        ],
+        "change": "Replaced private firmware-export and third-party source filenames with non-public descriptive source identifiers; retained supplied hashes and scientific locators."
+      }
+    ],
+    "rights_boundary": "No blanket license assignment or rights-clearance determination is made for firmware, third-party documents, definitions or supplier data. Omission does not negate a historical claim, resolve an unknown, or make that claim independently reproducible from this edition."
+  },
+  "record_type": "canonical_load_selector_decoding",
+  "dataset_id": "msv70:sha256:757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+  "source_sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+  "calibrations": [
+    {
+      "symbol": "K_RFMIN_EISY",
+      "runtime": "0085d7d0",
+      "file_offset": "0005d7d0",
+      "width_bytes": 2,
+      "raw": 600
+    },
+    {
+      "symbol": "K_TD_RFSTART",
+      "runtime": "0085d7d2",
+      "file_offset": "0005d7d2",
+      "width_bytes": 2,
+      "raw": 2
+    },
+    {
+      "symbol": "K_ZK_RFSTART",
+      "runtime": "0085d7d4",
+      "file_offset": "0005d7d4",
+      "width_bytes": 2,
+      "raw": 42952
+    },
+    {
+      "symbol": "CW_EISY",
+      "runtime": "0085e000",
+      "file_offset": "0005e000",
+      "width_bytes": 1,
+      "raw": 0
+    },
+    {
+      "symbol": "S_RFGDST_OFF",
+      "runtime": "0085e004",
+      "file_offset": "0005e004",
+      "width_bytes": 1,
+      "raw": 0
+    },
+    {
+      "symbol": "S_RFST_ON",
+      "runtime": "0085e005",
+      "file_offset": "0005e005",
+      "width_bytes": 1,
+      "raw": 0
+    },
+    {
+      "symbol": "S_EVNN_AUS",
+      "runtime": "0085e00b",
+      "file_offset": "0005e00b",
+      "width_bytes": 1,
+      "raw": 0
+    }
+  ],
+  "canonical_route": [
+    "ram:r13:6b9a",
+    "ram:r13:6b6a",
+    "ram:r13:6abe",
+    "ram:r13:6ade",
+    "ram:r13:6ab6",
+    "ram:r13:2ada"
+  ],
+  "raw_equations": [
+    "6b6a=u16(6b9a)",
+    "6abe=(6b68==0?32767:min(32767,(u16(6b6a)*5120)//u16(6b68)))",
+    "6ade=s16(6abe)",
+    "6ab6=u16(max(s16(6ade)-s16(6b62),600))",
+    "2ada=min(65535,(u16(6ab6)*30503+5000)//10000)"
+  ],
+  "caveat": "6ab6 has a lower bound and halfword store, not a final signed upper saturation. Static code/calibration proof is not a runtime sample or physical mass validation.",
+  "evidence": [
+    {
+      "file": "private-static-export:decompiled:00442f7c",
+      "line_start": 51,
+      "line_end": 119
+    },
+    {
+      "file": "private-static-export:instructions:00442f7c",
+      "line_start": 139,
+      "line_end": 314,
+      "instructions": [
+        "004430f0",
+        "00443204",
+        "00443258",
+        "0044327c",
+        "00443288"
+      ]
+    }
+  ],
+  "startup_map_condition": "CW_EISY.bit0==0 && (6eda.bit3==0) && S_RFST_ON!=0 && (01803350.bit0==0 || S_RFGDST_OFF!=0)",
+  "transition_condition": "not startup_map_condition, with 6ae2<K_TD_RFSTART && S_RFST_ON!=0 && (01803350.bit0==0 || S_RFGDST_OFF!=0)",
+  "runtime_observed": false,
+  "conditional_airflow_filling_route": {
+    "status": "recovered_conditional_software_route",
+    "route": [
+      "ram:r13:2b30",
+      "ram:r13:2b26",
+      "ram:r13:6980",
+      "ram:r13:6ac0",
+      "ram:r13:6c6e",
+      "ram:r13:6c6a",
+      "ram:r13:6ac2",
+      "ram:r13:6b9a"
+    ],
+    "conditions": [
+      "1f62 == 0",
+      "CW_EISY bit 1 set",
+      "CW_EISY bit 2 clear"
+    ],
+    "canonical_cw_eisy": 0,
+    "canonical_airflow_integrator_input_active": false,
+    "final_load_bit_is_separate": 0,
+    "integrator_upper_bound": "sat_u16(63c6 - K_DPS_INTMN), followed by K_PSMIN floor; 63c6 remains filtered ambient-derived modeled pre-throttle pressure",
+    "boundary": "This closes the static 2b30-to-6b9a transfer gap, not physical MAF identity, active runtime configuration or boosted pressure capability. Complete alternate derivation into6b5a is not asserted.",
+    "evidence": [
+      {
+        "file": "private-static-export:instructions:00447004",
+        "line_start": 10,
+        "line_end": 26,
+        "instructions": [
+          "0044701c",
+          "00447020",
+          "00447028",
+          "0044702c",
+          "00447030"
+        ]
+      },
+      {
+        "file": "private-static-export:decompiled:00447004",
+        "line_start": 15,
+        "line_end": 154
+      },
+      {
+        "file": "private-static-export:decompiled:004439b4",
+        "line_start": 494,
+        "line_end": 521
+      }
+    ]
+  }
+}

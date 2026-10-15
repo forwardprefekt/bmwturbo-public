@@ -1,0 +1,442 @@
+{
+  "schema_version": 1,
+  "edition": "MSV70 public documentation and reviewed findings",
+  "prepared_date": "2026-10-14",
+  "publication_status": "local preparation; original material licensed CC BY 4.0 / MIT; ownership and third-party rights review outstanding",
+  "allowed_types": [
+    ".md",
+    ".json"
+  ],
+  "excluded_categories": [
+    "raw firmware and prepared loader images",
+    "Ghidra databases and code exports",
+    "third-party definitions, manuals and diagnostic packages",
+    "supplier source datasets and correspondence",
+    "raw captures and personal build records",
+    "private Git metadata and history"
+  ],
+  "verification": {
+    "local_markdown_targets": 336,
+    "heading_anchor_errors": 0,
+    "pattern_scan_findings": 0,
+    "original_direct_wiki_dependency_count": 69,
+    "original_outgoing_wiki_link_occurrences": 147,
+    "limits": "Pattern scans are not exhaustive privacy or rights clearance. Commands and evidence in this edition are not a runnable source-corpus release."
+  },
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 2304,
+      "sha256": "09c5542fabe890592da373d06af40f7dc6c6378dcf4777a6b6dde18f295424cb",
+      "origin": "public-edition-authored"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 3060,
+      "sha256": "e82196636395cfcb51a99ef91b01dabce76be5c5572a4706604aaad3dd156ad2",
+      "origin": "public-edition-authored"
+    },
+    {
+      "path": "LICENSE-CC-BY-4.0.md",
+      "origin": "public-edition-authored",
+      "bytes": 18700,
+      "sha256": "2c874cf0c60226e4ca74c56a328667a236ac1472700f99ec6b99433a8191bc9b"
+    },
+    {
+      "path": "LICENSE-MIT.md",
+      "origin": "public-edition-authored",
+      "bytes": 1080,
+      "sha256": "6691063576d4e8b26e1e63cb319c685fdb9c824b658116a73162918d24b11209"
+    },
+    {
+      "path": "LICENSE.md",
+      "origin": "public-edition-authored",
+      "bytes": 3002,
+      "sha256": "dd7b256280a6a53c2a4ff62899c285dd7e5c781646779a7f08f93f347a1ac7ac"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 2879,
+      "sha256": "b22cef103b051f49e3f152d7fba07eb54a567462b45f0032987cc547d271605d",
+      "origin": "public-edition-authored"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3026,
+      "sha256": "a67760b077e444df35ea237ea8434a463975af7bf88d9946094b768e3255ad7e",
+      "origin": "public-edition-authored"
+    },
+    {
+      "path": "TARGET.md",
+      "bytes": 1856,
+      "sha256": "0822b7ff9945be786e80682f63fd3faf2d29c77d59e809059f741363d5c12b02",
+      "origin": "public-edition-authored"
+    },
+    {
+      "path": "analysis/derived/review-2026-09-04-dispatch-continuation/findings.json",
+      "bytes": 38328,
+      "sha256": "634143e44ede14b0fe6ae7d3b4685b1e652ed696a6b271451d7112ae578264ea",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "analysis/derived/review-2026-09-04-dispatch-continuation/findings.json",
+      "source_sha256": "949b224845e428d93f414b4f999097d230ea7b657f3b83ec8028a468df12a67d"
+    },
+    {
+      "path": "analysis/derived/review-2026-09-04-load-continuation/findings.json",
+      "bytes": 8570,
+      "sha256": "caa86069a0d7cfebfd635365c5fc03532bd1b76e6296ad3ae2a2b92688bc9030",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "analysis/derived/review-2026-09-04-load-continuation/findings.json",
+      "source_sha256": "dea3021081fea2ccf6ba5302199bd226ee44fceb32f5f3b730c2dbb647241044"
+    },
+    {
+      "path": "analysis/derived/review-2026-09-04-offline-maf-closure/findings.json",
+      "bytes": 9768,
+      "sha256": "bfdd62c33479275fba40fe1b20548575d81ea247a1ed0addffa8c369a8e921e8",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "analysis/derived/review-2026-09-04-offline-maf-closure/findings.json",
+      "source_sha256": "5e05232cb2a103093d9444fff67e6e30f244dcfe38210b57802dd8e536136c4f"
+    },
+    {
+      "path": "analysis/derived/review-2026-09-04-pressure-continuation/findings.json",
+      "bytes": 32337,
+      "sha256": "281f4618e94166b8714a93dfeefc2cffa85d34fccbc06cdd47a6d47b1d22b669",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "analysis/derived/review-2026-09-04-pressure-continuation/findings.json",
+      "source_sha256": "f2c4a440ba097f98ae0ac67cf0b57fc53bd22c87928395663c712cd891bd069a"
+    },
+    {
+      "path": "analysis/derived/review-2026-09-04-pressure-interface-closure/findings.json",
+      "bytes": 28433,
+      "sha256": "bb6a94e3f1aff6cec0c870418f010b589931a87210ad90304f9658d6d2af77be",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "analysis/derived/review-2026-09-04-pressure-interface-closure/findings.json",
+      "source_sha256": "ff3c1f2c313609e3b79c7418a3443a3c02608f0ca47fe631415195e0ec9d14d5"
+    },
+    {
+      "path": "analysis/derived/review-2026-09-05-injector-equation-closure/findings.json",
+      "bytes": 44183,
+      "sha256": "8205939afbc92281cffd33b824e1280d2795708a87dbb753884a334e9dc897f9",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "analysis/derived/review-2026-09-05-injector-equation-closure/findings.json",
+      "source_sha256": "2021ed29f7caac45a145ca6e3de3bc54e45ab40d84523ac31f3e355d8639390d"
+    },
+    {
+      "path": "analysis/derived/review-2026-09-05-lambda-topology-closure/findings.json",
+      "bytes": 36791,
+      "sha256": "b9f85b076623f4a5a148596dc00080324bc46c8bc0763249d8fc5c306efd0c49",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "analysis/derived/review-2026-09-05-lambda-topology-closure/findings.json",
+      "source_sha256": "130dce58988fcfeab1915445456088140e8b85368f28471b127f28bce01dcd9f"
+    },
+    {
+      "path": "docs/bimmerlabs-file-analysis.md",
+      "bytes": 7361,
+      "sha256": "3b74a4ef7777786e38b472f960b6e9be042d4ef6b4639c590653373ce08cd2ad",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/bimmerlabs-file-analysis.md",
+      "source_sha256": "c08fa217be4c62bb582caf227c8129e831d4513b3d27319837587c4b9ec39045"
+    },
+    {
+      "path": "docs/e90-ptcan-codebook.md",
+      "bytes": 6961,
+      "sha256": "29a7fe65201a3fffaa6b12809a8514b6d147bf0aab625781d8bc2dbf2850f14e",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/e90-ptcan-codebook.md",
+      "source_sha256": "e6b761267c10dfe8f9782034393917f1d99bdb2ef705d00c034de326eda62b88"
+    },
+    {
+      "path": "docs/esp32-sensor-logger.md",
+      "bytes": 10500,
+      "sha256": "0dbe269dba0039af17008550bc03996ada90de8c6c802a3eeae0afc326ec2e0a",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/esp32-sensor-logger.md",
+      "source_sha256": "e0f157beb326fd87adce0ec4d9084468f7bac707288ca691a66ab6b0bbe5565a"
+    },
+    {
+      "path": "docs/fic-750-6049-msv70-calibration-reference.md",
+      "bytes": 7468,
+      "sha256": "182fa44f6c0d86b7012198499d82d3f38bf1e6733f19cc1a0b5350dba37cfd5a",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/fic-750-6049-msv70-calibration-reference.md",
+      "source_sha256": "5b277520e244000fe7fbcd6cfa7c152ccdb1acff1a070db0e36bf56f8e60c615"
+    },
+    {
+      "path": "docs/hardware-io-and-instrumentation.md",
+      "bytes": 2926,
+      "sha256": "564c35f4ba26bd059acf46ec5b5097d522243b713e3303c9c7ed05665006187c",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/hardware-io-and-instrumentation.md",
+      "source_sha256": "af7b001b18df2326d16b6ddcae73e17bdbceb512daf4b5a235c1b7827f9844b1"
+    },
+    {
+      "path": "docs/msv70-airflow-filling-boundary.md",
+      "bytes": 10344,
+      "sha256": "508120acf3c67ac5bec7663c9a62bfbc0773178812d4885dc5c9a7dc45bc8af7",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-airflow-filling-boundary.md",
+      "source_sha256": "5ab2484844a83f4b1ff8ec973ee4ed615b553e779c2d5451e144b981b82a6c7d"
+    },
+    {
+      "path": "docs/msv70-boost-load-downstream-trace.md",
+      "bytes": 10484,
+      "sha256": "67c9089593d8688679e40ef551d59b2ede69b0356c29157fe7ed1e8ebda4c8c4",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-boost-load-downstream-trace.md",
+      "source_sha256": "6b1fb9320ca04d1eb2a9a961dcbb4e47e0c7ec7f23c324fae92ec32ef6017375"
+    },
+    {
+      "path": "docs/msv70-can-baseline-capture-runbook.md",
+      "bytes": 14570,
+      "sha256": "7fd19356cf1661528e9f5987974e23a42f29af1f1c8a207937309ebd5d582b88",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-can-baseline-capture-runbook.md",
+      "source_sha256": "f26462ded5ae45595826c0e4cf4fb1e90b1c263e6bfbdd9fecc76ebdf64d8443"
+    },
+    {
+      "path": "docs/msv70-dynamic-validation-protocol.md",
+      "bytes": 29567,
+      "sha256": "4c697b65dd487adcbdcd6bfd54c92fb32601ff88524bfc95a287988cfb5518a5",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-dynamic-validation-protocol.md",
+      "source_sha256": "84fc803f94fb28d0343ea491023ac84c43b02c7bc8f0f9af314c1c068a230709"
+    },
+    {
+      "path": "docs/msv70-findings-index.md",
+      "bytes": 30844,
+      "sha256": "2c3b62be25e8e6153797fccdfcf0a546f52d9c4315752b8a9cbe4c45a5416680",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-findings-index.md",
+      "source_sha256": "fb200ddcdf27fc8812a40a0676df422b4c96a72c6cd7da82956644e81be19045"
+    },
+    {
+      "path": "docs/msv70-injector-pulse-path.md",
+      "bytes": 8865,
+      "sha256": "4a24a620709044c0ad60dfc5eb1b4d5737b19658ebd1d7c4f6aee44e07393226",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-injector-pulse-path.md",
+      "source_sha256": "76903a34ae50e5058b5045dfa594772b993b52e1b493b0fe918076a349ff3343"
+    },
+    {
+      "path": "docs/msv70-interpolated-table-layout.md",
+      "bytes": 6689,
+      "sha256": "f2dce4602962fa8cf20a9fe038328f6ac74c26cc2c913d5ec0f12f9d2a77a1e0",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-interpolated-table-layout.md",
+      "source_sha256": "a63c8bc163b7367a90cd0174282e1cdec20e419849981b0d18c36cf1889f94be"
+    },
+    {
+      "path": "docs/msv70-knock-lambda-protection-dossier.md",
+      "bytes": 17474,
+      "sha256": "095bba3f19f6c5b848bffff15584d69f802a2e43ef14e4c9d9b095eae3fb769f",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-knock-lambda-protection-dossier.md",
+      "source_sha256": "134f29e1116f67124e162a9905b1aee5f3da3381fd51fab9da8a4396289273f3"
+    },
+    {
+      "path": "docs/msv70-load-lambda-ve-primer.md",
+      "bytes": 10456,
+      "sha256": "c720bc2528e44b519087dec855b1a3313d6df9af7bbea05b9884d81d80110fe1",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-load-lambda-ve-primer.md",
+      "source_sha256": "d697693d2bfd799116dc43ea9b521fa02aa79c2c5427db0f5a8d13704151805b"
+    },
+    {
+      "path": "docs/msv70-maf-to-load-decompilation.md",
+      "bytes": 49471,
+      "sha256": "9d7edb04b46f1791722d70c8f1c22f2ebf377ddb7de9deee38ef2670388a37d4",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-maf-to-load-decompilation.md",
+      "source_sha256": "d9b19f2cd2acc8a0649339833c0f1a8c432a776d693b763d8aecdb82cfb50145"
+    },
+    {
+      "path": "docs/msv70-measured-maf-envelope.md",
+      "bytes": 21173,
+      "sha256": "321861491835948f544a020b7dd80454f1347648d5704016930fe57fa246b1ab",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-measured-maf-envelope.md",
+      "source_sha256": "75b6f065bdfb4968816e55a44b2eb6ba2d0c3617042081e267b203280d902d25"
+    },
+    {
+      "path": "docs/msv70-memory-capture-runbook.md",
+      "bytes": 25476,
+      "sha256": "a598277008f1bff857526936c12913877276ddecfe02be0a39e1c728ddb4bd7c",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-memory-capture-runbook.md",
+      "source_sha256": "8cc30e108c662d17fbd25cd447607f62548b3b018796ab762d6b5d1c2e60cdfe"
+    },
+    {
+      "path": "docs/msv70-msd80-pressure-sensor-wiring.md",
+      "bytes": 13342,
+      "sha256": "749e58df2f334cec4ef1affbd560bf73688cccae7c8648de3e7bd6425dcb293c",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-msd80-pressure-sensor-wiring.md",
+      "source_sha256": "b96a14a6d1b60e8cbc5099fe8970e0b293d4e87ff460d410454ff9558aa0f9ab"
+    },
+    {
+      "path": "docs/msv70-pressure-ps-pvdk-dossier.md",
+      "bytes": 13435,
+      "sha256": "899ad435a0deefe5795ea41fbfbd23300cb4d2621804d8a008cc446670ca0ddf",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-pressure-ps-pvdk-dossier.md",
+      "source_sha256": "7f246e41a71e251301685b767ed5be9bcaab5f9057a81a55433831e3c0739105"
+    },
+    {
+      "path": "docs/msv70-rom-map.md",
+      "bytes": 16082,
+      "sha256": "00a72f7e36c397455e100c2aa869b6c2a49bcdc292d5950fbb693ec2eb7cf7d9",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-rom-map.md",
+      "source_sha256": "756b1e5c0c0c0c266097c5c0f788d0d682a9fc06b49145daa5ea5c023ba2e681"
+    },
+    {
+      "path": "docs/msv70-torque-authority-dossier.md",
+      "bytes": 11154,
+      "sha256": "27e7433fc4f0f81a3b86edb2ff5dc5ce0ba26442d80f3a81ef11dc7c3644755e",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/msv70-torque-authority-dossier.md",
+      "source_sha256": "9823f65732b9bb0c02ebf5b4c48971c0c3b150ccccf191de9806ead38573c7ee"
+    },
+    {
+      "path": "docs/notes/msv70-bdm-direct-solder-map.md",
+      "bytes": 8514,
+      "sha256": "5e8f728eba34ad1013ffae58b550bce4c972ca543b03e1b529b589f74a808e9e",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/notes/msv70-bdm-direct-solder-map.md",
+      "source_sha256": "3c1c8eb83f4fe3c5bfc334a9a84b60e85d185afcbc826cde717138492a591478"
+    },
+    {
+      "path": "docs/notes/msv70-ktag-bdm-bench-2026-08-29.md",
+      "bytes": 11289,
+      "sha256": "31c7448e7e731442f6baf38a84d8c582ac09da32bb36a7359db492d048db1546",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/notes/msv70-ktag-bdm-bench-2026-08-29.md",
+      "source_sha256": "2e3bc31a0817fa85adc9de0f84666112f43830c1dd48d85b529eef733537bec8"
+    },
+    {
+      "path": "docs/research-backlog.md",
+      "bytes": 6585,
+      "sha256": "d65df7db4a730a7ba7e8716ed07894ccdcdbc66b6fe1d1f6b3b59094daa46d62",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/research-backlog.md",
+      "source_sha256": "80c22c156c6b6bd699ce7c42b03e5bef4bc61aa1031fa1930cb2dd36ea57a392"
+    },
+    {
+      "path": "docs/wiki/README.md",
+      "bytes": 6230,
+      "sha256": "4f6b62d77450967c818fa110fabe2b2d891f83e3b35202848e65ad42889ccea9",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/wiki/README.md",
+      "source_sha256": "10e9f42469ebe7988eb37dcdc6e1dc74feb66c6cb9fcded63e39ae1afe64bbec"
+    },
+    {
+      "path": "docs/wiki/airflow-and-load.md",
+      "bytes": 13636,
+      "sha256": "8092ab2572bfc90d07ad1c49610ede30f3913cdb18a6ec03340bf97bf8e75685",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/wiki/airflow-and-load.md",
+      "source_sha256": "9d40bee44912705a0e2731419956b096aab86f450f2986c4ce468404351f9424"
+    },
+    {
+      "path": "docs/wiki/calibration-and-limits.md",
+      "bytes": 12471,
+      "sha256": "bb4c61efff91d55b3e27da7b66dfe1cd466f267d5f7aeab29dfee854b5fc35bf",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/wiki/calibration-and-limits.md",
+      "source_sha256": "c4d836f2df86f2fa0efa7d71ed713e204c2fd8a89c2266f2870d588f1e72d7b7"
+    },
+    {
+      "path": "docs/wiki/evidence-and-tools.md",
+      "bytes": 10767,
+      "sha256": "e2af7a7becf74956c41dbb2f2387338f7518aa14b94a509cdb9d0e6e21a232f3",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/wiki/evidence-and-tools.md",
+      "source_sha256": "12cff208e14c693f91745dce40f8ac664f82a2f3f3cad2913305cf93075736db"
+    },
+    {
+      "path": "docs/wiki/fuel-and-injection.md",
+      "bytes": 13039,
+      "sha256": "557f6de319cd50deec8f5e794c996d2bea70e4bb876de81f199beec478c3153e",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/wiki/fuel-and-injection.md",
+      "source_sha256": "1024217b29e5be49471f8af1cd699b90e8152c993d61026b4e05257654e446d5"
+    },
+    {
+      "path": "docs/wiki/glossary.md",
+      "bytes": 8885,
+      "sha256": "3ae1aba71ff3f4b544f08f2cbd94ea50ed4f3185cb41763589c7c01e19b61602",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/wiki/glossary.md",
+      "source_sha256": "8567192e4d3333610dcb60b4cca23f2061b697391ba37f1383936cb7a159900d"
+    },
+    {
+      "path": "docs/wiki/hardware-and-recovery.md",
+      "bytes": 7054,
+      "sha256": "e16ac7a5e70ead47e1dd1358363d6f3f9af8ccc433bdc70ba1973629c816ec69",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/wiki/hardware-and-recovery.md",
+      "source_sha256": "8d7b225dc31cf79cba56d27523ae76795844748e26b5df5651081f818dc2403d"
+    },
+    {
+      "path": "docs/wiki/identity-and-memory.md",
+      "bytes": 6955,
+      "sha256": "5f32fe92dd50bd982b8e5f8c7d4715f88b5d5c4a3044e811efc3bef06ec12979",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/wiki/identity-and-memory.md",
+      "source_sha256": "2e14398123e99faee23e67d8208d8b6c4c8571be5a4049ff1b5152b25ef29564"
+    },
+    {
+      "path": "docs/wiki/ignition-lambda-and-protection.md",
+      "bytes": 15301,
+      "sha256": "12faa4790c5e3ab405b63814af3eb332947431fc56f560fd17ba62e295bdb6c9",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/wiki/ignition-lambda-and-protection.md",
+      "source_sha256": "1c56988f1460917053f94b36a99b31c3a2150634b827b3cc56ff8f8fbb13b72b"
+    },
+    {
+      "path": "docs/wiki/logging-and-validation.md",
+      "bytes": 8647,
+      "sha256": "523c79771afdeb38cacb9721762b5d28f2e454f5a26deaa499e2377f4f4927bf",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/wiki/logging-and-validation.md",
+      "source_sha256": "befc04937accaf915d864a179fa388bca562d916873a32c94b9f650e203c995e"
+    },
+    {
+      "path": "docs/wiki/open-questions.md",
+      "bytes": 6887,
+      "sha256": "ae3bf40799920fa9d92c7244fda490c6494eac843381f452b8af8e7522f43c6a",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/wiki/open-questions.md",
+      "source_sha256": "6bfc6a6c8a3806e7c0c4b05e7dcacf70487acd7f774ecc7984175ffa532407b9"
+    },
+    {
+      "path": "docs/wiki/pressure-model.md",
+      "bytes": 13715,
+      "sha256": "c3ce31520e0c4f88d82a2622c9ad0100f19641d946df946eef718fd403d678d9",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/wiki/pressure-model.md",
+      "source_sha256": "99964f172405d407a2f0456439406bde9b3368053972f888cf39f3f0a713916f"
+    },
+    {
+      "path": "docs/wiki/torque-and-controls.md",
+      "bytes": 7336,
+      "sha256": "c19bcd7bc0c1a1973572b93883d143af471349a9ec46117172bcfcfaea3aec62",
+      "origin": "reviewed-transformed-copy",
+      "source_path": "docs/wiki/torque-and-controls.md",
+      "source_sha256": "bede8f676c2da197ce70e0bff93712217ef6c058deb5906ae9592e28605bb7a7"
+    },
+    {
+      "path": "evidence/README.md",
+      "bytes": 3799,
+      "sha256": "31cfe817ac40e5ea3a65fbe4de0ef3fd7f182299f4901f560e527f8f9082f2bb",
+      "origin": "public-edition-authored"
+    }
+  ],
+  "manifest_self_hash": "intentionally excluded to avoid recursive self-digest",
+  "licenses": {
+    "documentation_and_research_expression": "CC-BY-4.0",
+    "original_software_and_examples": "MIT",
+    "scope_document": "LICENSE.md",
+    "third_party_material": "not relicensed; see NOTICE.md"
+  },
+  "author": "Griffin Heavy Industries"
+}

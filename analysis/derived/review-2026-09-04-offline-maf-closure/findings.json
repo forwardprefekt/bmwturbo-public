@@ -1,0 +1,102 @@
+{
+  "public_edition": {
+    "edition": "sanitized public research summary",
+    "edition_date_utc": "2026-10-14",
+    "source_report": "analysis/derived/review-2026-09-04-offline-maf-closure/findings.json",
+    "source_report_sha256": "5e05232cb2a103093d9444fff67e6e30f244dcfe38210b57802dd8e536136c4f",
+    "canonical_software_id": "MSV70 0049PP0L921S0AC1S",
+    "canonical_image_sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+    "epistemic_status": "Editorial derivative of the dated private research report. Scientific claims, original review outcomes and source hashes describe that historical review, not newly executed public-edition verification. No tests, builds, lint, firmware execution or vehicle observations were performed for this edition.",
+    "interpretation_boundary": "Original research equations, decoded addresses, scalar observations and engineering interpretations are retained as analysis, not redistributed firmware source or a flash-ready calibration. Static software dataflow is not physical hardware identity, runtime activation, measurement or safety approval.",
+    "private_source_availability": {
+      "included": false,
+      "status": "Original reports and referenced evidence remain outside this public edition. No download, access entitlement, redistribution permission or automatic access-on-request is represented.",
+      "independent_review": "Reproduction requires separately and lawfully obtained source material matching the retained hashes, relevant tools, and sufficient permissions. Hashes and private-source identifiers are provenance locators, not substitutes for the omitted evidence.",
+      "reference_semantics": "Source-evidence and provenance fields document what the original review used. Unless a public URL or a public research-summary path is explicitly given, they do not identify a file distributed here. See evidence/README.md."
+    },
+    "omissions": [
+      {
+        "field": "representation.public_proposal.author",
+        "reason": "Personal forum handle omitted; public citation URL and date retained."
+      },
+      {
+        "field": "referenced source artifacts (all fields)",
+        "reason": "Firmware images, disassembly, reconstructed C, Ghidra projects/logs, extracted definition/fact datasets, manuals, supplier workbooks and characterization projections are not included. Their historical locators do not promise public availability."
+      }
+    ],
+    "rewritten_sections": [
+      {
+        "field": "measured_acquisition.adc_descriptor",
+        "change": "Descriptor byte dump removed; decoded research interpretation retained."
+      },
+      {
+        "field": "representation.public_proposal.target_match",
+        "change": "Retained source-matching conclusion without patch patterns."
+      }
+    ],
+    "rights_boundary": "No blanket license assignment or rights-clearance determination is made for firmware, third-party documents, definitions or supplier data. Omission does not negate a historical claim, resolve an unknown, or make that claim independently reproducible from this edition."
+  },
+  "schema_version": 1,
+  "review_date_utc": "2026-09-05",
+  "session_directory_label": "2026-09-04 continuation",
+  "canonical_image_sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+  "scope": "Static acquisition, averaging, availability, selection, correction and representation closure using retained image and public prior art. No tests, numerical input scenarios, new DME pull or firmware modifications.",
+  "source_evidence": [
+    "calibration-source-nodes.json",
+    "acquisition-census.json",
+    "decompiled/",
+    "instructions/"
+  ],
+  "measured_acquisition": {
+    "producer": "00432fc8",
+    "chain": [
+      "0041f184(logical27)",
+      "ADC result>>2 converted to8-bit index1f40",
+      "u16 id_maf_tab849ca4[index]",
+      "banked u32 sums4008/400c and u16 counters2c80/2c82 when1f62!=0",
+      "00435048: floor(sum/(2*count)) ->2b2c",
+      "2b28=2b2c; LUT84279e(2b2c,IAT1ef8) ->Q7 byte gain",
+      "0040ae48:sat_u16((2b28*gain)>>7) ->2b26"
+    ],
+    "adc_descriptor": "Header 00403cb4/table 00403cf4 from the pressure closure; logical input 27 descriptor at 00403e38 selects bank bit 7 set, encoded channel 0x38 and accessor bank 704c00. Physical pad/net remains unproven.",
+    "bank_boundary": "00417540 toggles1f46. Acquisition adds to one bank while00435048 consumes/resets the opposite bank. Cadence and zero-count avoidance are scheduler contracts, not inferred Hertz or tested behavior.",
+    "not_always_measured": "When1f62==0,00435048 copies selected2b30 into both2b28 and2b26 instead of using acquisition/gain."
+  },
+  "availability_and_selection": {
+    "availability": "00141084 clears1f62;00158c90 clears it when the reset-request record at[7ff998+0x21] equals1;00474698 sets it when currently0,c_conf_maf!=0,and1fe1!=0. c_conf_maf=1 adds strict41<1f40<230 and count>10; canonicalc_conf_maf=2 bypasses that added presence-window/count condition. Do not assign those conditional bounds as the universal sensor-fault window.",
+    "selection": "0046dec4 sets1e8c=0 if1f62==0 or2266!=0 or1e88!=0 or(2314!=0 and status nibble from pointer004028d0+2 equals1); otherwise sets1. Thus availability is not sufficient for selected measured airflow.",
+    "outer_update": "00438d94 sets1fea=0 if1fe2==0 or21d8<=150; otherwise1fea=21da&1.00435180 updates2b30 only when1fea==0, choosing2ac2 if1e8c==0 or2b26 otherwise.",
+    "alternate_candidate": "00434c98 copies6ab4 to2ac2.004449b0, under its update gate, selects6b4c when6eb6.bit0 clear,otherwise6b6a into6ab4. This is model/substitute-side publication, not the measured ADC chain. Its engineering units and active override remain mode-dependent.",
+    "calibration_not_runtime": "c_conf_maf=2 is a source byte; the actual learned flag/fault state/scheduler execution is not measured. No forced branch coverage is required or authorized by this finding."
+  },
+  "representation": {
+    "stock_table": "256 u16 entries at849ca4, XDFQ6=1/64kg/h/count, first0xffff atindex233. Raw table encoding ceiling1023.984375kg/h is not a global DME datatype ceiling or a measured sensor limit.",
+    "post_average_domain": "The correction-map MAF axis isQ5=1/32kg/h/count; division by2 converts tableQ6 into this domain. Averaged2b2c has floor behavior; corrected2b26 saturates at65535. Physical engineering scale is XDF-consistent source interpretation, not independent sensor characterization.",
+    "correction": "Byte Q7 factor has mathematical maximum255/128, stock36 cells109..137. Temperature axis−20.25..99.75C; airflow axis10..800kg/h.0040831c holds endpoints in each out-of-range dimension. Calibration-only gain relocation is not established as complete: it changes the base/correction coordinates and existing thermal correction, and requires a characterized characteristic and consumer-domain review.",
+    "public_proposal": {
+      "url": "https://nam3forum.com/forums/forum/main-forum/other-bmws/221387-msx70-flasher-alpha/page2#post251184",
+      "publication": "2024-01-29 04:20 forum GMT-8",
+      "status": "explicitly untested public proposal; no patch applied",
+      "target_match": "The original review reports both proposed patterns match the canonical image at CPU 435070/435098 (file offsets 235070/235098). The affected operation shifts sample count, not raw ADC signal. Patterns and patch bytes are not reproduced.",
+      "design_implication": "Removing the averaging divisor doubling while re-encoding a measured characteristic inQ5 could preserve downstreamQ5 semantics and address table encoding locally. It is not automatically a global rescale of all35 selected-airflow reads. It remains an untested code-design candidate, not established sensor capacity or a complete turbo tune.",
+      "failure_if_partial": "An XDF display-equation edit alone changes no firmware behavior. Removing divisor doubling while retaining the old curve would double its reported airflow. Neither is a valid calibration by itself.",
+      "remaining_limits": [
+        "measured sensor/housing curve and its pressure/temperature/placement applicability",
+        "gain/interpolation/clipping and diagnostics over expanded input domain",
+        "downstream arithmetic/axes/plausibility and fuel-demand coherence",
+        "source-matched recovery and later actual behavior evidence"
+      ]
+    }
+  },
+  "concrete_blocker": "The retained bytes now identify how acquired data becomes the corrected candidate and how a local representation change could work. They cannot identify the as-built MAF/housing or provide its physical transfer curve, sensor headroom, disturbed-flow/pressure/temperature response, or current installed state. No replacement curve or patch image can honestly be completed without those inputs.",
+  "user_records_needed_now": [
+    "Stamped MAF/IAT part number and rigid housing internal diameter; placement and bypass/BOV plumbing drawing.",
+    "Existing manufacturer/flow-bench characteristic for that exact assembly, including intended operating pressure/temperature domain; distinguish measured values from extrapolated stockcurve.",
+    "Actual Innovate package labels/contents and sensor part numbers; purchased-item URL returned403 via reader and an eBay error page in a separate research browser.",
+    "Actual exhaust runner-to-bank/merge/bung geometry; retained exterior manifold photo does not reveal internal separation."
+  ],
+  "deferred_actions": [
+    "No fresh DME read or test requested in this pass; current hardware/installed-image identity and live transport remain later acceptance gates.",
+    "No code/image patch, diagnostic disable, calibration value or power/boost approval produced."
+  ]
+}

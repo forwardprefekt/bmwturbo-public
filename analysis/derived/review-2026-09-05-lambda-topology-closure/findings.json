@@ -1,0 +1,428 @@
+{
+  "public_edition": {
+    "edition": "sanitized public research summary",
+    "edition_date_utc": "2026-10-14",
+    "source_report": "analysis/derived/review-2026-09-05-lambda-topology-closure/findings.json",
+    "source_report_sha256": "130dce58988fcfeab1915445456088140e8b85368f28471b127f28bce01dcd9f",
+    "canonical_software_id": "MSV70 0049PP0L921S0AC1S",
+    "canonical_image_sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+    "epistemic_status": "Editorial derivative of the dated private research report. Scientific claims, original review outcomes and source hashes describe that historical review, not newly executed public-edition verification. No tests, builds, lint, firmware execution or vehicle observations were performed for this edition.",
+    "interpretation_boundary": "Original research equations, decoded addresses, scalar observations and engineering interpretations are retained as analysis, not redistributed firmware source or a flash-ready calibration. Static software dataflow is not physical hardware identity, runtime activation, measurement or safety approval.",
+    "private_source_availability": {
+      "included": false,
+      "status": "Original reports and referenced evidence remain outside this public edition. No download, access entitlement, redistribution permission or automatic access-on-request is represented.",
+      "independent_review": "Reproduction requires separately and lawfully obtained source material matching the retained hashes, relevant tools, and sufficient permissions. Hashes and private-source identifiers are provenance locators, not substitutes for the omitted evidence.",
+      "reference_semantics": "Source-evidence and provenance fields document what the original review used. Unless a public URL or a public research-summary path is explicitly given, they do not identify a file distributed here. See evidence/README.md."
+    },
+    "omissions": [
+      {
+        "field": "referenced source artifacts (all fields)",
+        "reason": "Firmware images, disassembly, reconstructed C, Ghidra projects/logs, extracted definition/fact datasets, manuals, supplier workbooks and characterization projections are not included. Their historical locators do not promise public availability."
+      }
+    ],
+    "rewritten_sections": [
+      {
+        "field": "scope and AC1S references",
+        "change": "Removed private identifying image suffix; software revision and image SHA-256 retained."
+      },
+      {
+        "field": "static_code_facts[2].facts[0]",
+        "change": "Removed raw pointer-word dump; preserved bank-specific pointer interpretation."
+      },
+      {
+        "field": "static_code_facts[5].facts[1]",
+        "change": "Removed full firmware curve word/value sequence; retained model-input limitation."
+      },
+      {
+        "field": "static_code_facts[5].facts[3]",
+        "change": "Removed full axis-word sequence; retained scientific endpoint caveat."
+      },
+      {
+        "field": "public_sources[bosch_lsu49].facts",
+        "change": "Omitted numerical supplier limits and retained qualitative guidance, unit ambiguity and application boundary."
+      },
+      {
+        "field": "public_sources[bosch_lsu49].boundary",
+        "change": "Removed repeated numerical supplier limit while preserving qualifications."
+      },
+      {
+        "field": [
+          ".evidence_files.reused[0]",
+          ".evidence_files.reused[1]",
+          ".evidence_files.reused[2]",
+          ".evidence_files.reused[3]",
+          ".evidence_files.reused[4]",
+          ".evidence_files.reused[5]",
+          ".evidence_files.reused[6]",
+          ".evidence_files.reused[11]",
+          ".static_code_facts[0].sources[0]",
+          ".static_code_facts[0].sources[1]",
+          ".static_code_facts[0].sources[2]",
+          ".static_code_facts[1].sources[0]",
+          ".static_code_facts[1].sources[1]",
+          ".static_code_facts[1].sources[2]",
+          ".static_code_facts[2].sources[0]",
+          ".static_code_facts[2].sources[2]",
+          ".static_code_facts[3].sources[0]",
+          ".static_code_facts[3].sources[1]",
+          ".static_code_facts[3].sources[2]",
+          ".static_code_facts[3].sources[3]",
+          ".static_code_facts[3].sources[4]",
+          ".static_code_facts[4].sources[0]",
+          ".static_code_facts[4].sources[1]",
+          ".static_code_facts[5].sources[0]",
+          ".static_code_facts[5].sources[1]",
+          ".static_code_facts[5].sources[2]",
+          ".static_code_facts[5].sources[3]",
+          ".static_code_facts[5].sources[4]",
+          ".architecture_alternatives[3].costs_and_gates[0]",
+          ".public_sources[0].path",
+          ".public_sources[6].boundary",
+          ".user_input_records_required[5].request"
+        ],
+        "change": "Replaced private firmware-export and third-party source filenames with non-public descriptive source identifiers; retained supplied hashes and scientific locators."
+      }
+    ],
+    "rights_boundary": "No blanket license assignment or rights-clearance determination is made for firmware, third-party documents, definitions or supplier data. Omission does not negate a historical claim, resolve an unknown, or make that claim independently reproducible from this edition."
+  },
+  "schema_version": 1,
+  "review_date_utc": "2026-09-05",
+  "scope": "Offline design boundary for AC1S MSV70 N52 single-turbo exhaust with two retained upstream widebands",
+  "canonical_image_sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+  "decision": {
+    "status": "software_topology_recovered_physical_sampling_and_application_calibration_blocked",
+    "conclusion": "Two sensors in the same fully mixed 6-cylinder exhaust do not preserve independently observable three-cylinder-bank feedback. The recovered stock software processes two separate sensor/controller records and sends separate corrections into bank fuel requests. Retaining that architecture requires representative, genuinely bank-separated sampling before the first mixing junction, not merely two bungs or a divided-looking T3 flange. No source reviewed documents a calibration-only AC1S common-exhaust mode. A current commercial N51/N52 offering explicitly advertises a single-bank CODE PATCH with one post-turbo sensor; its exact MSV70/AC1S implementation, diagnostics and support are undisclosed, and it is not a calibration recipe or proof of safe operation with two stock loops in one mixture.",
+    "not_authorized": [
+      "calibration changes",
+      "firmware or code patches",
+      "diagnostic suppression",
+      "sensor substitutions or purchases",
+      "hardware changes",
+      "vehicle tests or new DME reads"
+    ],
+    "source_boundary": "This closes what the existing software and public application sources establish, not the as-built manifold, sensor operating environment, active runtime branches, or delivered lambda. Logical bank index to physical wiring and injector event/cylinder permutation require exact vehicle records; BMW's physical cylinder grouping alone does not prove that software permutation."
+  },
+  "evidence_files": {
+    "new_exports": "decompiled/ and instructions/ contain eight freshly extracted functions; provenance.json records commands, input/exporter hashes and output hashes. ghidra-export.log records successful static analysis/export. No executable numerical probe was used.",
+    "canonical_parameters": "static-parameters.json records canonical pointer-table bytes plus exact raw component values with XDF metadata. Decimal XDF equations are rounded metadata, not precise engineering-unit proofs.",
+    "reused": [
+      "private-static-export:decompiled:000d2928",
+      "private-static-export:decompiled:000d4ad8",
+      "private-static-export:decompiled:000d4d7c",
+      "private-static-export:decompiled:0046d598",
+      "private-static-export:decompiled:00457f68",
+      "analysis/derived/private-static-export:decompiled:00106998",
+      "private-static-export:decompiled:000e49c4",
+      "analysis/facts/msv70/ram-accesses.csv",
+      "analysis/facts/msv70/global-memory-accesses.csv",
+      "analysis/derived/msv70_calibration_components.csv",
+      "analysis/derived/msv70-host-inputs/a2l-functions.jsonl",
+      "private-source:oem-training-manual",
+      "docs/msv70-knock-lambda-protection-dossier.md",
+      "docs/msv70-injector-pulse-path.md",
+      "analysis/classifications/msv70-protection-domain.jsonl",
+      "parts/eurocan-n52-turbo-manifold.md"
+    ],
+    "metadata_warning": "The host A2L is contextual vocabulary, not AC1S address authority. XDF category strings around lambda tables sometimes name unrelated functions; the actual function bodies, pointers and component addresses take precedence. Protection-domain target selection is not an exhaustive two-bank feedback-controller inventory."
+  },
+  "static_code_facts": [
+    {
+      "id": "separate_sensor_acquisition_compensation",
+      "sources": [
+        "private-static-export:decompiled:0045e8fc",
+        "private-static-export:decompiled:0045e8fc",
+        "private-static-export:instructions:0045e8fc"
+      ],
+      "facts": [
+        "0045e8fc iterates exactly two sensor records with stride 0x2d8, base 007fc3d8. Offset/gain states, sampled input, readiness flags, tip-temperature correction and gain adaptation inputs are record-local.",
+        "The gate includes global 1fe2, local c4bd and c675; further offset/gain/readiness branches can hold old results. No unconditional fresh observation is implied by reading a value.",
+        "After per-bank compensated current processing, lookup branches use descriptors 008481c4/008481e6 and z components 0084850c/008484ec to write record+0x60, addresses 007fc438 and 007fc710 (r13:4438 and 4710). Those are separate values, not copies of a common mean.",
+        "The same function also computes shared minimum 3b78 and mean 3b7a from the two results. Existence of these summaries does not change the separate inputs consumed by the controller."
+      ]
+    },
+    {
+      "id": "separate_controller_error_and_history",
+      "sources": [
+        "private-static-export:decompiled:000d2734",
+        "private-static-export:decompiled:000d2928",
+        "private-static-export:decompiled:000d27f4"
+      ],
+      "facts": [
+        "000d2734(b) uses b*0x2d8 for sensor input and b*0x14c for controller state. It forms q_b=clamp(16*u16[007fc438+0x2d8*b]+s16[007fc232+0x14c*b],0,0x7fff), writes 007fc212+0x14c*b, and compares reciprocal-helper results of q_b and 007fc1fe+0x14c*b to write 007fc1be+0x14c*b. This is direct bank-specific sensor-to-error dataflow; helper calls are retained as code facts rather than inventing physical scaling.",
+        "000d2928 maintains controller records at 007fc140 and 007fc28c, with local mode at +0xe1, eligibility at +0xe3, integrator/filter history and output limits. Global 1fe2 gates the function; local modes 0,1,2,3 take different reset/control/hold routes.",
+        "Local P, I/I2 and D processing is explicit in 000d2928:318-519; 000d27f4 adds three local signed contributions through helper 0040a724 into record+0x7c. Mode and limits remain conditional, not always-on closed loop.",
+        "Final bounded contribution at record+0xaa is combined with record+0x78 through 0040a5c0 into record+0xa6: 007fc1e6 and 007fc332. Canonical global-access fact insn:000d3950 identifies the indexed final store. Neither identical targets nor identical table families imply the two state machines/integrators are one loop."
+      ]
+    },
+    {
+      "id": "distinct_transport_and_sensor_lag_models",
+      "sources": [
+        "private-static-export:decompiled:000d2928",
+        "static-parameters.json",
+        "private-static-export:decompiled:0040ae18"
+      ],
+      "facts": [
+        "Canonical pointer table 00407410 (full-image offset 0x207410) advances three pointers per bank. The original private-byte review binds bank 0 to normal/aged sensor-lag maps ip_t1_lsl_up_1/ip_t1_lsl_up_agi_lim_1 and exhaust-delay weight ip_fac_eg_dly_1; bank 1 uses the corresponding _2 maps. Raw pointer-word sequence is omitted. This association was based on decoded pointers, not suffix inference.",
+        "Both banks share load/RPM interpolation coordinates (descriptors 00847b46/00847b70, inputs 2ada/30a4), but have distinct map data. Shared XDF coordinate endpoints are approximately 82..398 mg/stk and 704..5000 rpm. Endpoints are neither approved boosted ranges nor proof of extrapolation behavior.",
+        "For each bank normal/aged 16-bit map results are blended using u16[007fc622+0x2d8*b], with denominator 1024 and signed truncation handling, into controller+0xd6. This drives a first-order filter coefficient through helpers 0040a694 and 0040b2d8. Filter state and output histories +0x64,+0x68,+0xc4,+0xc6,+0xc8 are independent per bank.",
+        "The third pointer supplies an 8-bit exhaust-delay weight at controller+0xe2. Code combines it with ((u16[controller+0x132]*0x66)>>8)&255 through helper 0040a678 (helper operation not independently recovered here), then multiplies the result's low byte shifted left three by common raw 30c0 through 0040ae18 (unsigned product >>8 with uint16 saturation). Output goes to controller+0xd8. Its physical time alias and active multiplier are not independently measured here.",
+        "The delay path then derives +0xb2,+0x74,+0xb4,+0x7a and uses current and historical values through 000d2510/000d25b0 to produce +0xbe/+0xc2. This is a dynamic model, not simply a distance constant. The +0xd6/+0xd8 coordinates also select P/I/I2/D gain maps or switched gain maps. A relocation can therefore invalidate both transport-model matching and controller tuning.",
+        "Stock delay weights differ between banks (full bytes retained in static-parameters.json). Rescaling a time lag or applying identical tables cannot restore a physically lost independent measurement. No measured delay versus flow/temperature/backpressure for the new manifold exists in this review."
+      ]
+    },
+    {
+      "id": "bank_local_output_filters_and_secondary_feedback",
+      "sources": [
+        "private-static-export:decompiled:000d2928",
+        "private-static-export:decompiled:0040c170",
+        "private-static-export:decompiled:000d283c",
+        "private-static-export:decompiled:000d4ad8",
+        "private-static-export:decompiled:000d4d7c"
+      ],
+      "facts": [
+        "Controller mean and filtered-mean words at record+0x98/+0x9a/+0x9c/+0x9e/+0xa0 are bank-local. They use shared coefficient calibrations 00847f17/18/19/1a or shared raw 2748, not shared output state.",
+        "0040c170 computes directional correction from |new-old|*coefficient, rounded at 16 bits, and forces one raw step for nonzero products that would otherwise round to zero. Final value is signed16. This precise recurrence is not a continuous-time measured filter constant.",
+        "000d283c filters downstream input at 007fc48c+0x2d8*b into controller 007fc21e+0x14c*b, applies thresholds 00847fee/fff0, and updates local history flags. 000d4ad8 likewise filters bank-specific downstream state with separate thresholds and diagnostic gating. Consequently, rear sensors/catalyst topology cannot be dismissed as unrelated to upstream mixture correction.",
+        "000d4d7c uses both common eligibility and separate bank fault/readiness conditions for adaptation eligibility; no claim of full adaptive-learning equations is made. None of these gates is a proposed disable switch."
+      ]
+    },
+    {
+      "id": "separate_fuel_request_handoff",
+      "sources": [
+        "private-static-export:decompiled:0046d598",
+        "private-static-export:decompiled:00457f68",
+        "docs/msv70-injector-pulse-path.md:15-23"
+      ],
+      "facts": [
+        "0046d598 copies 41e6 to 3dda and 4332 to 3f2a, with other bank factor/adaptation handoffs kept separate. It does also share 41da between two destinations, so bank-independent means distinct feedback/state where demonstrated, not globally uncoupled engines.",
+        "00457f68 selects bank structures 007fbd18/007fbe68; +0xc2 is exactly 3dda/3f2a. It multiplies base mass using ((signed_correction>>1)+0x8000)&0xffff, then applies additional local/global corrections. Normal operation calculates separate requested-mass results 2d6e/2d70; other modes, override and transition paths may produce a shared result.",
+        "Logical controller bank b=0/1 is not asserted to equal an injector event index or an undocumented physical cylinder numbering scheme. BMW's physical 1-3/4-6 assignment is a separate repair-source fact."
+      ]
+    },
+    {
+      "id": "shared_modeled_exhaust_pressure_not_turbine_sensor",
+      "sources": [
+        "analysis/derived/private-static-export:decompiled:00106998",
+        "private-static-export:decompiled:0040a694",
+        "private-static-export:decompiled:000e49c4",
+        "private-static-export:decompiled:0045e8fc",
+        "private-static-export:instructions:0045e8fc",
+        "static-parameters.json"
+      ],
+      "facts": [
+        "With 1fb8 and 207f nonzero, 00106998 evaluates ip_prs_ex_inc using raw 2ac6 and writes 2b34=usat16(curve_result+u16[2ccc]) at 001069dc. 000e49c4 copies 2ce8 to 2ccc. The A2L function vocabulary calls this system exhaust variable prs_ex_pcat_up, but vocabulary is not independent sensor proof.",
+        "The stock modeled pressure-increase source is a one-dimensional airflow curve. The original review reports no turbine-speed, wastegate-state, sensor-bung pressure-measurement or turbine-pressure-ratio dimension in this producer. Raw curve cells and their converted table values are omitted.",
+        "0045e8fc reads the SAME unsigned word 2b34 at 0045f468 for both sensor records. It forms signed offset-adjusted pump-input deviation; negative selects rich correction z=0084831a, nonnegative selects lean correction z=00848382, both using axis descriptor 0084825a. 0040af60 applies the selected correction before optional local tip-temperature correction and local adapted gain. Therefore the pressure correction is to the sensor-current conversion, not a direct lambda target offset.",
+        "The shared modeled-pressure axis extends to approximately 1600 hPa according to XDF metadata. That endpoint is not a sensor pressure rating, boost limit, or proof of correct behavior above the axis. Full raw and converted axis cells are omitted.",
+        "The stock modeling interface cannot represent two unequal local sensor pressures independently through this shared input. A calibrated airflow-to-pressure approximation might be usable only if the physical relationship is repeatable and validated over all relevant conditions; a turbo and wastegate can change that relationship. No such characterization exists here. Equal pressures would remove that specific mismatch, not the separate-mixture observability problem."
+      ]
+    }
+  ],
+  "physical_reasoning": {
+    "status": "engineering_inference_not_firmware_measurement",
+    "observability": "For a fully mixed common stream, both ideal probes observe the same resulting exhaust composition. The two bank compositions are two unknowns but two duplicates of the same mixed observation provide only one independent constraint. Under complete combustion with the same fuel, mixed lambda is a fuel-flow-weighted combination of the two bank lambdas, not generally their arithmetic mean. Opposing bank deviations can conceal one another. Sensor bias or unequal transport can cause the independent controllers to seek inconsistent corrections; instability is a risk, not a claimed inevitable measured outcome.",
+    "nonuniform_flow": "Two bungs at different angles in a collector can read different local mixtures, but difference alone does not establish clean, repeatable ownership of cylinders 1-3 versus 4-6. Reversion, pulses, incomplete mixing and changing flow can change the sampled proportion. An individual runner probe sees one cylinder, not automatically the representative three-cylinder bank.",
+    "compensation_limits": "Transport and sensor-lag maps change timing/response assumptions; pressure correction changes measurement transfer. Neither produces independent bank information once fully mixed. A common-stream controller architecture can regulate a global mixture but cannot promise stock independent-bank diagnosis or balancing merely by retaining two electrical sensor connectors."
+  },
+  "architecture_alternatives": [
+    {
+      "architecture": "Two separate three-cylinder collectors, one representative upstream wideband per bank, merging only downstream of both sampling points before one turbine",
+      "stock_two_bank_observability": "Preserved in principle if each branch genuinely carries only its assigned three cylinders at the sampling point",
+      "advantages": [
+        "Retains independent bank error information and separate correction/adaptation intent",
+        "Can retain shorter transport than a post-turbine downpipe location"
+      ],
+      "costs_and_gates": [
+        "High pre-turbine pressure, temperature, pulse/reversion and thermal loading",
+        "Actual bank separation/runner grouping and cross-communication must be documented",
+        "Stock common modeled-pressure input must fit both actual sensor environments; no automatic turbo correction is proven",
+        "New transport/gain/thermal/dew-point application characterization required",
+        "Downstream sensor and catalyst layout remains separately unresolved"
+      ],
+      "decision": "Closest architectural match to recovered software, not installation approval"
+    },
+    {
+      "architecture": "Two genuinely separated bank passages through a divided manifold and turbine inlet, sensing each passage before any mixing",
+      "stock_two_bank_observability": "Conditional on actual complete separation upstream of the probes",
+      "advantages": [
+        "May preserve bank identity while routing both banks to one turbo"
+      ],
+      "costs_and_gates": [
+        "A T3 label, visible flange divider or twin-scroll catalog label is not proof of internal continuity or cylinder grouping",
+        "Shared wastegate cavity, balance openings or early collector merge may defeat independence",
+        "Same pre-turbine pressure/thermal/transport caveats as separate collectors",
+        "Turbine outlet/downpipe commonly mixes; two downstream probes cannot be assumed separated"
+      ],
+      "decision": "Cannot select from current Eurocan catalog record"
+    },
+    {
+      "architecture": "Both retained upstream widebands installed in a common post-turbine downpipe or common pre-turbine 6-1 collector, retaining stock two-loop behavior",
+      "stock_two_bank_observability": "Not preserved for a fully mixed stream",
+      "advantages": [
+        "Mechanically simpler bung arrangement",
+        "Post-turbine placement can reduce direct turbine-inlet pressure/thermal exposure, but actual limits still require records"
+      ],
+      "costs_and_gates": [
+        "Duplicate mixed feedback cannot identify opposite bank deviations",
+        "Longer flow-dependent transport and turbine dynamics can invalidate stock delay/filter/gain assumptions",
+        "Different probe biases can produce inconsistent bank corrections",
+        "Pre-turbine common collector adds pressure/temperature problems without recovering bank identity"
+      ],
+      "decision": "Not supported as equivalent to stock independent-bank feedback by any reviewed calibration source"
+    },
+    {
+      "architecture": "Explicit common-stream/single-bank fueling controller using post-turbo feedback",
+      "stock_two_bank_observability": "Intentionally replaced, not preserved",
+      "advantages": [
+        "Matches global-mixture information actually available after mixing",
+        "Current 22RPD vendor page documents a commercial code-patch concept"
+      ],
+      "costs_and_gates": [
+        "Requires exact AC1S support, implementation and all consequential adaptation/diagnostic/catalyst/airmass contracts",
+        "Published offer is one sensor, not proof of a supported two-sensor common-stream strategy",
+        "Independent bank fault visibility is lost unless separately and demonstrably provided",
+        "Sensor failure response and protection integrity must be specified; disabling diagnostics is not a resolution"
+      ],
+      "decision": "Outside the retained-stock-two-loop constraint and no code applied; vendor/support records are missing, not evidence that a stock calibration switch suffices"
+    },
+    {
+      "architecture": "Remote separate-bank sample branches to pressure-reduced sensor chambers",
+      "stock_two_bank_observability": "Only if branch source identity and representative composition are genuinely maintained",
+      "advantages": [
+        "Conceptually separates sampling identity from main exhaust path"
+      ],
+      "costs_and_gates": [
+        "Introduces uncontrolled transport, cooling, condensation, flow bias and reversion unless engineered and characterized",
+        "No reviewed BMW/Bosch approval or proven MSV70 application supports this proposed arrangement",
+        "Cannot assume spacers, stand-offs or sample tubes are accurate pressure compensation"
+      ],
+      "decision": "Not a supported shortcut; no hardware proposal selected"
+    }
+  ],
+  "public_sources": [
+    {
+      "id": "bmw_msv70_manual",
+      "kind": "Original BMW training manual held locally",
+      "path": "private-source:oem-training-manual",
+      "pages": [
+        12,
+        13,
+        38
+      ],
+      "publication_date": "2005-03",
+      "facts": "Page 12 explicitly ties near-engine wideband measurement to faster lambda control than farther-downstream sensors; page 13 describes oxygen-feedback correction of calculated air mass in the future HFM-omission configuration. Page 38 identifies N52 upstream Bosch LSU4.9 and downstream Bosch LSF4.2. This is model-level context, not proof of the active AC1S load branch or exact installed sensor part number."
+    },
+    {
+      "id": "bmw_physical_bank_mapping",
+      "kind": "BMW service procedure reproduced by Operation CHARM",
+      "url": "https://charm.li/BMW/2006/330i%20Sedan%20%28E90%29%20L6-3.0L%20%28N52%29/Repair%20and%20Diagnosis/Sensors%20and%20Switches/Sensors%20and%20Switches%20-%20Powertrain%20Management/Sensors%20and%20Switches%20-%20Computers%20and%20Control%20Systems/Oxygen%20Sensor/Service%20and%20Repair/11%2078%20513%20Replacing%20Both%20Oxygen%20Control%20Sensors/",
+      "title": "11 78 513 Removing and installing/replacing both lambda oxygen control sensors (N52)",
+      "retrieval_date_utc": "2026-09-05",
+      "quote": "Cable colour black, cylinders 1 to 3. Cable colour gray, cylinders 4 to 6.",
+      "boundary": "Physical OEM routing fact; not as-built turbo manifold geometry or logical bank-index proof."
+    },
+    {
+      "id": "bosch_lsu49",
+      "kind": "Primary Bosch Motorsport datasheet",
+      "url": "https://www.bosch-motorsport.com/content/downloads/Raceparts/Resources/pdf/Data%20sheet_69034379_Lambda_Sensor_LSU_4.9.pdf",
+      "publication_date": "2026-01-27",
+      "retrieval_date_utc": "2026-09-05",
+      "facts": [
+        "Published application guidance requires representative exhaust mixture, suitable placement/orientation, leak control and protection against condensation.",
+        "The datasheet specifies temperature and exhaust-pressure constraints, but numerical supplier application limits are omitted from this public summary; consult the linked original for its exact conditions and units.",
+        "The original review found that the stated exhaust-pressure limit did not explicitly identify absolute versus gauge pressure.",
+        "An LSU interface and trimming arrangement are application-specific; evaluation-circuit output must not be mistaken for direct pump-current evidence.",
+        "Application signal validation remains necessary."
+      ],
+      "boundary": "Generic Motorsport LSU4.9 guidance does not prove the exact OEM sensor variant rating or suitability before this turbine. Short-duration and pressure-accuracy qualifications require the linked original; no zero-error guarantee follows from an endpoint."
+    },
+    {
+      "id": "bosch_pre_turbo_variant",
+      "kind": "Primary Bosch Motorsport product technical information",
+      "url": "https://www.bosch-motorsport.com/products/sensors/lambda/lambda-sensor-lsu-adv-pre-turbo/",
+      "retrieval_date_utc": "2026-09-05",
+      "facts": "LSU ADV pre Turbo specifically uses an Inconel protection tube for pre-turbo mounting, a wider working temperature range, no trimming resistor and five connector pins, and requires special LT4 ADV evaluation electronics. It repeats representative-mixture, orientation, leak and condensation requirements.",
+      "boundary": "Evidence that pre-turbine application and electronics are specific engineering constraints, NOT a recommendation to replace BMW LSU4.9 with ADV or proof of MSV70 compatibility."
+    },
+    {
+      "id": "bosch_basic_sensor_information",
+      "kind": "Primary Bosch Motorsport application information",
+      "url": "https://www.bosch-motorsport.com/media/catalog_content/downloads_catalog/pdf_catalog/basic_information_lambda_sensors.pdf",
+      "publication_date": "2011-04-14",
+      "retrieval_date_utc": "2026-09-05",
+      "facts": "Describes heated zirconia/Nernst and pumping-cell operation; connector contamination can obstruct reference-air designs; sensor is not an exhaust temperature sensor. No pressure-compensation recipe for this BMW is supplied."
+    },
+    {
+      "id": "ess_header_warning",
+      "kind": "Original vendor technical-support and warranty position",
+      "url": "https://esstuning.com/terms-conditions/",
+      "retrieval_date_utc": "2026-09-05",
+      "quote": "N52: Aftermarket headers can not be used as the AFR feedback timing and control is entirely wrong with these installed.",
+      "boundary": "ESS refuses support and warns about severe engine consequences for that combination. It supplies no exact DME revision, sensor geometry, transport map or universal impossibility proof for every custom header calibration. Corroborates that relocation is load-bearing, not that all possible engineered architectures are impossible."
+    },
+    {
+      "id": "22rpd_single_bank_offer",
+      "kind": "Original vendor current product claim",
+      "url": "https://22rpd.com/shop/tune/engine/N51%20-%20N52B30",
+      "retrieval_date_utc": "2026-09-05",
+      "quote": "We offer an optional Single Bank Fueling code patch that allows the use of a single O2 sensor placed in the downpipe after the turbocharger.",
+      "boundary": "Page lists OEM MAF-based turbo package and currently supported 22RPD 60-pound Bosch EV14 injector combination. No exact AC1S compatibility list, patch bytes, source, diagnostic policy, two-retained-sensor behavior or performance proof is published. This is a real public architecture claim, not an open calibration-only solution or a purchasing instruction."
+    }
+  ],
+  "source_gap": {
+    "not_admitted": "A search located a purported Bosch LSU4.9 Technical Customer Information pressure equation on Scribd, but direct read returned a page-load failure rather than the original document. No numerical pressure equation, k values, reference-pressure interpretation or worked example from that search result is admitted here.",
+    "known_vs_unknown": "Pressure dependence is established qualitatively by original Bosch specification and by actual MSV70 rich/lean correction code. Exact OEM pressure correction transfer, sensor-specific limits and the as-built pre-turbine pressure remain unknown."
+  },
+  "user_input_records_required": [
+    {
+      "priority": "architecture_blocker",
+      "request": "Existing as-delivered manifold photographs/drawings: all six numbered head ports, each runner route, collector interiors and turbine inlet from both faces with a scale; internal-divider continuity/cross-holes and any early merge; wastegate takeoff(s) and whether its cavity connects banks. A manufacturer sectional drawing or fabrication record is preferable where photos cannot establish the interior.",
+      "why": "Determines whether a representative three-cylinder bank sampling location exists before first mixing. Do not infer it from N52TRBMAN, T3, top-mount or a catalog exterior photograph."
+    },
+    {
+      "priority": "architecture_blocker",
+      "request": "Existing bung inventory and scaled photos: identify upstream/downstream intended function, thread, bore, boss height, insertion depth of the actual sensor tip, clock angle relative to installed gravity, distance along gas path from each contributing exhaust port and to first merge/turbine flange; identify any probe shared cavity, spacer or extension.",
+      "why": "Establishes representative sampling, local thermal exposure and condensation risk. A bung on a single runner is not automatically a bank sample."
+    },
+    {
+      "priority": "architecture_blocker",
+      "request": "Actual turbine housing identity and inlet/outlet photographs/drawings, divider continuity, A/R/model markings, planned or existing downpipe and wastegate-dump routing including rejoin position and all catalysts/rear sensor positions.",
+      "why": "A nominal T3 fitment does not establish divided scrolls, separated sampling, mixed-stream transport or rear-feedback compatibility."
+    },
+    {
+      "priority": "sensor_application_blocker",
+      "request": "Existing clear sensor body/connector labels and part-number records for both upstream probes, harness colours/pinout routing, original VIN-specific part record, sensor replacement history and OEM application/offer drawings. Identify any non-original sensor, spliced lead or extension.",
+      "why": "BMW model-level LSU4.9 description and generic Motorsport datasheet are not exact OEM sensor identification; confirms physical cylinder bank ownership without assuming software/injector event permutation."
+    },
+    {
+      "priority": "calibration_characterization_blocker",
+      "request": "Any already-existing professionally acquired exhaust pressure/temperature/response records at each proposed sensor location, with absolute/gauge reference and ambient pressure, sampling method, timestamps, RPM/load/fuel/wastegate state, calibration certificates and full operating envelope. Existing delay measurements must identify stimulus, sensing locations, logger/filter delay and operating conditions separately.",
+      "why": "Separates gas transport from sensor/filter response and tests whether common modeled pressure could represent both locations. None is available in current artifacts. This requests existing records only, not new measurements or vehicle actions in this offline phase."
+    },
+    {
+      "priority": "conditional_common_stream_alternative",
+      "request": "If considering a common-stream architecture, obtain any existing vendor written contract for exact MSV70 AC1S compatibility and this sensor/injector/MAF/exhaust configuration; explicitly distinguish calibration changes from code changes, one versus two sensors, bank adaptation and target coordination, rear-sensor/catalyst/airmass behavior, fault detection and degraded-mode response. Source or reviewable implementation evidence would be needed before treating the claim as software proof.",
+      "why": "Current N51/N52 product text alone cannot select or approve a patch for this image. No purchase or vendor communication was performed."
+    }
+  ],
+  "completion_evidence": {
+    "performed": [
+      "Read existing project dossiers, classification inventory, component metadata, canonical access facts and immutable exports",
+      "Decoded controller pointer table and selected raw stock calibration values from canonical bytes",
+      "Fresh disposable Ghidra 12.0.4 static extraction of eight missing functions and complete instruction bodies, successful return code 0",
+      "Retrieved original BMW/Bosch application guidance and current ESS/22RPD statements"
+    ],
+    "not_performed": [
+      "tests of any kind",
+      "builds, lint or formatting",
+      "numerical firmware probes",
+      "DME reads",
+      "firmware or calibration changes",
+      "hardware or vehicle actions",
+      "purchases",
+      "issue mutations",
+      "shared-file edits"
+    ],
+    "remaining_boundary": "No physical architecture or calibration approval follows until the specific missing geometry, sensor identity and application records are available. Source-level bank independence, separate transport models and common modeled pressure are no longer merely name-based unknowns."
+  }
+}

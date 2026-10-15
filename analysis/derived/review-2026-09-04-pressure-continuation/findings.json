@@ -1,0 +1,690 @@
+{
+  "public_edition": {
+    "edition": "sanitized public research summary",
+    "edition_date_utc": "2026-10-14",
+    "source_report": "analysis/derived/review-2026-09-04-pressure-continuation/findings.json",
+    "source_report_sha256": "f2c4a440ba097f98ae0ac67cf0b57fc53bd22c87928395663c712cd891bd069a",
+    "canonical_software_id": "MSV70 0049PP0L921S0AC1S",
+    "canonical_image_sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+    "epistemic_status": "Editorial derivative of the dated private research report. Scientific claims, original review outcomes and source hashes describe that historical review, not newly executed public-edition verification. No tests, builds, lint, firmware execution or vehicle observations were performed for this edition.",
+    "interpretation_boundary": "Original research equations, decoded addresses, scalar observations and engineering interpretations are retained as analysis, not redistributed firmware source or a flash-ready calibration. Static software dataflow is not physical hardware identity, runtime activation, measurement or safety approval.",
+    "private_source_availability": {
+      "included": false,
+      "status": "Original reports and referenced evidence remain outside this public edition. No download, access entitlement, redistribution permission or automatic access-on-request is represented.",
+      "independent_review": "Reproduction requires separately and lawfully obtained source material matching the retained hashes, relevant tools, and sufficient permissions. Hashes and private-source identifiers are provenance locators, not substitutes for the omitted evidence.",
+      "reference_semantics": "Source-evidence and provenance fields document what the original review used. Unless a public URL or a public research-summary path is explicitly given, they do not identify a file distributed here. See evidence/README.md."
+    },
+    "omissions": [
+      {
+        "field": "scope.canonical_source",
+        "reason": "Private firmware filename omitted; canonical SHA-256 retained."
+      },
+      {
+        "field": "canonical_calibration_bytes",
+        "reason": "Entire 35-record byte/definition dump omitted, including bytes_hex, raw_values, table cells and copied definition descriptions. Distinct scalar observations are retained separately; analytical equations and table-domain conclusions remain research interpretations."
+      },
+      {
+        "field": "retained_evidence_note",
+        "reason": "Private execution-session collision and excluded-file bookkeeping omitted; not scientific evidence."
+      },
+      {
+        "field": "referenced source artifacts (all fields)",
+        "reason": "Firmware images, disassembly, reconstructed C, Ghidra projects/logs, extracted definition/fact datasets, manuals, supplier workbooks and characterization projections are not included. Their historical locators do not promise public availability."
+      }
+    ],
+    "rewritten_sections": [
+      {
+        "field": "scope.semantic_boundary",
+        "change": "Replaced internal worker ownership wording with report scope and cross-reference."
+      },
+      {
+        "field": "unresolved_gaps",
+        "change": "Removed internal worker role labels without changing coverage boundary."
+      },
+      {
+        "field": [
+          ".recovered_edges[0].evidence[0].c",
+          ".recovered_edges[0].evidence[0].instructions",
+          ".recovered_edges[0].evidence[1].c",
+          ".recovered_edges[0].evidence[1].instructions",
+          ".recovered_edges[0].prior_evidence[0]",
+          ".recovered_edges[1].evidence[0].c",
+          ".recovered_edges[1].evidence[0].instructions",
+          ".recovered_edges[1].evidence[1].c",
+          ".recovered_edges[1].evidence[1].instructions",
+          ".recovered_edges[2].evidence[0].c",
+          ".recovered_edges[2].evidence[0].instructions",
+          ".recovered_edges[3].evidence[0].c",
+          ".recovered_edges[3].evidence[0].instructions",
+          ".recovered_edges[4].evidence[0].c",
+          ".recovered_edges[4].evidence[0].instructions",
+          ".recovered_edges[5].evidence[0].c",
+          ".recovered_edges[5].evidence[0].instructions",
+          ".recovered_edges[6].evidence[0].c",
+          ".recovered_edges[6].evidence[0].instructions",
+          ".recovered_edges[7].evidence[0].c",
+          ".recovered_edges[7].evidence[0].instructions",
+          ".recovered_edges[8].evidence[0].c",
+          ".recovered_edges[8].evidence[0].instructions",
+          ".recovered_edges[8].evidence[1].c",
+          ".recovered_edges[8].evidence[1].instructions",
+          ".recovered_edges[9].evidence[0].c",
+          ".recovered_edges[9].evidence[0].instructions",
+          ".recovered_edges[10].evidence[0].c",
+          ".recovered_edges[10].evidence[0].instructions",
+          ".recovered_edges[11].evidence[0].c",
+          ".recovered_edges[11].evidence[0].instructions",
+          ".recovered_edges[12].evidence[0].c",
+          ".recovered_edges[12].evidence[0].instructions",
+          ".recovered_edges[13].evidence[0].c",
+          ".recovered_edges[13].evidence[0].instructions",
+          ".recovered_edges[13].evidence[1].c",
+          ".recovered_edges[13].evidence[1].instructions"
+        ],
+        "change": "Replaced private firmware-export and third-party source filenames with non-public descriptive source identifiers; retained supplied hashes and scientific locators."
+      }
+    ],
+    "rights_boundary": "No blanket license assignment or rights-clearance determination is made for firmware, third-party documents, definitions or supplier data. Omission does not negate a historical claim, resolve an unknown, or make that claim independently reproducible from this edition."
+  },
+  "conclusion": "The current stock modeled-filling route is pressure-aware and is a viable native research path for boosted mass, but its pressure truth is blocked upstream. In canonical AC1S, modeled Pvdk is ambient minus an unsigned air-cleaner decrement (all zero stock), integrated manifold pressure is bounded by that modeled Pvdk minus 51 counts, and the sensor-derived alternative cannot produce above-ambient pressure through the unsigned-load differential conversion. S_EISY_TURBO changes request/control normalization, not the selected actual-filling pressure. Recovering a MAF-to-NN bridge is not prerequisite to investigating this native pressure/model route; no statement here validates that route for operation.",
+  "scope": {
+    "canonical_sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+    "r13": "007f8000",
+    "r2": "00847ff0",
+    "ownership": "Only this derived directory; no firmware/calibration changes, hardware access, wiring or actuation claims, tests/builds/formatters/linters/notebook suites",
+    "semantic_boundary": "Raw executable dataflow and conditions are reported from the original private review. Ps/Pvdk/Pirg/actual-filling naming is an XDF/cross-build EISY projection, not a sensor/wiring claim. This report stops at actual-filling candidates/model-flow states; see load continuation for final selection."
+  },
+  "functions": {
+    "fresh_ghidra_export_count": 14,
+    "new_function_count_vs_prior_all_derived_decompiled": 1,
+    "new_functions": [
+      "0040a930"
+    ],
+    "newly_exported_vs_review_2026_09_03": [
+      "0040a930",
+      "000c5358"
+    ],
+    "bounded_reexports": [
+      "004353d0",
+      "001038e4",
+      "000c4100",
+      "004439b4",
+      "00446994",
+      "00443824",
+      "00447004",
+      "000df4e8",
+      "00434c48",
+      "000b2534",
+      "0040a930",
+      "0040b38c",
+      "0040b46c",
+      "000c5358"
+    ],
+    "run": "headless-pass1.log",
+    "exit_code": 0,
+    "analysis_result": "Analysis succeeded; post-analysis succeeded; import succeeded; 14 full C exports and 14 full instruction bodies; 4184 instructions retained with canonical bytes"
+  },
+  "recovered_edges": [
+    {
+      "from": [
+        "2ce8",
+        "ip_amp_dec__maf_cyl(2ac6)"
+      ],
+      "to": [
+        "2b38",
+        "2b3a"
+      ],
+      "condition": "r13+1fea == 0; otherwise retains existing values",
+      "equation": "Both outputs = max(u16(2ce8) - u16(interpolated decrement),0). Stock decrement values are all zero, so each executed update copies 2ce8. Initialization FUN_0013a244 also copies 2ce8.",
+      "lane": "modeled pre-throttle pressure producer, not measured charge-pipe acquisition",
+      "evidence": [
+        {
+          "function": "FUN_004353d0",
+          "c": "private-static-export:decompiled:004353d0",
+          "instructions": "private-static-export:instructions:004353d0",
+          "instruction_addresses": [
+            "004353dc",
+            "00435400",
+            "00435404",
+            "00435408",
+            "00435420"
+          ]
+        },
+        {
+          "function": "FUN_0040a930",
+          "c": "private-static-export:decompiled:0040a930",
+          "instructions": "private-static-export:instructions:0040a930",
+          "instruction_addresses": [
+            "0040a930",
+            "0040a938",
+            "0040a93c"
+          ]
+        }
+      ],
+      "prior_evidence": [
+        "private-static-export:decompiled:0013a244"
+      ]
+    },
+    {
+      "from": [
+        "2b38",
+        "2ce8",
+        "2cea"
+      ],
+      "to": [
+        "698c",
+        "01802da6",
+        "01802d96"
+      ],
+      "condition": "FUN_000df4e8 invoked; 01802d96 forced zero if r13+7bb3 == 4",
+      "equation": "698c = sat_u16(floor((u16(2b38)*257+60)/121)); 01802da6 same conversion of 2ce8; 01802d96=2cea unless override.",
+      "lane": "two pressure scales and ambient ratio",
+      "evidence": [
+        {
+          "function": "FUN_000df4e8",
+          "c": "private-static-export:decompiled:000df4e8",
+          "instructions": "private-static-export:instructions:000df4e8",
+          "instruction_addresses": [
+            "000df540",
+            "000df558"
+          ]
+        },
+        {
+          "function": "FUN_0040b46c",
+          "c": "private-static-export:decompiled:0040b46c",
+          "instructions": "private-static-export:instructions:0040b46c",
+          "instruction_addresses": [
+            "0040b46c"
+          ]
+        }
+      ]
+    },
+    {
+      "from": [
+        "698c"
+      ],
+      "to": [
+        "63c6"
+      ],
+      "condition": "FUN_000b2534 invoked",
+      "equation": "63c6=FUN_00410f20(7fdefc,698c,K_ZKLF=0x051f); retained PT1 filter state, not an independent pressure source",
+      "lane": "filtered modeled pre-throttle pressure",
+      "evidence": [
+        {
+          "function": "FUN_000b2534",
+          "c": "private-static-export:decompiled:000b2534",
+          "instructions": "private-static-export:instructions:000b2534",
+          "instruction_addresses": [
+            "000b25c8"
+          ]
+        }
+      ]
+    },
+    {
+      "from": [
+        "698c",
+        "63c6"
+      ],
+      "to": [
+        "01802fc8"
+      ],
+      "condition": "S_PVDKPN_F(85e39c)==0 uses 698c (canonical); nonzero uses 63c6",
+      "equation": "01802fc8=sat_u16(floor((P<<14)/0x654d)); input P read with lhz. No K_PVDKPNRFV_MX read in this producer. Nominal Q14 u16 capacity 3.999939; with the u16 input and fixed divisor, reachable maximum is floor(65535*16384/25933)=41403 (2.5270386 in Q14).",
+      "lane": "pressure density normalization",
+      "evidence": [
+        {
+          "function": "FUN_001038e4",
+          "c": "private-static-export:decompiled:001038e4",
+          "instructions": "private-static-export:instructions:001038e4",
+          "instruction_addresses": [
+            "00103cf8",
+            "00103d04",
+            "00103d10",
+            "00103d18",
+            "00103d1c",
+            "00103d40"
+          ]
+        }
+      ]
+    },
+    {
+      "from": [
+        "01803369",
+        "01802d96",
+        "01802fc8"
+      ],
+      "to": [
+        "01802fca",
+        "6c98"
+      ],
+      "condition": "S_FTPVDKPN(85e39d)==1 canonical selects pressure-normalized density factor for 01802fca; zero uses ambient ratio variant; 6c98 always ambient variant",
+      "equation": "6c98=(u8(01803369)*u16(01802d96))>>8; 01802fca=S_FTPVDKPN ? sat_u16((u8(01803369)*u16(01802fc8))>>7) : 6c98.",
+      "lane": "shared actual-throttle-inflow and inverse-request density factor",
+      "evidence": [
+        {
+          "function": "FUN_001038e4",
+          "c": "private-static-export:decompiled:001038e4",
+          "instructions": "private-static-export:instructions:001038e4",
+          "instruction_addresses": [
+            "00103d58",
+            "00103d60",
+            "00103d70",
+            "00103d74",
+            "00103d78",
+            "00103d9c"
+          ]
+        }
+      ]
+    },
+    {
+      "from": [
+        "01802d96",
+        "01802fc8"
+      ],
+      "to": [
+        "67b0"
+      ],
+      "condition": "S_EISY_TURBO(85e00a)==0 canonical copies ambient ratio; any nonzero value takes alternate",
+      "equation": "67b0 = S_EISY_TURBO ? sat_u16(2*min(01802fc8,K_PVDKPNRFV_MX(85dd98)=0x4000)) : 01802d96. Stock enabled branch limited to 0x8000, exactly 1.0 in Q15; the producer 01802fc8 is not modified.",
+      "lane": "request/control normalization only at the recovered direct readers",
+      "evidence": [
+        {
+          "function": "FUN_000c4100",
+          "c": "private-static-export:decompiled:000c4100",
+          "instructions": "private-static-export:instructions:000c4100",
+          "instruction_addresses": [
+            "000c420c",
+            "000c4224",
+            "000c4228",
+            "000c4240",
+            "000c425c",
+            "000c426c"
+          ]
+        }
+      ]
+    },
+    {
+      "from": [
+        "67b0",
+        "6b72",
+        "65ac",
+        "6ab6",
+        "6b70"
+      ],
+      "to": [
+        "677e",
+        "67d0",
+        "67c8"
+      ],
+      "condition": "nonzero denominators; zero paths saturate as retained C documents",
+      "equation": "677e=sat_s16(((s16(65ac)<<15)/u16(6b72)<<15)/u16(67b0)); filtered actual load 6ab6->67cc is separately temperature-normalized to 67ce, then 67d0=sat_s16((s16(67ce)<<15)/u16(67b0)); 67d0 indexes map 85bed8 for 67c8.",
+      "lane": "normalized requested filling and feedback used for control, not a write of estimated actual filling 6b9a/6b5a",
+      "evidence": [
+        {
+          "function": "FUN_000c4100",
+          "c": "private-static-export:decompiled:000c4100",
+          "instructions": "private-static-export:instructions:000c4100",
+          "instruction_addresses": [
+            "000c42cc",
+            "000c42d4",
+            "000c529c"
+          ]
+        }
+      ]
+    },
+    {
+      "from": [
+        "6c6a",
+        "63c6",
+        "01802fca",
+        "6ac8",
+        "6ac4"
+      ],
+      "to": [
+        "6b48",
+        "6b4c"
+      ],
+      "condition": "6ee9b bit0 controls table refresh; denominator-zero pressure-ratio path saturates",
+      "equation": "6b48=sat_u16((u16(6c6a)<<16)/u16(63c6)); 6b50=table(853ade,6b48); 6b52=sat_u16(sat_u16((sat_u16(6b54+K_MSNLG)*6b50)>>14)*6ac8>>15 + s16(6ac4)); 6b4c=sat_u16((6b52*01802fca)>>14). See C for evaluation order.",
+      "lane": "estimated actual throttle inflow (EISY_DK naming is a projection, arithmetic is direct); not merely request normalization",
+      "evidence": [
+        {
+          "function": "FUN_00443824",
+          "c": "private-static-export:decompiled:00443824",
+          "instructions": "private-static-export:instructions:00443824",
+          "instruction_addresses": [
+            "004438a4",
+            "004438ac",
+            "00443900",
+            "00443970",
+            "00443978",
+            "00443998"
+          ]
+        }
+      ]
+    },
+    {
+      "from": [
+        "2b3e",
+        "2b3c"
+      ],
+      "to": [
+        "694e",
+        "6950"
+      ],
+      "condition": "FUN_00434c48 invoked",
+      "equation": "Each source is loaded UNSIGNED with lhz, multiplied by 257 then rounded/divided by 121 by signed-saturating 0040b38c. Reachable outputs from this callsite are 0..32767, not negative; placing a two-complement negative value in 2b3c/e instead produces a large positive input and positive saturation.",
+      "lane": "converted vacuum-oriented differential pressure, software-domain blocker",
+      "evidence": [
+        {
+          "function": "FUN_00434c48",
+          "c": "private-static-export:decompiled:00434c48",
+          "instructions": "private-static-export:instructions:00434c48",
+          "instruction_addresses": [
+            "00434c60",
+            "00434c6c",
+            "00434c74",
+            "00434c80"
+          ]
+        },
+        {
+          "function": "FUN_0040b38c",
+          "c": "private-static-export:decompiled:0040b38c",
+          "instructions": "private-static-export:instructions:0040b38c",
+          "instruction_addresses": [
+            "0040b38c"
+          ]
+        }
+      ]
+    },
+    {
+      "from": [
+        "01802da6",
+        "694e",
+        "6950"
+      ],
+      "to": [
+        "6c48"
+      ],
+      "condition": "CW_EISY bit5 clear canonical uses 694e; bit5 set uses 6950, averaged with previous sample below K_NPK; pressure result written before regulator gate 6ea2 bit2",
+      "equation": "6c48=sat_u16(u16(01802da6)-s16(selected differential)). Arithmetic accepts a negative differential at this stage, but the recovered 00434c48 producers cannot supply one. Thus for those producers 6c48 <= 01802da6, independent of transfer rescale.",
+      "lane": "sensor-derived absolute-pressure candidate, not a direct throttle command",
+      "evidence": [
+        {
+          "function": "FUN_00446994",
+          "c": "private-static-export:decompiled:00446994",
+          "instructions": "private-static-export:instructions:00446994",
+          "instruction_addresses": [
+            "004469c8",
+            "00446a18",
+            "00446a1c",
+            "00446a20",
+            "00446a50"
+          ]
+        }
+      ]
+    },
+    {
+      "from": [
+        "6b4c",
+        "6ac0",
+        "6b6a",
+        "63c6"
+      ],
+      "to": [
+        "6c6a"
+      ],
+      "condition": "CW_EISY bit1 clear canonical selects 6b4c into 6c6e; set selects 6ac0; manifold balance integration executes in 00447004",
+      "equation": "inflow=6c6e plus purge/auxiliary terms; 6c70=sat_s16(s16(6c72)-u16(6b6a)); 6c76=sat_u16(previous_6c6a+signed_pressure_increment); 6c7a=sat_u16(u16(63c6)-0x0033); 6c6a=max(0x0a00,min(6c76,6c7a)). See full C for variable timestep/damping term 6c84.",
+      "lane": "estimated actual manifold pressure; NA ceiling comes from modeled Pvdk, not hardcoded atmospheric maximum",
+      "evidence": [
+        {
+          "function": "FUN_00447004",
+          "c": "private-static-export:decompiled:00447004",
+          "instructions": "private-static-export:instructions:00447004",
+          "instruction_addresses": [
+            "00447038",
+            "0044718c",
+            "004472e0",
+            "004472e4",
+            "00447318",
+            "00447320",
+            "00447368",
+            "00447370"
+          ]
+        }
+      ]
+    },
+    {
+      "from": [
+        "6c6a",
+        "6c48"
+      ],
+      "to": [
+        "6ac2",
+        "6b9a",
+        "6b6a"
+      ],
+      "condition": "CW_EISY bit2 clear canonical selects integrated 6c6a; set selects 6c48. S_EVNN_AUS=0 canonical selects 6b9a into modeled filling 6b6a. NN coefficient refresh has 6e9b bit1 clear and 6ea2 bit1 set gates.",
+      "equation": "6ac2=bit2?6c48:6c6a; D=max(u16(6ac2)-u16(6b76),0); 6b9a=sat_u16(((((D*6b66)>>3)*10)>>15)*6b70>>15). All intermediate products are 32-bit, not infinite precision. 6b70 is 01802fc4 for canonical CW_TZYLKOR=2. 6b76 is residual-pressure candidate, subtracted from absolute pressure; it is not itself fresh-air partial pressure.",
+      "lane": "actual modeled filling, viable pressure-aware research route",
+      "evidence": [
+        {
+          "function": "FUN_004439b4",
+          "c": "private-static-export:decompiled:004439b4",
+          "instructions": "private-static-export:instructions:004439b4",
+          "instruction_addresses": [
+            "00444870",
+            "0044487c",
+            "00444880",
+            "004448d0",
+            "004448e4",
+            "004448f4",
+            "00444908",
+            "00444928",
+            "00444960"
+          ]
+        }
+      ]
+    },
+    {
+      "from": [
+        "NN filling and Pirg outputs",
+        "6acc",
+        "6ace",
+        "6c6a",
+        "01802da6"
+      ],
+      "to": [
+        "6b66",
+        "6b76"
+      ],
+      "condition": "coefficient update gates above; canonical S_PIRGKON=1 applies affine residual-pressure variant; NN branch chosen by 6ea3",
+      "equation": "NN filling is RPM-clamped between KL_RFVIST_MN and KL_RFVIST_MX before conversion to base flow and correction 6b98. 6b74=max(0x654d-6b6c,0); 6b92=sat_u16((((6b98<<15)/6b74)<<3)/10) with overflow guard. Residual pressure 6b76 uses S_PIRGKON affine form [0x654d+trunc((6b6c-0x654d)*6acc/32768)] floored at zero and multiplied by ambient ratio/32768. 6b94=sat_u16((6c6a-6b76)*32768/(01802da6-6b76)); 6b66=sat_u16(6b92*table(8544d8,6b94,6b76)>>15). Zero denominators saturate.",
+      "lane": "normalized volumetric/residual model coefficients, not a final boosted-mass clamp at 112%",
+      "evidence": [
+        {
+          "function": "FUN_004439b4",
+          "c": "private-static-export:decompiled:004439b4",
+          "instructions": "private-static-export:instructions:004439b4",
+          "instruction_addresses": [
+            "00443fbc",
+            "00444004",
+            "00444014",
+            "004443fc",
+            "00444404"
+          ]
+        }
+      ]
+    },
+    {
+      "from": [
+        "lift/cam-speed fallback flow",
+        "678e",
+        "6b56"
+      ],
+      "to": [
+        "6b5a"
+      ],
+      "condition": "cached computation when 6e9b bit1 clear; only selected as 6b6a when S_EVNN_AUS nonzero (not canonical)",
+      "equation": "6b5a=sat_u16(Mtemp * floor((max(678e-6b56,0)<<16)/max(0x654d-6b56,1))/65536), where Mtemp includes lift table, correction and CW_TZKBLS temperature branch. 678e is produced by request/control 000c4100: canonical S_PSSOL_UBEG=0 chooses sat_u16(01802da6-s16(6784)); alternate selects 67b2. Neither 6c48 nor 6c6a is a direct pressure operand in this final fallback factor.",
+      "lane": "modeled fallback filling with request-side pressure proxy; do not equate a Ps fix with this path automatically becoming truthful",
+      "evidence": [
+        {
+          "function": "FUN_004439b4",
+          "c": "private-static-export:decompiled:004439b4",
+          "instructions": "private-static-export:instructions:004439b4",
+          "instruction_addresses": [
+            "004447b4",
+            "004447e4",
+            "00444800"
+          ]
+        },
+        {
+          "function": "FUN_000c4100",
+          "c": "private-static-export:decompiled:000c4100",
+          "instructions": "private-static-export:instructions:000c4100",
+          "instruction_addresses": [
+            "000c4100"
+          ]
+        }
+      ]
+    }
+  ],
+  "critical_corrections": [
+    {
+      "claim": "01802fc8 itself is capped at 1.0 by K_PVDKPNRFV_MX",
+      "result": "False for the recovered producer. 001038e4 has only u16 saturation; K_PVDKPNRFV_MX=4000 is a local min in consumer 000c4100 before Q14->Q15 doubling. 01802fca remains stock-active via S_FTPVDKPN=01 and sees uncapped 01802fc8. Its actual-inflow consumer 00443824 can therefore respond above unity independently of S_EISY_TURBO.",
+      "older_review": "docs/reviews/2026-09-03-fresh-eyes-eisy-sensor-path-and-boost-reading-review.md:165-193"
+    },
+    {
+      "claim": "Hardcoded standard-pressure normalization causes an altitude+boost bias",
+      "result": "Not established; P/Pstandard is a dimensionless density normalization, whereas P/Pambient is a different quantity. Feeding genuine absolute pressure into P/Pstandard preserves altitude dependence; replacing the divisor with ambient would erase part of that dependence unless all consumers were redesigned. Ambient ratio already appears explicitly in residual-pressure model and pressure reconstruction. The pressure-input provenance, not a constant reference alone, is the demonstrated defect. Other model/calibration errors remain unvalidated.",
+      "older_review": "docs/reviews/2026-09-03-fresh-eyes-eisy-sensor-path-and-boost-reading-review.md:214"
+    },
+    {
+      "claim": "0x654d is exactly 1013.25 hPa and 257/121 exactly equals the ratio of published XDF scales",
+      "result": "Arithmetic correction: 0x654d=25933; at nominal 0.0390625 hPa/count it is 1013.0078125 hPa, not 1013.25. 257/121*0.0390625=0.08296745867768594, not rounded XDF 0.082918. c_amp_ref canonical bytes 2fb9=12217. Preserve raw equations and do not claim exact equality between rounded/documentary scales.",
+      "older_review": "docs/reviews/2026-09-03-fresh-eyes-eisy-sensor-path-and-boost-reading-review.md:141-144"
+    },
+    {
+      "claim": "6b76 is fresh-air partial pressure",
+      "result": "The recovered 6b76 is the pressure subsequently subtracted from 6ac2; fresh-air pressure difference for 6b9a is max(6ac2-6b76,0). 6b74 is max(Pstandard-6b6c,0). Calling 6b76 itself fresh-air partial pressure reverses the role.",
+      "older_review": "docs/reviews/2026-09-03-fresh-eyes-eisy-sensor-path-and-boost-reading-review.md:82-85"
+    },
+    {
+      "claim": "Absolute MAP substitution into 2b3c/2b3e is sufficient to yield boosted Ps",
+      "result": "No: these are unsigned differential-code inputs. 00434c48 LHZ followed by positive scaling cannot yield a negative differential at 694e/6950. An absolute value written there is still subtracted from ambient downstream; a two-complement negative value saturates positive. A software interface/domain change upstream of actual-pressure selection is required, not just changing the transfer endpoints.",
+      "older_review": "docs/reviews/2026-09-03-fresh-eyes-eisy-sensor-path-and-boost-reading-review.md:209"
+    }
+  ],
+  "native_research_routes": [
+    {
+      "route": "Truthful pre-throttle absolute pressure -> 2b38/698c/63c6 domain -> 01802fc8/01802fca -> estimated throttle inflow 6b4c -> manifold mass-balance 6c6a -> 6ac2 -> actual NN filling 6b9a",
+      "viability": "Executable pressure gain and a movable pressure ceiling already exist. This is not solely an alpha-N NN output: pressure and temperature are combined downstream of normalized NN coefficients. Stock KL_RFVIST_MX=90..112% bounds the normalized NN coefficient before pressure multiplication; it is not established as a hard final boosted filling ceiling.",
+      "required_research": "Replace/extend the false ambient-minus-decrement pressure producer/domain coherently; verify temperature provenance, model coefficients, NN residual-pressure behavior, table endpoint behavior, arithmetic overflow and diagnostics. No firmware mutation is recommended or performed here."
+    },
+    {
+      "route": "Truthful sensor-derived absolute Ps at 6c48 -> CW_EISY bit2-selected 6ac2 -> 6b9a",
+      "viability": "The native selector and final pressure multiplier exist; setting bit2 without fixing the unsigned differential path supplies at-most-ambient pressure. Coherent pre-throttle pressure is still needed for throttle inflow and regulator plausibility, so this is not a one-byte completion.",
+      "required_research": "Define a representable absolute/signed-differential producer contract before considering selectors; trace diagnostics/fallbacks through the same domain."
+    },
+    {
+      "route": "67b0 alternate normalization",
+      "viability": "Necessary research for request/control consistency after pressure truth exists, not proof of actual charge truth; local stock4000 cap limits Q15 normalization to1.0. Its absence from direct actual-filling operand lists is bounded to the exported functions and census, not all transitive behavior."
+    }
+  ],
+  "absence_bounds": {
+    "source": "analysis/derived/msv70-ram-census/states-summary.json",
+    "selected_state_snapshot": "census-pressure-subset.json",
+    "facts": "Indexed 2b38 writers are 0013a244 and004353d0. Indexed 67b0 direct readers are only000c4100. Indexed 01802fc8 readers are000c4100 and001038e4. Indexed01802fca readers are000c5358 and00443824. This is not proof against every indirect/pointer-mediated reference or alternate binary/scheduler state. No ECU has been observed."
+  },
+  "unresolved_gaps": [
+    "Which physical signal could truthfully populate the boosted pre-throttle/manifold pressure and post-intercooler temperature domains is not answered by this software-only work.",
+    "Runtime scheduling, refresh bits6e9b/6ea2, model branch6ea3, startup and fault substitutions remain source-gated observations to recover, not asserted runtime-active merely because calibration bytes are stock.",
+    "6b66 depends on pressure-ratio correction table8544d8, residual-pressure normalization, retained NN coefficients and arithmetic limits; complete boosted operating-domain proof is not supplied by existence of a final pressure multiplier.",
+    "Lift fallback6b5a pressure operand678e is a request-side proxy; direct actual Ps insertion does not automatically make that fallback truthful.",
+    "Full downstream load/fueling/spark/intervention domains and nested final selector are outside this report, not re-audited here.",
+    "No global physical maximum, safe boost level, sensor electrical capability, hardware actuator endpoint or usable calibration is established."
+  ],
+  "experiment_recommendations": [
+    "Non-actuating raw-state replay: keep RPM/lift/cams and temperature fixed, inject consistent pressure states only in a disposable arithmetic/emulation harness, exercise 698c->01802fc8->01802fca->6b4c and 63c6->6c6a cap; separately observe 67b0 local min. Confirm the local cap cannot be mistaken for a producer cap.",
+    "Exercise the differential interface with nonnegative stock codes and attempted negative two-complement codes; observe unsigned LHZ and s16 positive saturation. Then evaluate a separately specified signed/absolute pressure interface, without flashing.",
+    "Sweep coherent absolute pre-throttle/manifold pressure and residual-pressure coefficients through the intended5-8psi research envelope at several ambient pressures, holding charge temperature separately. Capture each multiply/shift, endpoint selection, zero denominator, clamp and model refresh state; do not substitute a change of reference divisor for pressure truth.",
+    "Only after static contracts are complete, plan synchronized non-driving observations with independent pressure/temperature truth and fault transitions. No experiments involving ECU or hardware were performed."
+  ],
+  "canonical_scalar_observations": {
+    "K_ZKLF": {
+      "runtime_address": "0x85d7e0",
+      "value": 1311
+    },
+    "K_DPS_INTMN": {
+      "runtime_address": "0x85d8dc",
+      "value": 51
+    },
+    "K_PSMIN": {
+      "runtime_address": "0x85d8de",
+      "value": 2560
+    },
+    "K_PVDKPNRFV_MX": {
+      "runtime_address": "0x85dd98",
+      "value": 16384
+    },
+    "CW_EISY": {
+      "runtime_address": "0x85e000",
+      "value": 0
+    },
+    "S_EISY_TURBO": {
+      "runtime_address": "0x85e00a",
+      "value": 0
+    },
+    "S_EVNN_AUS": {
+      "runtime_address": "0x85e00b",
+      "value": 0
+    },
+    "S_MSZYL_3MOD": {
+      "runtime_address": "0x85e00c",
+      "value": 0
+    },
+    "CW_TZYLKOR": {
+      "runtime_address": "0x85e00d",
+      "value": 2
+    },
+    "CW_TZKBLS": {
+      "runtime_address": "0x85e00e",
+      "value": 2
+    },
+    "S_RFVISTHUB": {
+      "runtime_address": "0x85e00f",
+      "value": 0
+    },
+    "S_PIRGKON": {
+      "runtime_address": "0x85e012",
+      "value": 1
+    },
+    "S_PVDKPN_F": {
+      "runtime_address": "0x85e39c",
+      "value": 0
+    },
+    "S_FTPVDKPN": {
+      "runtime_address": "0x85e39d",
+      "value": 1
+    },
+    "c_amp_ref": {
+      "runtime_address": "0x84495a",
+      "value": 12217
+    },
+    "K_PIRG_MN": {
+      "runtime_address": "0x85d80e",
+      "value": 0
+    },
+    "S_PSPVDK_SOL": {
+      "runtime_address": "0x85e37d",
+      "value": 1
+    },
+    "S_PSSOL_UBEG": {
+      "runtime_address": "0x85e37e",
+      "value": 0
+    }
+  }
+}

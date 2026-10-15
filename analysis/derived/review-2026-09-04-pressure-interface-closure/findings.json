@@ -1,0 +1,330 @@
+{
+  "public_edition": {
+    "edition": "sanitized public research summary",
+    "edition_date_utc": "2026-10-14",
+    "source_report": "analysis/derived/review-2026-09-04-pressure-interface-closure/findings.json",
+    "source_report_sha256": "ff3c1f2c313609e3b79c7418a3443a3c02608f0ca47fe631415195e0ec9d14d5",
+    "canonical_software_id": "MSV70 0049PP0L921S0AC1S",
+    "canonical_image_sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+    "epistemic_status": "Editorial derivative of the dated private research report. Scientific claims, original review outcomes and source hashes describe that historical review, not newly executed public-edition verification. No tests, builds, lint, firmware execution or vehicle observations were performed for this edition.",
+    "interpretation_boundary": "Original research equations, decoded addresses, scalar observations and engineering interpretations are retained as analysis, not redistributed firmware source or a flash-ready calibration. Static software dataflow is not physical hardware identity, runtime activation, measurement or safety approval.",
+    "private_source_availability": {
+      "included": false,
+      "status": "Original reports and referenced evidence remain outside this public edition. No download, access entitlement, redistribution permission or automatic access-on-request is represented.",
+      "independent_review": "Reproduction requires separately and lawfully obtained source material matching the retained hashes, relevant tools, and sufficient permissions. Hashes and private-source identifiers are provenance locators, not substitutes for the omitted evidence.",
+      "reference_semantics": "Source-evidence and provenance fields document what the original review used. Unless a public URL or a public research-summary path is explicitly given, they do not identify a file distributed here. See evidence/README.md."
+    },
+    "omissions": [
+      {
+        "field": "cw_eisy_bit5.instructions",
+        "reason": "Embedded instruction mnemonic/operand sequence omitted; branch equations and function-address references retained."
+      },
+      {
+        "field": "referenced source artifacts (all fields)",
+        "reason": "Firmware images, disassembly, reconstructed C, Ghidra projects/logs, extracted definition/fact datasets, manuals, supplier workbooks and characterization projections are not included. Their historical locators do not promise public availability."
+      }
+    ],
+    "rewritten_sections": [
+      {
+        "field": "adc_route.pressure_descriptor",
+        "change": "Removed descriptor byte sequence; decoded route retained."
+      },
+      {
+        "field": "diagnostics.dtc_storage",
+        "change": "Raw diagnostic-object word sequence omitted; interpretation and uncertainty retained."
+      },
+      {
+        "field": [
+          ".acquisition.evidence[0]",
+          ".acquisition.evidence[1]",
+          ".acquisition.evidence[2]",
+          ".acquisition.evidence[3]",
+          ".acquisition.evidence[4]",
+          ".acquisition.evidence[5]",
+          ".acquisition.evidence[6]",
+          ".acquisition.evidence[7]",
+          ".adc_route.evidence[1]",
+          ".adc_route.evidence[2]",
+          ".adc_route.evidence[3]",
+          ".adc_route.evidence[4]",
+          ".adc_route.evidence[5]",
+          ".fallback.evidence[0]",
+          ".fallback.evidence[1]",
+          ".fallback.evidence[2]",
+          ".fallback.evidence[3]",
+          ".fallback.evidence[4]",
+          ".cw_eisy_bit5.evidence[0]",
+          ".cw_eisy_bit5.evidence[1]",
+          ".cw_eisy_bit5.evidence[2]",
+          ".stopped_engine_adaptation.evidence[0]",
+          ".stopped_engine_adaptation.evidence[1]",
+          ".stopped_engine_adaptation.evidence[2]",
+          ".stopped_engine_adaptation.evidence[3]",
+          ".stopped_engine_adaptation.evidence[4]",
+          ".stopped_engine_adaptation.evidence[5]",
+          ".stopped_engine_adaptation.evidence[6]",
+          ".stopped_engine_adaptation.evidence[7]",
+          ".stopped_engine_adaptation.evidence[8]",
+          ".diagnostics.evidence[0]",
+          ".diagnostics.evidence[1]",
+          ".diagnostics.evidence[2]",
+          ".diagnostics.evidence[3]",
+          ".diagnostics.evidence[4]",
+          ".diagnostics.evidence[5]",
+          ".diagnostics.evidence[6]",
+          ".diagnostics.evidence[7]",
+          ".diagnostics.evidence[8]"
+        ],
+        "change": "Replaced private firmware-export and third-party source filenames with non-public descriptive source identifiers; retained supplied hashes and scientific locators."
+      }
+    ],
+    "rights_boundary": "No blanket license assignment or rights-clearance determination is made for firmware, third-party documents, definitions or supplier data. Omission does not negate a historical claim, resolve an unknown, or make that claim independently reproducible from this edition."
+  },
+  "schema_version": 1,
+  "generated_utc": "2026-09-05T04:29:13.810944+00:00",
+  "session_directory_label": "2026-09-04-pressure-interface-closure",
+  "canonical_image_sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+  "scope": {
+    "vehicle": "2006 E90 330i N52",
+    "software": "MSV70 0049PP0L921S0AC1S",
+    "method": "Retained-file and canonical-byte static extraction only; fresh headless layout export for missing arithmetic; read-only retained Ghidra project for subsequent missing functions. No firmware execution, numerical scenarios, tests, builds, lint, vehicle/bench activity, writes or new image pull.",
+    "semantic_rule": "RAM identities and executable arithmetic are direct evidence; physical signal names projected from exact XDF only where named. A2L9PP73000 not used as address map.",
+    "r13": "007f8000",
+    "r2": "00847ff0",
+    "ownership": "Only this derived directory."
+  },
+  "calibration_only_pressure_extension": {
+    "status": "contradicted",
+    "scope": "The reviewed native pressure interface: two-point differential transfer, both acquisition producers, CW_EISY bit5 and sensor/integrated candidates, including fault substitution. Not a proof that every firmware byte contains no alternative dormant subsystem.",
+    "why": [
+      "Both2b3c and2b3e enter00434c48 as LHZ; positive257/121 scaling in0040b38c saturates to signed16 maximum, so these inputs cannot express a negative differential.",
+      "CW_EISY bit5 chooses6950, optionally averaging its current and previous values; it still subtracts a nonnegative differential from ambient. It does not select an absolute-pressure ADC.",
+      "The fault alternate in004576f0 is max(ambient2ccc−model-pressure2aca,0), feeding the same unsigned differential interface; it recycles integrated Ps rather than acquiring another sensor.",
+      "Integrated6c6a remains bounded by modeled63c6−K_DPS_INTMN; canonical modeled pre-throttle pressure is ambient minus an unsigned decrement.",
+      "Editing transfer points, requesting turbo normalization or selecting bit5 cannot change those signs or manufacture an independent boosted absolute measurement. A truthful boost interface requires a source/domain implementation change; sensor replacement alone or diagnostics defeat is not established as viable."
+    ],
+    "boundary": "Physical pressure-domain extension and safe operating envelope are not validated; no patch or purchase recommended."
+  },
+  "acquisition": {
+    "evidence": [
+      "private-static-export:decompiled:0013a260",
+      "private-static-export:decompiled:004576f0",
+      "private-static-export:instructions:0013a260",
+      "private-static-export:instructions:004576f0",
+      "private-static-export:decompiled:00432fc8",
+      "private-static-export:decompiled:0040b2d8",
+      "private-static-export:decompiled:0040a9b4",
+      "private-static-export:decompiled:0040bfe0"
+    ],
+    "states": {
+      "1f47": "u8 alternating bank selector",
+      "4010/4014": "u32 raw sums",
+      "2c84/2c86": "u16 raw sample counters",
+      "2b46": "signed16 learned raw-voltage offset",
+      "2b40": "u16 offset-corrected mean, upper-clamped1024",
+      "5c90/5c94": "u32 previous completed sums",
+      "0180242a/0180242c": "u16 previous completed counters",
+      "2b3c": "u16 transfer of latest completed mean or fallback",
+      "2b3e": "u16 transfer of latest+opposite previous combined mean or fallback"
+    },
+    "raw_producer": {
+      "function": "00432fc8",
+      "call_instruction": "0043305c",
+      "predicate": "1f47==0 writes4010 += (ADC(7)&0xffff),2c84++; otherwise4014 += (ADC(7)&0xffff),2c86++. No fault gate around this pair in this function.",
+      "integer_contract": "Accumulation uses ordinary32-bit addition and16-bit counter stores, not saturating adds here. Actual overflow avoidance relies on schedule/sample-count bounds not proven by ADC physical sampling observations."
+    },
+    "initial_producer": {
+      "function": "0013a260",
+      "predicate": "1f47==0 consumes current4010/2c84; otherwise4014/2c86.",
+      "equation": "2b40=min(sat_u16(round_u32_div_u16(sum,count)−s16(2b46)),1024);00409320(0084110a,2b40),00408f34(008437d8) ->2b3c;2b3e=2b3c;5c9c=s16(2b46)<<16.",
+      "difference": "This initial producer does not inspect233c and does not clear the selected raw bank. Caller001405e4 calls it at00140694."
+    },
+    "periodic_producer": {
+      "function": "004576f0",
+      "bank0_predicate": "1f47==0 consumes completed4014/2c86, combines with previous5c90/0180242a, saves4014->5c94 and2c86->0180242c, then clears4014 and2c86.",
+      "bank1_predicate": "1f47!=0 consumes completed4010/2c84, combines with previous5c94/0180242c, saves4010->5c90 and2c84->0180242a, then clears4010 and2c84.",
+      "combined_mean": "Combined count uses0040a694 sat_u16(add); combined sum uses0040a6ec sat_u32(add). Each mean uses0040b2d8; subtract signed2b46 via0040a9b4; clamp1024 via0040bfe0.",
+      "transfer_predicate": "u8(233c)==0 at00457820:00409920(008437d8,0084110a,latest_mean)->2b3c, same helper(combined_mean)->2b3e.",
+      "fallback_predicate": "u8(233c)!=0:0040a930(u16(2ccc),u16(2aca))->both2b3c and2b3e.",
+      "important_difference": "2b3e is a combined-sample-bank transfer, not merely a second ADC and not an independent pressure source."
+    },
+    "helpers": {
+      "0040b2d8": "Unsigned32/unsigned16 rounded quotient q+floor(2*remainder/divisor); divisor0 returns65535; outputs saturate65535.",
+      "0040a9b4": "Signed32 subtraction; result<=0 becomes0, result>=65535 becomes65535; otherwise lower16 returned. Callers explicitly LHA2b46.",
+      "0040bfe0": "Signed32 comparison returns low16(min(argument1,argument2)); bounded nonnegative caller arguments make this upper clamp1024.",
+      "00409920": "Unsigned16 axis/table interpolation with endpoint hold, rounded interpolation between endpoint cells. Canonical descriptor0084110a contains count/axis, points151/922; values at008437d8 are0/9648.",
+      "0040a930": "If argument2<argument1 return(argument1−argument2)&65535, otherwise0; both fallback call operands are zero-extended16-bit."
+    },
+    "bank_scheduling": {
+      "001404ac": "Initialization zeros both sums and counts.",
+      "00417540": "At00417540 callback, toggles1f47 along with1f46 and1ed6 before other processing; literal callback pointer exists canonical file204820 (CPU00404820).",
+      "0046df24": "Toggles1f47 then calls004576f0.000acbe0 reaches it only with5bdf!=0 and21ed==0; same scheduler later calls0046df38.",
+      "00440624": "Calls004576f0 at004406b4 before00434c48 and00434c98 in normal processing.",
+      "boundary": "Order/bank selection is static. Exact wall-clock invocation interval, interrupt phase and physical conversion latency remain hardware/scheduler delivery properties; no millisecond rate inferred from table names."
+    }
+  },
+  "adc_route": {
+    "evidence": [
+      "descriptor-source-nodes.json",
+      "private-static-export:decompiled:00161dd4",
+      "private-static-export:instructions:00161dd4",
+      "private-static-export:decompiled:0041f38c",
+      "private-static-export:decompiled:0041f184",
+      "private-static-export:decompiled:001562a8"
+    ],
+    "root": "001562a8 calls00161dd4(00403cb4) at00156300. Header count34, table pointer00403cf4, descriptor stride12.00161dd4 assigns r13:5de8 to header.",
+    "pressure_descriptor": "Logical input 7 descriptor at 00403d48 selects bank bit 7 clear, encoded channel 0x31, grouping pointer 0 and callback pointer 0.",
+    "bank_and_slot": "0041f184 uses header table[index].bit7 to choose704800/704c00, then reads u16(base+0x280+2*u8(7fdb1c+index)).00161dd4 builds this index->slot mapping; first three bank0 entries use group0, class1 starts slot4, index7 is fifth class1 entry ->slot8 ->address00704a90. This is static canonical-table arithmetic, not a firmware test.",
+    "programming": "00161dd4 stores index7 slot into007fdb23, writes conversion command at00704a10; encoded command channel0x31 with canonical flags0.",
+    "boundary": "The descriptor and MMIO address identify the software acquisition channel, not the MCU pad/board net/connector routing or analog impedance. Need an exact MSV70 board/schematic/MCU pin mapping or electrical characterization to bind channel0x31 to physical wire and verify reference, clamp, source impedance, settling and safe fault limits."
+  },
+  "fallback": {
+    "evidence": [
+      "private-static-export:decompiled:000e49c4",
+      "private-static-export:decompiled:00434c98",
+      "private-static-export:decompiled:000e49d0",
+      "private-static-export:decompiled:00141818",
+      "private-static-export:decompiled:00447004"
+    ],
+    "source_2ccc": "000e49c4 copies ambient candidate2ce8 to2ccc (u16).",
+    "source_2aca": "00434c98 publishes2aca=floor(u16(6c6a)*121/257).6c6a is integrated manifold-pressure candidate, not a separate hardware source.",
+    "ambient_boundary": "2ce8 itself is acquired/filtered in000e49d0 through2c54 and transfer0084221a/008410f8 with default84495a and fault gates2264/2265;00141818 initializes same state. This review does not treat recalibrating an ambient default as measuring boost.",
+    "sign": "Fault substitution explicitly clips negative ambient−integrated differences to0 and then traverses unsigned differential scaling.",
+    "verdict": "Model-feedback substitute, not a calibration-only absolute MAP branch."
+  },
+  "cw_eisy_bit5": {
+    "evidence": [
+      "private-static-export:decompiled:00446994",
+      "private-static-export:instructions:00446994",
+      "private-static-export:instructions:00434c48"
+    ],
+    "clear": "0085e000&0x20==0:6c48=sat_u16(u16(01802da6)−s16(694e)).",
+    "set": "0085e000&0x20!=0:if s16(6984)<s16(0085d8ba),6c4a=trunc_toward_zero((s32(61fc)+s16(6950))/2), otherwise6c4a=s16(6950);61fc=s16(6950);6c48=sat_u16(u16(01802da6)−s16(6c4a)).",
+    "canonical": "CW_EISY=0;K_NPK raw8000.",
+    "negative_finding": "Bit5 is pulsation/temporal correction of the second differential path. Both stock differential candidates are nonnegative after00434c48/0040b38c. No above-ambient pressure authority is created; startup/retained state transient is not a truthful boosted measurement."
+  },
+  "stopped_engine_adaptation": {
+    "evidence": [
+      "private-static-export:decompiled:0046df38",
+      "private-static-export:instructions:0046df38",
+      "private-static-export:decompiled:001310f0",
+      "private-static-export:decompiled:0013a260",
+      "private-static-export:decompiled:0040a8a8",
+      "private-static-export:decompiled:0040bd28",
+      "private-static-export:decompiled:0040ac68",
+      "private-static-export:decompiled:000acbe0",
+      "private-static-export:decompiled:004741d8",
+      "calibration-source-nodes.json"
+    ],
+    "qualification": "Outer caller000acbe0 requires u8(5bdf)!=0.0046df38 requires u8(7bb3)==4 AND u16(2e16)>=u16(00845000); otherwise it clears53a4 only. Canonical threshold548 is XDF c_tps_v_map_ad_min. State4 is held while1fb8==0 in004741d8, and entered after transitions through no-1fb8 branches; engine-stopped interpretation is consistent with XDF but raw qualification is authoritative.",
+    "first_qualified_invocation": "When53a4==0:sample counter539f=0;completed53a2=0;delay_complete53a1=0;latched temperature539e=u8(1f1a);sum5c98=0;error2b42=0;allowed2b44=s16(008450a0);53a4=1;delay counter01802424=0. Learned2b46/5c9c are not reset here.",
+    "delay": "While53a1==0:if u16(01802424)<u16(844df0) increment;else set53a1=1. Canonical delay threshold300 is a call count here, not an independently proven duration.",
+    "sample_and_error": "After delay, while53a2==0:if u8(539f)<u8(844ce3),increment539f and add u16(2b40) to32-bit5c98;else mean01802426=min(round_div(5c98,844ce3),1024),signed2b42=sat_s16(mean−u16(84509e)),set53a2=1. Canonical sample count100 and setpoint152.",
+    "temperature_branch": "If latched u8(539e)<u8(844f72) OR u8(844f71)<latched539e:2b44=sat_s16(trunc_toward_zero(s16(8450a0)*u8(844ad1)/128));01802428=u8(844af0)*u8(844ad0). Otherwise2b44=s16(8450a0),01802428=u8(844af0)*255. Canonical lower/upper144/177,allowed19,multiplier150,gain64,and irregular-temperature gain factor128.",
+    "acceptance_and_learning": "If abs_sat_s16(2b42)<=s16(2b44):5c9c += s16(2b42)*u16(01802428);clear53a2,539f,5c98;clamp signed5c9c between−(u16(845098)<<16) and+(u16(845098)<<16). Canonical offset limit20. Publish2b46=high16(5c9c) on every qualified post-sample path, including unacceptable error.",
+    "rejected_error_behavior": "If abs(error)>allowed,there is no learn/update/reset ofcompleted flag53a2 in that branch; same completed error remains until qualification resets53a4 and re-entry restarts collection. No direct233c/228f fault guard exists inside0046df38;the shift diagnostic has those guards separately.",
+    "lifetime": "001310f0 zeroes2b46;direct callers00109ed8,0013ff68,00173a3c.0013a260 initializes5c9c from current signed2b46.Ordinary loss of adaptation qualification does not clear learned offset. Whole-program direct RAM facts expose only001310f0 and0046df38 as2b46 writers and only acquisition functions as readers. This does not prove a nonvolatile lifetime across every generic RAM/NVM service;no learned-offset persistence claim is made.",
+    "physical_boundary": "How stopped manifold equalizes, actual sensor offset drift,temperature meaning of1f1a,and real-time delay require hardware/operating evidence. These unknowns do not hide the now-recovered arithmetic or branch predicates."
+  },
+  "diagnostics": {
+    "evidence": [
+      "private-static-export:decompiled:000e0374",
+      "private-static-export:instructions:000e0374",
+      "private-static-export:decompiled:004186ec",
+      "private-static-export:instructions:004186ec",
+      "private-static-export:decompiled:00419450",
+      "private-static-export:decompiled:004192d4",
+      "private-static-export:decompiled:0014eea4",
+      "private-static-export:decompiled:0014eeb0",
+      "private-static-export:decompiled:0014e7e4",
+      "descriptor-source-nodes.json",
+      "calibration-source-nodes.json"
+    ],
+    "voltage_qualification": "000e0374:qualify iff u8(1fb8)!=0 AND u8(1fe0)==0 AND u8(1fe1)==0. Qualified code defaults0x10; if u16(2b40)>u16(84509a),code0x11;else if u16(2b40)<u16(84509c),code0x12. Unqualified code0. Canonical lower33,upper1004; equality at either endpoint is not a local voltage failure.",
+    "voltage_signal_domain": "The diagnostic sees2b40 AFTER subtracting learned offset and clamping1024,not bare ADC counts. Canonical XDF voltage units do not establish analog pin fault-voltage thresholds independent of offset/reference.",
+    "shift_qualification": "Qualify iff7bb3==4 AND u16(2e16)>=u16(845000) AND u8(228f)==0 AND u8(233c)==0. Qualified default0x10; if s16(2b44)<abs_sat_s16(s16(2b42)),code0x18. Unqualified0.",
+    "wrapper_call_gate": "Each wrapper copies(code&0x10) into state16 bit0x0200. Calls004186ec if (qualified OR (cal847260!=0 AND increment in{0,255})) AND (state bit0x4000==0 OR code low nibble!=0 OR increment in{0,255}). No disabled-policy values were introduced in this work.",
+    "instance_mapping": {
+      "0xe9": {
+        "descriptor": "00402be4",
+        "flag": "007fa33c",
+        "state": "007fb540",
+        "dtc_object": "0084655a",
+        "name": "fmy_id_map_dip_sens.dtc",
+        "increment": 4,
+        "max": 20,
+        "recovery_decrement": 1,
+        "policy": "0x0301:generic accumulator mode,bit0x1000 clear,bit0x0400 clear"
+      },
+      "0xf5": {
+        "descriptor": "00402cd4",
+        "flag": "007fa348",
+        "state": "007fb544",
+        "dtc_object": "0084656c",
+        "name": "fmy_id_map_dip_shift.dtc",
+        "increment": 2,
+        "max": 20,
+        "recovery_decrement": 1,
+        "policy": "0x0001:generic accumulator mode,bit0x1000 clear,bit0x0400 clear"
+      }
+    },
+    "generic_debounce_contract": "004186ec derives state pointer from004019b0+instance*20+12. Primary accumulator is state byte0,secondary transition counter byte1,status is BE16 at+2. Input low nibble is stored into status bits5..8;nonzero fault increments primary by configured increment and clamps at max. Upon crossing max with published status0x2000 clear,it sets status0x2400 and emits event2. Fault-free calls decrement primary by1 to0,then clear0x2000 and emit event4 if previously set (canonical policy does not latch recovery). Secondary transition counter resets on zero/nonzero nibble change while status0x0400 clear,then increments by fault increment or1 and caps at max,setting0x0400. The full source covers override policy and status-transition events;do not convert counts into milliseconds without invocation timing.",
+    "publication": "00418b98 onward writes u8(flag)=(status16>>13)&1 through descriptor+4;writes both counters/status back before00419450. Thus233c is a debounced electrical fault publication,not an untraceable raw mode switch. Direct RAM/global fact searches missed its writer because publication is table-indirect.",
+    "fallback_relation": "Only0xe9 flag007fa33c selects the recovered004576f0 fallback. Shift0xf5 publishes007fa348;no claim that it directly selects an alternate pressure source.",
+    "dtc_storage": "The canonical pressure-sensor DTC object has six big-endian 16-bit slots. Raw slot contents are omitted. The original review did not assert a scan-tool naming scheme or translate every entry to a P-code. Event 2 in 00419450 reaches 004192d4, which creates or updates a 14-byte per-instance fault record and bookkeeping; generic diagnostic storage is not an engine protection command.",
+    "callbacks": "Instance callbacks0014eea4 and first-report0014eeb0 and event helper0014e7e4 are return-only functions in recovered instructions.0014eea4 was not defined in retained Ghidra and was explicitly disassembled/created in read-only memory before full export.",
+    "bounded_protection_finding": "Immediate sensor-fault consequence established: publication233c ->model-feedback pressure substitution. No torque/throttle/fuel/shutdown command was observed in reviewed local acquisition,adaptation,voltage/shift diagnosis or immediate generic record-dispatch code. Generic diagnostic-record internals were not reclassified as pressure-specific safety protection.",
+    "named_plausibility_boundary": "Exact XDF fmy_id_map_dip_plaus.dtc pointer00846548 occurs in descriptor00403170,instance0x130,published flag007fa383. Whole-program calibration facts contain no references to its c_abc_inc/max cells844859/8448e3;canonical li r3,0x130 occurrences examined lead to0014cf70 or0014ac94,not immediate004186ec calls. This is a bounded negative for a direct diagnostic emission,not proof that indirect/generic diagnosis is absent. Export0043f97c was inspected and excluded:instances0xe7/e8 are unrelated segment diagnostics (cal84759a etseq),not pressure plausibility.000e0188 was also inspected and excluded as a temperature-model initializer.",
+    "other_diagnostic_consumer": "Existing000dd2f4 consumes2b3c within a larger sequenced diagnostic and compares separate2adc against844bce. The150hPa XDF threshold must not be equated with raw electrical pressure fault thresholds or a boost shutdown. Its full prior export remains the evidence for its separate state machine."
+  },
+  "bounded_negative_findings": [
+    "Direct complete RAM-access fact set identifies only0013a260/004576f0 writing2b3c/2b3e;table-indirect writes are not excluded globally.",
+    "No calibration selector in the reviewed branch chain changes unsigned differential2b3c/2b3e into a signed negative differential or absolute MAP.",
+    "CW_EISY bit5 is not an alternate ADC route;0xe9 fallback is not an absolute-pressure acquisition.",
+    "Changing default ambient pressure or allowing transient integrator/filter state does not constitute independent boosted pressure measurement.",
+    "Diagnostic/configuration names alone are insufficient:pressure plausibility instance is0x130,not adjacent0xe8.",
+    "No tests,synthetic arithmetic scenarios,firmware modifications,vehicle/bench actions or fresh pull were performed."
+  ],
+  "remaining_exact_unknowns": [
+    {
+      "id": "analog-net",
+      "class": "hardware evidence boundary",
+      "known": "Logical ADC7 ->bank704800/channel0x31/result704a90 under canonical initialization.",
+      "missing": "MSV70 hardware-revision-specific MCU pad/board/connector mapping and analog network values including reference,protection,impedance,settling and sensor transfer/fault-voltage limits.",
+      "specific_user_action_when_authorized": "Provide existing board schematic/part marking or sensor datasheet/connector documentation;do not change wiring or buy a sensor based on software channel alone."
+    },
+    {
+      "id": "physical-pressure-truth",
+      "class": "physical evidence boundary",
+      "known": "All recovered native Ps sources are differential/model-based and bounded by modeled ambient-based pre-throttle source.",
+      "missing": "Independent absolute manifold/pre-throttle pressure source specification and its electrical/output range,plus source/domain implementation design.",
+      "specific_user_action_when_authorized": "Choose an absolute-pressure measurement/interface architecture with documentation before calibration decisions;no calibration-only pressure extension approved."
+    },
+    {
+      "id": "timing",
+      "class": "hardware/scheduler boundary",
+      "known": "Bank switches and acquisition/adaptation ordering are recovered,including00417540 and000acbe0 callback identities.",
+      "missing": "Actual conversion/update timestamps and real-time scheduler delivery under the target hardware conditions;counter constants alone do not prove seconds.",
+      "specific_user_action_when_authorized": "Later obtain timestamped read-only observations of ADC conversion/acquisition/bank/adaptation cadence;not requested or run in this pass."
+    },
+    {
+      "id": "offset-lifetime",
+      "class": "bounded static coverage,not a capture demand",
+      "known": "Explicit zero initializer001310f0 and normal retention across qualification changes are recovered;three reset callers are identified in pressure-ram-accesses.csv.",
+      "missing": "Any additional table-driven bulk RAM/NVM lifecycle affecting2b46 beyond direct writer census.",
+      "specific_user_action_when_authorized": "None now. This is a static generic-memory lifecycle question;do not demand a fresh DME image to resolve the already-known reset code."
+    },
+    {
+      "id": "plausibility-reachability",
+      "class": "bounded static coverage,not a capture demand",
+      "known": "Descriptor0x130 and exactcalibration cells are identified;no direct emission identified by the declared searches.",
+      "missing": "A table-driven/generic invocation edge,if any,to the pressure-plausibility instance andflag2383.",
+      "specific_user_action_when_authorized": "None now;no claim that capture is needed to understand an unreviewed traceable function. A future static generic diagnostic dispatcher expansion can use retained bytes."
+    }
+  ],
+  "user_actions_now": [
+    "No new DME pull,no test,no firmware write,no purchase.",
+    "Use this closure to reject a two-point-transfer-only or CW_EISY-bit5-only absolute boost-pressure plan.",
+    "Hardware/connector/sensor documentation already in hand can close the analog-net boundary;do not treat software MMIO routing as pin-level proof."
+  ]
+}

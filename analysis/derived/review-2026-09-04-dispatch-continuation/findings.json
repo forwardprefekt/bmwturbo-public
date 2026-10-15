@@ -1,0 +1,906 @@
+{
+  "public_edition": {
+    "edition": "sanitized public research summary",
+    "edition_date_utc": "2026-10-14",
+    "source_report": "analysis/derived/review-2026-09-04-dispatch-continuation/findings.json",
+    "source_report_sha256": "949b224845e428d93f414b4f999097d230ea7b657f3b83ec8028a468df12a67d",
+    "canonical_software_id": "MSV70 0049PP0L921S0AC1S",
+    "canonical_image_sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+    "epistemic_status": "Editorial derivative of the dated private research report. Scientific claims, original review outcomes and source hashes describe that historical review, not newly executed public-edition verification. No tests, builds, lint, firmware execution or vehicle observations were performed for this edition.",
+    "interpretation_boundary": "Original research equations, decoded addresses, scalar observations and engineering interpretations are retained as analysis, not redistributed firmware source or a flash-ready calibration. Static software dataflow is not physical hardware identity, runtime activation, measurement or safety approval.",
+    "private_source_availability": {
+      "included": false,
+      "status": "Original reports and referenced evidence remain outside this public edition. No download, access entitlement, redistribution permission or automatic access-on-request is represented.",
+      "independent_review": "Reproduction requires separately and lawfully obtained source material matching the retained hashes, relevant tools, and sufficient permissions. Hashes and private-source identifiers are provenance locators, not substitutes for the omitted evidence.",
+      "reference_semantics": "Source-evidence and provenance fields document what the original review used. Unless a public URL or a public research-summary path is explicitly given, they do not identify a file distributed here. See evidence/README.md."
+    },
+    "omissions": [
+      {
+        "field": "canonical_setup",
+        "reason": "Private setup-byte artifact is not distributed; interpretation remains in recovered edges."
+      },
+      {
+        "field": "auxiliary_setup.writes",
+        "reason": "Raw configuration word list omitted; no physical register semantics inferred."
+      },
+      {
+        "field": "farthest_instruction_proven_endpoint.canonical_request_words",
+        "reason": "Raw service-request word list omitted; field interpretation retained."
+      },
+      {
+        "field": "run_results.collision",
+        "reason": "Private execution-session collision detail omitted; original successful-run claims and limitations retained."
+      },
+      {
+        "field": "referenced source artifacts (all fields)",
+        "reason": "Firmware images, disassembly, reconstructed C, Ghidra projects/logs, extracted definition/fact datasets, manuals, supplier workbooks and characterization projections are not included. Their historical locators do not promise public availability."
+      }
+    ],
+    "rewritten_sections": [
+      {
+        "field": "recovered_edges[0].source",
+        "change": "Replaced descriptor byte sequence with its original research interpretation."
+      },
+      {
+        "field": "recovered_edges[4].condition",
+        "change": "Omitted enumerated request words; retained channel/field interpretation."
+      },
+      {
+        "field": "farthest_instruction_proven_endpoint.instruction",
+        "change": "Removed assembly mnemonic and register operands; kept endpoint address."
+      },
+      {
+        "field": [
+          ".recovered_edges[0].evidence.path",
+          ".recovered_edges[1].evidence.path",
+          ".recovered_edges[2].evidence.path",
+          ".recovered_edges[3].evidence.path",
+          ".recovered_edges[4].evidence.path",
+          ".recovered_edges[5].evidence.path",
+          ".recovered_edges[6].evidence.path",
+          ".recovered_edges[7].evidence.path",
+          ".conversion.citations[0]",
+          ".conversion.citations[1]",
+          ".conversion.citations[2]",
+          ".source_evidence[0].c.path",
+          ".source_evidence[0].instructions.path",
+          ".source_evidence[1].c.path",
+          ".source_evidence[1].instructions.path",
+          ".source_evidence[2].c.path",
+          ".source_evidence[2].instructions.path",
+          ".source_evidence[3].c.path",
+          ".source_evidence[3].instructions.path",
+          ".source_evidence[4].c.path",
+          ".source_evidence[4].instructions.path",
+          ".source_evidence[5].c.path",
+          ".source_evidence[5].instructions.path",
+          ".source_evidence[6].c.path",
+          ".source_evidence[6].instructions.path",
+          ".source_evidence[7].c.path",
+          ".source_evidence[7].instructions.path",
+          ".source_evidence[8].c.path",
+          ".source_evidence[8].instructions.path",
+          ".source_evidence[9].c.path",
+          ".source_evidence[9].instructions.path",
+          ".source_evidence[10].c.path",
+          ".source_evidence[10].instructions.path",
+          ".source_evidence[11].c.path",
+          ".source_evidence[11].instructions.path",
+          ".source_evidence[12].c.path",
+          ".source_evidence[12].instructions.path",
+          ".source_evidence[13].c.path",
+          ".source_evidence[13].instructions.path",
+          ".source_evidence[14].c.path",
+          ".source_evidence[14].instructions.path",
+          ".source_evidence[15].c.path",
+          ".source_evidence[15].instructions.path",
+          ".source_evidence[16].c.path",
+          ".source_evidence[16].instructions.path",
+          ".source_evidence[17].c.path",
+          ".source_evidence[17].instructions.path",
+          ".source_evidence[18].c.path",
+          ".source_evidence[18].instructions.path",
+          ".source_evidence[19].c.path",
+          ".source_evidence[19].instructions.path",
+          ".source_evidence[20].c.path",
+          ".source_evidence[20].instructions.path",
+          ".source_evidence[21].c.path",
+          ".source_evidence[21].instructions.path",
+          ".source_evidence[22].c.path",
+          ".source_evidence[22].instructions.path",
+          ".source_evidence[23].c.path",
+          ".source_evidence[23].instructions.path",
+          ".source_evidence[24].c.path",
+          ".source_evidence[24].instructions.path",
+          ".source_evidence[25].c.path",
+          ".source_evidence[25].instructions.path",
+          ".source_evidence[26].c.path",
+          ".source_evidence[26].instructions.path",
+          ".source_evidence[27].c.path",
+          ".source_evidence[27].instructions.path",
+          ".source_evidence[28].c.path",
+          ".source_evidence[28].instructions.path",
+          ".source_evidence[29].c.path",
+          ".source_evidence[29].instructions.path",
+          ".source_evidence[30].c.path",
+          ".source_evidence[30].instructions.path",
+          ".source_evidence[31].c.path",
+          ".source_evidence[31].instructions.path",
+          ".acquisition_3bf2.citations[0]",
+          ".acquisition_3bf2.citations[1]",
+          ".acquisition_3bf2.citations[2]"
+        ],
+        "change": "Replaced private firmware-export and third-party source filenames with non-public descriptive source identifiers; retained supplied hashes and scientific locators."
+      }
+    ],
+    "rights_boundary": "No blanket license assignment or rights-clearance determination is made for firmware, third-party documents, definitions or supplier data. Omission does not negate a historical claim, resolve an unknown, or make that claim independently reproducible from this edition."
+  },
+  "conclusion": "The table and final service boundary are software-recoverable. With the proven setup descriptor, per-cylinder dispatch writes concrete addresses00704102..00704152 at stride0x10, then a channel-specific request1 field in0070401a at00433e70. Physical ignition transfer and exact timer-register identities remain unproven.",
+  "canonical_source_sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+  "functions": {
+    "00160eb8": "Initializes/reinitializes all descriptor-count pointer slots via postincrement store; publishes descriptor; configures each channel with raw (7,2,0). Does not explicitly clear 01802a54 or cached command words.",
+    "00433784": "Arithmetic channel object constructor, bank base 00704000/00704400; +0x100 +0x10*local_channel.",
+    "004337b8": "Shared bitfield configuration helper: four-bit function fields, two-bit scheduling fields, one-bit mask field; no primary register naming asserted.",
+    "00433da8": "Shared service-request endpoint: polls selected 2-bit field twice, disables interrupts/nests, writes request shifted to channel field.",
+    "0041e13c": "Changes per-cylinder mode, immediately publishes cached +2 and +0 halfwords and request1; cached other-mode data can be published on switch.",
+    "0041e22c": "Updates mode0 cache regardless of mode; writes channel +2 and request1 only when mode bit is clear.",
+    "0041e318": "Updates mode1 cache regardless of mode; writes channel +2 and request1 only when mode bit is set.",
+    "0041e404": "Updates common mode0 cache 01802a44 and channel +0/request1 only for mode0 cylinders.",
+    "0041e4ec": "Updates common mode1 cache 01802a52 and channel +0/request1 only for mode1 cylinders.",
+    "00161018": "Channel stop/start/rearm path with request2/request3, activity mask01802a56, channel +8 and +0xe words; active scheduling can be disrupted independently of mode bit.",
+    "001612f8": "Reconfigures scheduling half-cycle flag and helper control bit; conditionally repairs channel +0xe alignment.",
+    "0041e80c": "Reads channel +8 and +0xe under active mask; compares raw metadata and schedule candidates, returns error bits.",
+    "0041ea34": "Error mask0xd conditionally invokes stop/start for active channels then rechecks.",
+    "001562a8": "Broad setup caller supplies canonical descriptor004049c4 at00156470.",
+    "00156654": "Separate reconfiguration/reset-like caller supplies same descriptor at00156684. Runtime lifecycle label not inferred from call alone.",
+    "00439014": "Three-cylinder cyclic dispatcher; sets mode then publishes scaled1feb byte into selected branch.",
+    "004390e0": "Computes per-cylinder stop flag from command and six gating conditions, calls00161018 on flag transitions. Decompiler omits arg2; instruction register r4 supplies stop flag.",
+    "0014240c": "Six-cylinder reinitialization path synchronizes mode and cached dispatch values.",
+    "00433c4c": "Changes selected bit of two-bit-per-channel control register at base+0x16 or+0x14; shared helper, physical mode semantics not named.",
+    "0041c3f0": "Writes indexed3bf2 halfword from0041f184(2), then schedules next acquisition window with00428e10; bounded candidate shared-hardware check only.",
+    "00141988": "Reads selected3bf2 and3bfe to reporting state; not acquisition writer.",
+    "00424284": "Wrapped software schedule-position helper used by+0xe setup.",
+    "0041f184": "Acquisition-result peripheral read, separate bank family00704800/00704c00 with+0x280 result array; exact ADC identity not asserted.",
+    "00428e10": "Bounded overlap check: another descriptor007fcf50 and cache01802a68/01802a6c; no shared01802a20 access in this function."
+  },
+  "scalar6356_join": {
+    "decision": "Separate hypothesis, not a prerequisite for this already executable-connected dispatch path.",
+    "reason": "00439014 consumes the per-cylinder1feb lane and passes converted values to0041e22c/0041e318; both reach descriptor-initialized channel objects and00433da8 without a scalar6356 operand. Whether the ignition scalar influences upstream command formation elsewhere is a separate unresolved graph edge, not a reason to stop this trace."
+  },
+  "hardware_semantics": {
+    "proven": "Executable accesses to exact absolute addresses and bank/channel arithmetic; EID/EIE critical-section instructions; polling and raw request fields.",
+    "candidate": "Paired timer-channel parameter RAM and host-service request register organization is a plausible interpretation, not a primary-document-proven hardware binding.",
+    "unproven": "Exact silicon/register names, channel microcode semantics, package pin/driver/coil mapping, energized ignition angle, dwell/current, or physical actuator transfer. Existing reference searches did not recover a primary register map; no such hardware-name binding is claimed."
+  },
+  "coverage": {
+    "tiers": [
+      "whole ram-accesses.csv",
+      "whole global-memory-accesses.csv",
+      "whole pointer-table-accesses.jsonl",
+      "whole calls.csv",
+      "fresh whole Ghidra listing operand/reference scan",
+      "fresh selected C and full instruction bodies"
+    ],
+    "whole_listing_instructions": 384419,
+    "whole_listing_matches": 170,
+    "caveat": "Direct facts report only the first postincrement table write; loop instructions prove all six slots. Whole-listing search is a reference/immediate census, not a proof that every arbitrary computed alias or bulk reset writer is absent."
+  },
+  "recovered_edges": [
+    {
+      "source": "Descriptor 004049c4 supplies six channel indices in ascending order.",
+      "destination": "01802a20+4*i =00704100+0x10*i",
+      "condition": "001562a8 or00156654 supplies descriptor; i<count",
+      "evidence": {
+        "path": "private-static-export:instructions:00160eb8",
+        "line_start": 12,
+        "line_end": 39,
+        "instructions": [
+          "00160ee8",
+          "00160ef0",
+          "00160ef4",
+          "00160ef8",
+          "00160f20",
+          "00160f24"
+        ]
+      }
+    },
+    {
+      "source": "channel number",
+      "destination": "base +0x100 +0x10*local_channel",
+      "condition": "channel<16 uses00704000; else00704400 and uint8(channel-16)",
+      "evidence": {
+        "path": "private-static-export:instructions:00433784",
+        "line_start": 1,
+        "line_end": 15,
+        "instructions": [
+          "00433784",
+          "004337a4",
+          "004337a8",
+          "004337b0"
+        ]
+      }
+    },
+    {
+      "source": "01802a38+2*i cache",
+      "destination": "u32[01802a20+4*i]+2 then00433da8(channel,1)",
+      "condition": "01802a54 bit i clear; cache updates before gate",
+      "evidence": {
+        "path": "private-static-export:instructions:0041e22c",
+        "line_start": 24,
+        "line_end": 60,
+        "instructions": [
+          "0041e284",
+          "0041e2ac",
+          "0041e2bc",
+          "0041e2c8",
+          "0041e2dc"
+        ]
+      }
+    },
+    {
+      "source": "01802a46+2*i cache",
+      "destination": "u32[01802a20+4*i]+2 then00433da8(channel,1)",
+      "condition": "01802a54 bit i set; cache updates before gate",
+      "evidence": {
+        "path": "private-static-export:instructions:0041e318",
+        "line_start": 24,
+        "line_end": 60,
+        "instructions": [
+          "0041e374",
+          "0041e39c",
+          "0041e3ac",
+          "0041e3b4",
+          "0041e3c8"
+        ]
+      }
+    },
+    {
+      "source": "00433da8(channel,request)",
+      "destination": "sth request<<(2*field) to0070401a/00704018/0070441a/00704418",
+      "condition": "Both busy polls must find the selected two-bit field zero; canonical channels 0 through 5 each request service through their distinct field in 0070401a.",
+      "evidence": {
+        "path": "private-static-export:instructions:00433da8",
+        "line_start": 16,
+        "line_end": 88,
+        "instructions": [
+          "00433e34",
+          "00433e40",
+          "00433e44",
+          "00433e54",
+          "00433e60",
+          "00433e6c",
+          "00433e70"
+        ]
+      }
+    },
+    {
+      "source": "3160+0x18*i bit7 and1feb+i byte",
+      "destination": "0041e13c(i,!bit7) then selected dispatch conversion",
+      "condition": "3 cyclic cylinders per call; bit7 set ->0041e22c, clear ->0041e318",
+      "evidence": {
+        "path": "private-static-export:instructions:00439014",
+        "line_start": 8,
+        "line_end": 60,
+        "instructions": [
+          "00439038",
+          "0043905c",
+          "00439064",
+          "00439088",
+          "004390a8"
+        ]
+      }
+    },
+    {
+      "source": "mode selector and cached01802a38/01802a46 +01802a44/01802a52",
+      "destination": "01802a54 bit and channel+2/channel+0 then request1",
+      "condition": "param2 normalized boolean; mode bit update is separately critical before cached stores",
+      "evidence": {
+        "path": "private-static-export:instructions:0041e13c",
+        "line_start": 12,
+        "line_end": 81,
+        "instructions": [
+          "0041e1a4",
+          "0041e1f8",
+          "0041e200",
+          "0041e228"
+        ]
+      }
+    },
+    {
+      "source": "computed stop flag",
+      "destination": "00161018(i,flag)",
+      "condition": "only on change relative to previous553c bit; r4 is live arg2 despite omitted decompiler argument",
+      "evidence": {
+        "path": "private-static-export:instructions:004390e0",
+        "line_start": 72,
+        "line_end": 88,
+        "instructions": [
+          "004391a0",
+          "004391a8",
+          "004391c0",
+          "004391cc"
+        ]
+      }
+    }
+  ],
+  "unresolved_gaps": [
+    "Physical hardware mapping and request execution/acknowledgement are not established by a CPU store.",
+    "Generic startup memory clearing and every possible computed alias/reset writer are not exhaustively disproved. The recovered setup routine itself leaves mode/cache initialization untouched.",
+    "Actual runtime setup/mode/active-mask state and busy-bit progress need runtime evidence."
+  ],
+  "experiment_recommendations": [
+    "Read-only synchronized observation should capture descriptor007fdde4, table01802a20..01802a34, mode01802a54, active mask01802a56, caches01802a38..01802a52 and per-cylinder1feb state before interpreting dispatch; MMIO reads must not be assumed safe until primary documentation establishes read semantics.",
+    "Resolve exact processor timer/channel microcode and board output mapping from primary hardware documentation before naming channels ignition outputs. Only authorized independent timing/current measurement can establish physical transfer."
+  ],
+  "mode_reset_reconfiguration": [
+    "00160eb8 called by001562a8 and00156654 always receives004049c4 in recovered callsites; table is reconstructed, not immutable.",
+    "00439014 and0014240c both call0041e13c before command update; bit7 clear at3160+0x18*i selects mode1, bit7 set selects mode0. Thus mode gate is synchronized in these call paths, not an independent unreachable obstacle.",
+    "0041e13c republishes previously cached values before the immediately following new per-cylinder command; do not assume single atomic new-value update.",
+    "00161018 nonzero arg2 sends request2 and clears active bit; zero sends request3 after +8/+0xe scheduling setup. 004390e0 calls it only when computed per-cylinder stop flag changes, so an apparently valid +2 write does not prove an enabled physical output.",
+    "0041ea34 with error mask0xd cycles active channels through request2/request3. 001612f8 modifies shared control bits and +0xe schedule alignment.",
+    "00160eb8 does not itself reset01802a54,01802a56 or the command caches. Runtime startup/reinitialization sequencing matters; generic RAM-clear effects have not been exhaustively traced."
+  ],
+  "auxiliary_setup": {
+    "descriptor": "004049b2",
+    "raw_configuration": "004337b8(channel,7,2,0) for channels0..5; function nibble7 at base+0x12/+0x10, two-bit field2 at+0x1e, bit clear at+0xa."
+  },
+  "conversion": {
+    "formula": "Let d=u16[descriptor007fcce0+4]-u8[007fcd1e]; if signed16(d)<0 add u16[007fcd14]. Both branches store low16(param2+0x700-(d&0xff)); caller param2=sign16(16*u8[1feb+i]-0x5f0). This is raw arithmetic, not independently proven time/angle units.",
+    "citations": [
+      "private-static-export:instructions:0041e22c",
+      "private-static-export:instructions:0041e318",
+      "private-static-export:instructions:00439014"
+    ]
+  },
+  "farthest_instruction_proven_endpoint": {
+    "instruction": "CPU-side halfword store at reviewed address 00433e70",
+    "canonical_destination": "0070401a",
+    "preceding_data_stores": [
+      "00704102",
+      "00704112",
+      "00704122",
+      "00704132",
+      "00704142",
+      "00704152"
+    ],
+    "scope": "CPU-side service request write after raw channel-parameter update, not proof of request execution, timer output edge, or ignition transfer."
+  },
+  "retained_search_results": [
+    "fact-search.json",
+    "pointer-fact-search.json",
+    "whole-call-search.json",
+    "whole-listing-search.txt",
+    "address-references.csv",
+    "r13-references.csv"
+  ],
+  "reviewed_consumers": {
+    "pointer_table_slot_writer": [
+      "00160eb8"
+    ],
+    "pointer_table_consumers": [
+      "0041e13c",
+      "0041e22c",
+      "0041e318",
+      "0041e404",
+      "0041e4ec",
+      "00161018",
+      "001612f8",
+      "0041e80c"
+    ],
+    "mode_mask_readers": [
+      "0041e13c",
+      "0041e22c",
+      "0041e318",
+      "0041e404",
+      "0041e4ec"
+    ],
+    "mode_mask_explicit_writer": [
+      "0041e13c"
+    ],
+    "qualifier": "Inventory union of retained fact tiers and whole listing search; only demonstrated explicit/indexed accesses, not exhaustive alias disproof."
+  },
+  "source_evidence": [
+    {
+      "function": "00141988",
+      "c": {
+        "path": "private-static-export:decompiled:00141988",
+        "line_start": 1,
+        "line_end": 24,
+        "sha256": "64ee6e56e57dc19301c82b81aa35be369b3f3a0dbb950b6ee95192ddfb2c4916"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:00141988",
+        "line_start": 1,
+        "line_end": 26,
+        "sha256": "f7a37d2d0b93bdf12e7d397818d6206cfcdb22654fee0f77ba3de338de7e2b9d"
+      }
+    },
+    {
+      "function": "0014240c",
+      "c": {
+        "path": "private-static-export:decompiled:0014240c",
+        "line_start": 1,
+        "line_end": 45,
+        "sha256": "b486434d99cb0b181993cf7b6c5d62690db8f547f86e3ca1063ad017d6691c03"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0014240c",
+        "line_start": 1,
+        "line_end": 101,
+        "sha256": "851c8973d756c06a1bc44aa9bab35a4bd337deb09b077f4db5ed471dae2505d2"
+      }
+    },
+    {
+      "function": "001562a8",
+      "c": {
+        "path": "private-static-export:decompiled:001562a8",
+        "line_start": 1,
+        "line_end": 65,
+        "sha256": "9dcf2d8c1486a81cb057bb5518c71fcad1f0d6cdde290c9c5a109f9967324890"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:001562a8",
+        "line_start": 1,
+        "line_end": 226,
+        "sha256": "e33f77f95e048257fe6db26792ea0f9a0f741e0b3923bcceb63a46e88ccb186e"
+      }
+    },
+    {
+      "function": "00156654",
+      "c": {
+        "path": "private-static-export:decompiled:00156654",
+        "line_start": 1,
+        "line_end": 23,
+        "sha256": "2b6538eee0ab11361f98ff517db900ccc5a8451b1d7ae0fa869f90780fc392b9"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:00156654",
+        "line_start": 1,
+        "line_end": 31,
+        "sha256": "222a0431ff483edd7790fc87dde5cbf4a9ddb1a9494d32c3eb1ebc5c594287bd"
+      }
+    },
+    {
+      "function": "00160eb8",
+      "c": {
+        "path": "private-static-export:decompiled:00160eb8",
+        "line_start": 1,
+        "line_end": 37,
+        "sha256": "8c0df6bc5b009f027b68822a222f865d55d6634ffda7bc035b9008571871a28f"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:00160eb8",
+        "line_start": 1,
+        "line_end": 77,
+        "sha256": "dd4754fc0a4bd2684376749fd487bce4e7c53faf9399528c619ff1670889d316"
+      }
+    },
+    {
+      "function": "00160f8c",
+      "c": {
+        "path": "private-static-export:decompiled:00160f8c",
+        "line_start": 1,
+        "line_end": 16,
+        "sha256": "411f711adc00b17e0eab3787dfc034587e3e8b320d53ae72f014c114a9d432c6"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:00160f8c",
+        "line_start": 1,
+        "line_end": 6,
+        "sha256": "d298166d72c2bb6eecab429b3accd485b5e471d2a5d0a54fb8af2c4bfc58dec4"
+      }
+    },
+    {
+      "function": "00161018",
+      "c": {
+        "path": "private-static-export:decompiled:00161018",
+        "line_start": 1,
+        "line_end": 86,
+        "sha256": "153aa14fb8ed75ec207f72751456b425d13ab1b3d34de1478f0c6888d10fbdf2"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:00161018",
+        "line_start": 1,
+        "line_end": 245,
+        "sha256": "16fda337c7d501bbeb93706b61d460da4228a2ae0d4cf05a29bafeb9cc412a3b"
+      }
+    },
+    {
+      "function": "001612f8",
+      "c": {
+        "path": "private-static-export:decompiled:001612f8",
+        "line_start": 1,
+        "line_end": 62,
+        "sha256": "2e7eb254c043c7811cc27b8dcaa4f12a013db460fa7b149eebf0f697f5f75992"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:001612f8",
+        "line_start": 1,
+        "line_end": 151,
+        "sha256": "fdb27cff8ee3df2451b2d2ae6a8ca7b0537fb794dc9b9a75f83435c8c7a2afa1"
+      }
+    },
+    {
+      "function": "0041c3f0",
+      "c": {
+        "path": "private-static-export:decompiled:0041c3f0",
+        "line_start": 1,
+        "line_end": 61,
+        "sha256": "54b39394fb3db4e5de470837581efe3d16766e8d3ed954799cecc1aca83e28e6"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041c3f0",
+        "line_start": 1,
+        "line_end": 212,
+        "sha256": "039ee89c63103735b9f36f5f688ece4020d3c063c6b9b053ab772af9217068cb"
+      }
+    },
+    {
+      "function": "0041e13c",
+      "c": {
+        "path": "private-static-export:decompiled:0041e13c",
+        "line_start": 1,
+        "line_end": 32,
+        "sha256": "7ad6a2e531f261bcac3d9bbb9c2f372ee61573b2b3bab208749f43ddb2fb3db5"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041e13c",
+        "line_start": 1,
+        "line_end": 81,
+        "sha256": "eb781efa89df7295e6b77acf380900fc740b55fb9a7f50d26e0b97fa139e64cc"
+      }
+    },
+    {
+      "function": "0041e22c",
+      "c": {
+        "path": "private-static-export:decompiled:0041e22c",
+        "line_start": 1,
+        "line_end": 34,
+        "sha256": "76d7e3625f9c7369a642910260cfd601c71585b6fc3a6d065cec5658852d4410"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041e22c",
+        "line_start": 1,
+        "line_end": 81,
+        "sha256": "43d5d3d3c1828f84a34c75fe28c06ae5421aaf6623dcaa64fd01963612937c78"
+      }
+    },
+    {
+      "function": "0041e318",
+      "c": {
+        "path": "private-static-export:decompiled:0041e318",
+        "line_start": 1,
+        "line_end": 34,
+        "sha256": "653bf7d34a4ea4f31bb5dd41be522d1f1679dc2d852a4763c9abd28e8ec14455"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041e318",
+        "line_start": 1,
+        "line_end": 81,
+        "sha256": "bceae296e7ca99e767d3ceecca682dd021c19fa875c78ac1f03e3aaed41e6d4b"
+      }
+    },
+    {
+      "function": "0041e404",
+      "c": {
+        "path": "private-static-export:decompiled:0041e404",
+        "line_start": 1,
+        "line_end": 34,
+        "sha256": "c5fab6d11b520ec12987935908ea856b7e8a4a957e3f92c62f5d2371ed81d96f"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041e404",
+        "line_start": 1,
+        "line_end": 86,
+        "sha256": "0056494a204eadf3db6812bfdc8f2f98e4fca0a36ecd7b3e206f5252d51095ab"
+      }
+    },
+    {
+      "function": "0041e4ec",
+      "c": {
+        "path": "private-static-export:decompiled:0041e4ec",
+        "line_start": 1,
+        "line_end": 34,
+        "sha256": "451f345ebf464284f5956ec8540784af84bf198f915e29605d6855a638d3439c"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041e4ec",
+        "line_start": 1,
+        "line_end": 86,
+        "sha256": "15c8590b13c6ec1b096468eeeb760106f03da16386f023d354a7576abb470bb2"
+      }
+    },
+    {
+      "function": "0041e5d4",
+      "c": {
+        "path": "private-static-export:decompiled:0041e5d4",
+        "line_start": 1,
+        "line_end": 20,
+        "sha256": "dba32e5122b3d2c0dafdb0d917c26a0dfd147f1802c9f70101bf5f1496fd1b62"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041e5d4",
+        "line_start": 1,
+        "line_end": 27,
+        "sha256": "bb50f1a1a2fd71ce12b424cb8ea08f1dddc57af402535fd1c0cf781fb816b12c"
+      }
+    },
+    {
+      "function": "0041e620",
+      "c": {
+        "path": "private-static-export:decompiled:0041e620",
+        "line_start": 1,
+        "line_end": 21,
+        "sha256": "e3c212a76a987e817f812b116058e656a291a1dbb3ca8d1ad4264feb4191349e"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041e620",
+        "line_start": 1,
+        "line_end": 27,
+        "sha256": "360a466ea2e780a492609f604efb04a339df4f1b8fb0a1cc31e70a5cce5e4214"
+      }
+    },
+    {
+      "function": "0041e66c",
+      "c": {
+        "path": "private-static-export:decompiled:0041e66c",
+        "line_start": 1,
+        "line_end": 26,
+        "sha256": "68859dfa5321e0de65a2015f7b0e7b6ee0618888bc0f5fba8dc729344381e861"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041e66c",
+        "line_start": 1,
+        "line_end": 48,
+        "sha256": "5a28d5b4b26651ffcfe72a7cee33ccaeac55365130cddde00e877b56fd3efcad"
+      }
+    },
+    {
+      "function": "0041e6f0",
+      "c": {
+        "path": "private-static-export:decompiled:0041e6f0",
+        "line_start": 1,
+        "line_end": 26,
+        "sha256": "b66a3f1d05057e79214289ffbff679cdf39fabdf4632e6ea1d3d3e7aff14c618"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041e6f0",
+        "line_start": 1,
+        "line_end": 41,
+        "sha256": "afa1e8c1be76ec69bbfbee833d3e1c8f86bc5d45e777414e5ada364886bc4437"
+      }
+    },
+    {
+      "function": "0041e768",
+      "c": {
+        "path": "private-static-export:decompiled:0041e768",
+        "line_start": 1,
+        "line_end": 21,
+        "sha256": "93d861bde2440a409b264fa53ecac78fdbb7253ac6b608c5e34fd2304f758340"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041e768",
+        "line_start": 1,
+        "line_end": 27,
+        "sha256": "dc09e1df8e868196189311248a3c510a3b2d2b9d21f548001875367ec062f61e"
+      }
+    },
+    {
+      "function": "0041e7b4",
+      "c": {
+        "path": "private-static-export:decompiled:0041e7b4",
+        "line_start": 1,
+        "line_end": 24,
+        "sha256": "f6c0ee87634e3ffb758d2b6233fd79a4803117a55135f7bc79eca641d0b1ffb2"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041e7b4",
+        "line_start": 1,
+        "line_end": 31,
+        "sha256": "50cae869b84ca2b440b61e4241a6b33ba20a75b461d2abc018313c4be1c668a2"
+      }
+    },
+    {
+      "function": "0041e80c",
+      "c": {
+        "path": "private-static-export:decompiled:0041e80c",
+        "line_start": 1,
+        "line_end": 85,
+        "sha256": "3c026277ab48cc9fde554166af40466354760870b407bed493825845769cf740"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041e80c",
+        "line_start": 1,
+        "line_end": 182,
+        "sha256": "d84cfac0a1a2b07e1bffee0c334586da91296f2c0f2e9723f5f42d6fae91f876"
+      }
+    },
+    {
+      "function": "0041ea34",
+      "c": {
+        "path": "private-static-export:decompiled:0041ea34",
+        "line_start": 1,
+        "line_end": 26,
+        "sha256": "631b7643c236bce0d73bc37f585b16fec77c6311a0020bdf13dc9433b6c93c49"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041ea34",
+        "line_start": 1,
+        "line_end": 55,
+        "sha256": "221ab2eb3dab725e70f75fca6cfa0d9f86f3d26f48d0411ace7681a338a64a85"
+      }
+    },
+    {
+      "function": "0041f184",
+      "c": {
+        "path": "private-static-export:decompiled:0041f184",
+        "line_start": 1,
+        "line_end": 77,
+        "sha256": "d5d288b71b7581142e7ca45cfa79975911d0a58b6c3912a0a7abe259e19c7e26"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:0041f184",
+        "line_start": 1,
+        "line_end": 21,
+        "sha256": "e25cb692f0d1b78a20fc49155b38256600b6e9fbea9dd8d59e8381e9f6f4e0eb"
+      }
+    },
+    {
+      "function": "00424284",
+      "c": {
+        "path": "private-static-export:decompiled:00424284",
+        "line_start": 1,
+        "line_end": 40,
+        "sha256": "89f5add07e2317dfdf695b92eb48b133c923161ee911b16364309e80acead97f"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:00424284",
+        "line_start": 1,
+        "line_end": 48,
+        "sha256": "39fac03d94a58c3b335be857393ba89e4d16e588601bd6d1108ac4cff53d3238"
+      }
+    },
+    {
+      "function": "00428e10",
+      "c": {
+        "path": "private-static-export:decompiled:00428e10",
+        "line_start": 1,
+        "line_end": 23,
+        "sha256": "d46f191903753dafdcace510001374a818e8f490ebf6ea01e0cab5d52597099b"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:00428e10",
+        "line_start": 1,
+        "line_end": 50,
+        "sha256": "ca866414738a6ed89c75974ecfbdb168ae29a559ffdd0d37d0c684d7ad39eda7"
+      }
+    },
+    {
+      "function": "00433784",
+      "c": {
+        "path": "private-static-export:decompiled:00433784",
+        "line_start": 1,
+        "line_end": 52,
+        "sha256": "25c39026fcd152012cf8cf1a1671d927a074a1f3e851ebddc14e768c8798fb0f"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:00433784",
+        "line_start": 1,
+        "line_end": 15,
+        "sha256": "382227c75b4c06d09330054e90bc273ebc4c7a27870e5d944a344606ded75952"
+      }
+    },
+    {
+      "function": "004337b8",
+      "c": {
+        "path": "private-static-export:decompiled:004337b8",
+        "line_start": 1,
+        "line_end": 91,
+        "sha256": "7f120c55e898e40a5c95b4def56760b81ced40071a8c68f3aef37fdbbaae5cb0"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:004337b8",
+        "line_start": 1,
+        "line_end": 204,
+        "sha256": "56eb411a0ccb1671e617e84c38fc497511cce4dc35d4faa6f99e7003ba719498"
+      }
+    },
+    {
+      "function": "00433c4c",
+      "c": {
+        "path": "private-static-export:decompiled:00433c4c",
+        "line_start": 1,
+        "line_end": 55,
+        "sha256": "3037e2476ff506dc2be3f10b4944a42b864cadc10c2d67567edc8e28d53b4a9f"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:00433c4c",
+        "line_start": 1,
+        "line_end": 119,
+        "sha256": "735c7201f47e3f2ceaee951271d4589cdf98cdf37e577edb3bd481b479401610"
+      }
+    },
+    {
+      "function": "00433da8",
+      "c": {
+        "path": "private-static-export:decompiled:00433da8",
+        "line_start": 1,
+        "line_end": 128,
+        "sha256": "1bb2c82f857fc1e97578c038da5021c11da55b592a2c6081ef65df7395b59068"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:00433da8",
+        "line_start": 1,
+        "line_end": 101,
+        "sha256": "18dba9a67880ca084099ac9812a5a9e113a2dc2885b65282021cb0d9fffadaa0"
+      }
+    },
+    {
+      "function": "00439014",
+      "c": {
+        "path": "private-static-export:decompiled:00439014",
+        "line_start": 1,
+        "line_end": 34,
+        "sha256": "4bede4c8187b0bc9d60b917c70f684f276a4c68f6c77d4abd644cdb7c691e408"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:00439014",
+        "line_start": 1,
+        "line_end": 68,
+        "sha256": "a4f8708023aed053a36773f24d023bb2e9f311e0f109c5535e6eccde41b455f9"
+      }
+    },
+    {
+      "function": "004390e0",
+      "c": {
+        "path": "private-static-export:decompiled:004390e0",
+        "line_start": 1,
+        "line_end": 57,
+        "sha256": "369b442f36bcb319c7dbe8eb3ddc343874c1cd9be7061a47737f02aad87b78dd"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:004390e0",
+        "line_start": 1,
+        "line_end": 99,
+        "sha256": "a10fd56dade03757fc202d78060d5381678f536068655001528aa38c95239c31"
+      }
+    },
+    {
+      "function": "00476e18",
+      "c": {
+        "path": "private-static-export:decompiled:00476e18",
+        "line_start": 1,
+        "line_end": 43,
+        "sha256": "1bd99c0a4fe1923648c808523d016b680b6ccce6798060f51a9e4a2739458060"
+      },
+      "instructions": {
+        "path": "private-static-export:instructions:00476e18",
+        "line_start": 1,
+        "line_end": 98,
+        "sha256": "5f75e9115cc6e0945a3e57de9d4433a0f64ec93389ffc223a4e99389a964230e"
+      }
+    }
+  ],
+  "acquisition_3bf2": {
+    "decision": "Bounded overlap check found a distinct acquisition-result peripheral address family; do not extend unrelated acquisition scope.",
+    "producer": "0041c3f0 calls0041f184(2), computes((result>>2)&0xff)<<8 and stores u16 at007fbbf2+2*(param1&0xf), instruction0041c438.",
+    "source": "0041f184 reads u16 at (descriptor-selected00704800 or00704c00)+0x280+2*u8[007fdb1c+2]. This is not the dispatch table01802a20 or the0070401a request field.",
+    "scheduling_caveat": "Producer also calls00428e10; that stages01802a68/01802a6c and calls0041fdc4/0041fe3c with another descriptor007fcf50. No shared table/physical ignition join is proven. These downstream acquisition-window helpers were not expanded, per non-goal.",
+    "citations": [
+      "private-static-export:instructions:0041c3f0",
+      "private-static-export:instructions:0041f184",
+      "private-static-export:decompiled:00428e10"
+    ]
+  },
+  "run_results": {
+    "retained_successful_export_runs": 3,
+    "exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "unique_functions": 32,
+    "instruction_bodies": 32,
+    "scope": "Real source-bound Ghidra investigation only; no tests/builds/lint/formatters, ECU access, or image modifications."
+  }
+}

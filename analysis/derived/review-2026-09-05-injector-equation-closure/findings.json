@@ -1,0 +1,636 @@
+{
+  "public_edition": {
+    "edition": "sanitized public research summary",
+    "edition_date_utc": "2026-10-14",
+    "source_report": "analysis/derived/review-2026-09-05-injector-equation-closure/findings.json",
+    "source_report_sha256": "2021ed29f7caac45a145ca6e3de3bc54e45ab40d84523ac31f3e355d8639390d",
+    "canonical_software_id": "MSV70 0049PP0L921S0AC1S",
+    "canonical_image_sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+    "epistemic_status": "Editorial derivative of the dated private research report. Scientific claims, original review outcomes and source hashes describe that historical review, not newly executed public-edition verification. No tests, builds, lint, firmware execution or vehicle observations were performed for this edition.",
+    "interpretation_boundary": "Original research equations, decoded addresses, scalar observations and engineering interpretations are retained as analysis, not redistributed firmware source or a flash-ready calibration. Static software dataflow is not physical hardware identity, runtime activation, measurement or safety approval.",
+    "private_source_availability": {
+      "included": false,
+      "status": "Original reports and referenced evidence remain outside this public edition. No download, access entitlement, redistribution permission or automatic access-on-request is represented.",
+      "independent_review": "Reproduction requires separately and lawfully obtained source material matching the retained hashes, relevant tools, and sufficient permissions. Hashes and private-source identifiers are provenance locators, not substitutes for the omitted evidence.",
+      "reference_semantics": "Source-evidence and provenance fields document what the original review used. Unless a public URL or a public research-summary path is explicitly given, they do not identify a file distributed here. See evidence/README.md."
+    },
+    "omissions": [
+      {
+        "field": "canonical_image.path",
+        "reason": "Private source-image filename omitted; canonical hash, size and address mapping retained."
+      },
+      {
+        "field": "voltage_delay.knots_raw",
+        "reason": "Full canonical voltage-axis raw array omitted; unit convention and endpoint behavior remain in the analysis."
+      },
+      {
+        "field": "voltage_delay.knots_volts",
+        "reason": "Converted full voltage-axis array omitted alongside its raw table; this is not evidence of a different domain."
+      },
+      {
+        "field": "flow_conversion.stock_raw_words",
+        "reason": "Canonical coefficient word list omitted; family locations, different divisors and exact mathematical scaling retained."
+      },
+      {
+        "field": "provenance.headless.project",
+        "reason": "Private temporary execution path omitted."
+      },
+      {
+        "field": "provenance.headless.program",
+        "reason": "Private Ghidra input program filename omitted."
+      },
+      {
+        "field": "referenced source artifacts (all fields)",
+        "reason": "Firmware images, disassembly, reconstructed C, Ghidra projects/logs, extracted definition/fact datasets, manuals, supplier workbooks and characterization projections are not included. Their historical locators do not promise public availability."
+      }
+    ],
+    "rewritten_sections": [
+      {
+        "field": "workbook_definition_review.authoritative_source",
+        "change": "Removed source workbook filename; distinguished private source from public conclusions."
+      },
+      {
+        "field": "workbook_definition_review.physical_rows",
+        "change": "Omitted supplier flow values, cell coordinates and characterization-domain table projection; retained accuracy caveat."
+      },
+      {
+        "field": "workbook_definition_review.important_context_correction",
+        "change": "Replaced supplier cell contents with the research interpretation."
+      },
+      {
+        "field": "workbook_definition_review.additional_offset_cells",
+        "change": "Removed supplier voltage-row/cell projections; preserved coverage and driver caveats."
+      },
+      {
+        "field": "workbook_definition_review.small_pulse_cells",
+        "change": "Removed supplier table/cell projection; preserved unresolved mapping conclusion."
+      },
+      {
+        "field": "workbook_definition_review.pressure_label_conflict",
+        "change": "Retained unit-label inconsistency without copying supplier cell contents."
+      },
+      {
+        "field": "workbook_definition_review.additional_info",
+        "change": "Omitted workbook cell locator and personal attribution; public article URL retained."
+      },
+      {
+        "field": "remaining_inputs.supplier[0]",
+        "change": "Removed supplier numerical workbook labels; retained required characterization definitions."
+      },
+      {
+        "field": [
+          ".flow_conversion.sources[0]",
+          ".flow_conversion.sources[1]",
+          ".flow_conversion.sources[2]",
+          ".flow_conversion.sources[3]",
+          ".flow_conversion.sources[4]",
+          ".pressure_equation.sources[0]",
+          ".pressure_equation.sources[1]",
+          ".pressure_equation.sources[2]",
+          ".pressure_equation.sources[3]",
+          ".pressure_equation.sources[4]",
+          ".pressure_equation.sources[5]",
+          ".pressure_equation.sources[6]",
+          ".voltage_delay.sources[0]",
+          ".voltage_delay.sources[1]",
+          ".voltage_delay.sources[2]",
+          ".voltage_delay.sources[3]",
+          ".voltage_delay.sources[4]",
+          ".voltage_delay.sources[5]",
+          ".minimum_and_pulse.sources[0]",
+          ".minimum_and_pulse.sources[1]",
+          ".bank_and_pointer_selectors.sources[0]",
+          ".bank_and_pointer_selectors.sources[1]",
+          ".bank_and_pointer_selectors.sources[2]",
+          ".oem_pressure_characterization_requirement.source",
+          ".provenance.retained_sources[0].path",
+          ".provenance.retained_sources[1].path",
+          ".provenance.retained_sources[2].path",
+          ".provenance.retained_sources[3].path",
+          ".provenance.retained_sources[4].path",
+          ".provenance.retained_sources[5].path",
+          ".provenance.retained_sources[6].path",
+          ".provenance.retained_sources[7].path",
+          ".provenance.retained_sources[8].path",
+          ".provenance.retained_sources[9].path",
+          ".provenance.retained_sources[10].path",
+          ".provenance.retained_sources[11].path",
+          ".provenance.retained_sources[12].path",
+          ".provenance.retained_sources[13].path",
+          ".provenance.retained_sources[14].path",
+          ".provenance.retained_sources[15].path",
+          ".provenance.retained_sources[16].path",
+          ".provenance.retained_sources[17].path",
+          ".provenance.retained_sources[18].path",
+          ".provenance.retained_sources[19].path",
+          ".provenance.retained_sources[20].path",
+          ".provenance.retained_sources[21].path",
+          ".provenance.retained_sources[27].path",
+          ".provenance.retained_sources[28].path",
+          ".provenance.retained_sources[29].path",
+          ".provenance.new_exports[0].path",
+          ".provenance.new_exports[1].path",
+          ".provenance.new_exports[2].path",
+          ".provenance.new_exports[3].path",
+          ".provenance.new_exports[4].path",
+          ".provenance.new_exports[5].path",
+          ".provenance.new_exports[6].path",
+          ".provenance.new_exports[7].path",
+          ".provenance.new_exports[8].path",
+          ".provenance.new_exports[9].path",
+          ".provenance.new_exports[10].path",
+          ".provenance.new_exports[11].path",
+          ".provenance.new_exports[12].path",
+          ".provenance.new_exports[13].path",
+          ".provenance.new_exports[14].path",
+          ".provenance.new_exports[15].path",
+          ".provenance.new_exports[16].path",
+          ".provenance.new_exports[17].path",
+          ".provenance.new_exports[18].path",
+          ".provenance.new_exports[19].path",
+          ".provenance.new_exports[20].path"
+        ],
+        "change": "Replaced private firmware-export and third-party source filenames with non-public descriptive source identifiers; retained supplied hashes and scientific locators."
+      }
+    ],
+    "rights_boundary": "No blanket license assignment or rights-clearance determination is made for firmware, third-party documents, definitions or supplier data. Omission does not negate a historical claim, resolve an unknown, or make that claim independently reproducible from this edition."
+  },
+  "schema_version": 1,
+  "review_date_utc": "2026-09-05",
+  "scope": "Static injector equation and characterization closure; no executable calibration output",
+  "canonical_image": {
+    "sha256": "757a3df8dada0ba4c593a2b823d9c8fc4a88ff97ff8eabd12ff95a44d096f495",
+    "size_bytes": 2621440,
+    "address_mapping": {
+      "external": "file offset equals address through0x17ffff",
+      "internal": "file offset = runtime address -0x200000 for0x400000..0x47ffff",
+      "calibration": "file offset = runtime address -0x800000 for0x840000..0x85ffff"
+    }
+  },
+  "conclusions": [
+    "Raw equations, table encodings, interpolation and the two differently-scaled standard-flow families are now recoverable offline. The XDF six-decimal standard-flow equations are lossy; they must not be treated as exact physical conversion factors.",
+    "2b24 is constructed from calibrated nominal fuel pressure, an ambient-derived pressure state and a voltage/fuel-demand correction. This reviewed injector path does not consume a live rail-pressure sensor. A falling or inadequate real rail pressure can therefore remain absent from its pressure correction.",
+    "1fb4 is no longer a wholly untraced voltage candidate: canonical code derives it from eight samples of acquisition channel0x17. Its engineering voltage intent is corroborated by shared voltage axes and host A2L; actual pin/divider accuracy and voltage at the energized injector remain physical evidence gaps.",
+    "ip_ti_add_dly is a one-dimensional voltage addend, not a pressure-voltage surface. Its pressure dependence cannot be filled from two FIC pressure rows without an explicit reference and approximation/architecture decision.",
+    "ip_ti_min is a post-addend minimum over preliminary electrical-duration-domain values: the code shifts all selected cylinder pulses by the same positive delta. It is not a short-pulse correction curve and not a per-cylinder max(pulse,min) clamp.",
+    "Retained OEM documentation specifies a5bar tank regulator and non-return rail; canonical pressure table covers approximately5–6bar differential. Full OEM-topology characterization therefore requires data above4bar, including before boost. Two3/4bar rows are not sufficient for that envelope.",
+    "No flash-ready values, vehicle actions, numerical test scenarios, tests, builds, lints or formatters were performed."
+  ],
+  "raw_arithmetic": {
+    "notation": "U16 and U8 read unsigned RAM/calibration words/bytes; S16 is signed reinterpretation; SAT_U clamps0..65535; SAT_S clamps-32768..32767. All equations below retain operation order; no float replacement is implied.",
+    "MUL15": "0040aeac(a,b)=min(65535,((u32)(a*b))>>15). Unsigned halfword operands here do not overflow u32.",
+    "MUL7": "0040ae48(a,b)=min(65535,((u32)(a*b))>>7).",
+    "RMD": "0040b46c(a,b,d)=min(65535,floor(u32(a*b+floor(d/2))/d)); d=0 returns65535. Used with d=16384,4096,32768,4096 in main pulse.",
+    "ADD_U": "0040a694(a,b)=min(65535,a+b) for the nonnegative operands here; it is NOT a signed-add helper.",
+    "ADD_US": "0040a6b4(a,s)=SAT_U(a+s).",
+    "ADD_S": "0040a5c0(s,t)=SAT_S(s+t).",
+    "SUB_U": "0040a930(a,b)=a>b ? ((a-b)&65535) :0; unsigned positive differential only.",
+    "DIV_R": "0040b2d8(a,d)=min(65535,floor(a/d)+floor(2*(a mod d)/d)); d=0 returns65535.",
+    "LUT": "004097c0 uses byte axes/u16 outputs;00409920 uses u16 axes/u16 outputs. Both hold endpoint values outside their axis, return stored values on knots, and between knots use q=floor((x-x0)*65536/(x1-x0)), t=abs(y1-y0)*q, output=y0+sign(y1-y0)*((t>>16)+((t>>15)&1)). This is quantized interpolation, not real-valued interpolation followed by an arbitrary rounding rule.",
+    "LUT2": "0040882c accepts two count-prefixed byte axes and row-major u16 outputs. First coordinate selects the row with stride equal to second-axis count. Each axis clamps at endpoints and computes floor((coordinate-low)*65536/(high-low)); exact knots have fraction0. It first interpolates along the second coordinate in each adjacent row, then interpolates those rounded row results along the first coordinate, using the same signed-difference half-up magnitude rounding as LUT. This operation order is not an arbitrary floating bilinear interpolation."
+  },
+  "flow_conversion": {
+    "sources": [
+      "private-static-export:decompiled:00458918",
+      "private-static-export:decompiled:0040aeac",
+      "private-static-export:decompiled:0043b628",
+      "private-static-export:decompiled:0043d02c",
+      "private-static-export:decompiled:004588e4"
+    ],
+    "wall_film_entry": "WhenU8(1fea)==0,U16(2da4)=MUL15(U16(2d6c),U16(cal844ac0)); otherwise retains previous value.",
+    "per_cylinder_balance": "0043b628 chooses cal844ac0 when bit_i(0x2a)=0,cal844ac2 otherwise, multiplies mass2d7a+2i throughMUL15 and writes2d96+2i.",
+    "main_pulse_standard_flow": "0043d02c separately reads cal845aac+2*b withb=(0x2a>>(i&63))&1 and divides product by16384. c_fac_mff_ti_stnd_1 is NOT this array element; suffix_1 at844ac0 differs from bracket[1] at845aae.",
+    "unit_derivation": {
+      "mass_quantum_mg_per_stroke": 0.02119478141451133,
+      "mass_basis": "Host A2L method116 and matching mass-calibration components; physical meaning corroboration, not permission to copy foreign A2L RAM addresses.4us per time count is supported by XDF time tables and host method127.",
+      "wall_factor_formula": "K(ms/(mg/stk))=C_raw*0.004/(32768*s_mass).",
+      "bank_factor_formula": "K(ms/mg)=C_raw*0.004/(16384*s_mass).",
+      "derived_wall_lsb": 5.759451353266739e-06,
+      "derived_bank_lsb": 1.1518902706533478e-05,
+      "host_a2l_wall_lsb": 5.759517814908065e-06,
+      "host_a2l_bank_lsb": 1.1518902706533486e-05,
+      "precision_boundary": "The discrepancy is explainable without measurement: A2L231 uses a rounded full-scale0.37745, while arithmetic closure gives0.3774456444363357. A2L651 retains full-scale0.754891288872672 and agrees with the doubled arithmetic scale. Use the exact binary denominators and stated mass/time engineering contract, not either rounded display slope. The equations are exact under that explicit engineering-unit convention; they do not prove actual injector flow.",
+      "xdf_loss": "XDF0.000006/0.000012 slopes are six-decimal approximations, about4.18% above dimensional closure; XDF displayed stock0.315858 is not the exact arithmetic-derived about0.303195ms/mg. Do not calculate target encoded words using six-decimal XDF slopes.",
+      "mass_quantum_exact": "1389/65535 mg/stk per raw count, the host method116 full-scale convention.",
+      "wall_factor_lsb_exact_under_mass_contract": "4369/758579200 ms/(mg/stk) per raw count = (1/250)/(32768*(1389/65535)).",
+      "bank_factor_lsb_exact_under_mass_contract": "4369/379289600 ms/mg per raw count = (1/250)/(16384*(1389/65535))."
+    },
+    "reference_pressure": "Canonical ip_fac_ti_prs unity4096 at first x1884 (~4998.93hPa) together with c_fup_nom~5000hPa and OEM5bar regulator supports a stock standard-flow reference near5bar differential. The firmware does not store a formal supplier test-pressure/temperature definition attached to c_fac_mff_ti_stnd_1.",
+    "symbolic_supplier_mapping": "For linear flowQ_ref in g/s, numerical mg/ms is alsoQ_ref, so ideal t_eff_ms=m_mg/Q_ref and K_ref=1/Q_ref. Using a chosen, measured differential-pressure reference and the same fluid/temperature definition, pairK_ref withF_prs(deltaP)=Q_ref/Q(deltaP). Quantize using proven raw domains and explicit unit convention only after those definitions are fixed. No encoded replacement values supplied."
+  },
+  "pressure_equation": {
+    "sources": [
+      "private-static-export:decompiled:0046ddf4",
+      "private-static-export:instructions:0046ddf4",
+      "private-static-export:decompiled:000e49d0",
+      "private-static-export:decompiled:00141818",
+      "private-static-export:decompiled:00434c98",
+      "private-static-export:decompiled:0043cc84",
+      "private-static-export:decompiled:0010c838"
+    ],
+    "exact_rail_model": "corr=S16(LUT2(cal84af44,descriptor84116e,descriptor84119b,U8(1fb4),U8(207e))-32768); q=ADD_U(U16(cal844b0c)>>2,U16(2ce8)>>2); q=ADD_US(q,trunc_toward_zero(corr/4)); U16(2b24)=DIV_R(q,8). LUT2 is the retained0040882c two-byte-axis/u16-output helper; no newly assumed rail ADC input.",
+    "exact_manifold_operand": "U16(2aca)=floor(U16(6c6a)*121/257).0043cc84 then right-shifts this result5 bits, not an unrounded real pressure subtraction.",
+    "exact_final": "U16(3230)=SUB_U(U16(2b24),U16(2aca)>>5); U16(3228)=RMD(LUT16(cal8459d6,descriptor8457a0,U16(3230)),U16(322a),4096).",
+    "additional_factor": "322a is produced by0010c838 fromip_fac_ti_temp_cor(cal8459ee,descriptor8457ce,U8(1e85)); initialization0014a53c is a separate writer.3228 is pressure correction multiplied by a fuel-temperature-intent correction, not pure pressure alone.",
+    "unit_derivation": "Nominal and ambient pre-quarter words share fine hPa intent; quartering then rounded/8 coarsens by32. The pressure axis uses2.6533607995727473hPa/count from host method154 (XDF2.653361). Its matching fine domain is axis_scale/32=0.08291752498664835hPa/count. SUB_U compares both operands in that coarse domain. Host method155/XDF offset metadata represents pressure correction centered near32767.5 whereas executable subtracts32768: preserve half-count discrepancy, do not use display0.057hPa as intentional nonzero stock correction.",
+    "physical_interpretation": "Source-bound nominal+ambient+correction construction supports modeled absolute rail, and subtracting modeled manifold pressure supports modeled injector delta. Ambient2ce8 is ADC-transfer/filter/default derived, not fuel rail.6c6a is the reviewed integrated manifold-pressure model, not a newly proved boosted-capable MAP sensor. Stock-topology physical relation is deltaP=P_rail_gauge+P_ambient-P_manifold_abs, modulo head losses/corrections; firmware arithmetic is only its estimate.",
+    "axis_and_reference": "Raw x1884..2261 (~5..6bar),z4096..3740 withQ12 denominator4096. Below first x the stock table holds4096. Thus it cannot provide increasing time correction for boost-induced delta below the stock domain without a calibrated domain change.",
+    "not_proven": "Actual rail pressure, regulator tracking or sag, pressure alias accuracy and correspondence during boost cannot be recovered from firmware. Square-root flow scaling is a physical approximation, not supplied >4bar injector latency/short-pulse characterization.",
+    "fuel_demand_operand": "207e is written at00479d80 in00479a7c, within the207a==2 operating-state branch and its gate/count conditions. The value combines calibrated lookup results and a saturated floor(U16(299e)*36/100) term through0040a678. Its ip_fup_cor axis has l/h intent; it is a computed fuel-demand coordinate, not a measured rail pressure. Full producer source is retained; no assumed physical alias of every upstream term is needed for this distinction.",
+    "stock_map_observation": "All six voltage rows in canonical ip_fup_cor contain the same six output words. Consequently, in these retained bytes its output varies with the fuel-demand axis but not with the voltage row, even though the code supplies a voltage coordinate. This is a byte observation, not a measured pressure relationship."
+  },
+  "voltage_delay": {
+    "sources": [
+      "private-static-export:decompiled:00432fc8",
+      "private-static-export:decompiled:00474174",
+      "private-static-export:decompiled:00474b38",
+      "private-static-export:decompiled:0040ae48",
+      "private-static-export:decompiled:0043cce0",
+      "private-static-export:decompiled:0010c868"
+    ],
+    "acquisition": "00432fc8 storesFUN0041f184(0x17) into eight-word ring007fac9a indexed by1f49.00474174 sets2caa=(sum(ring)>>3)&0x1fff.00474b38 sets1fb4=clamp_u8(MUL7(U16(2caa),142)>>2).Separate channel0x1a/ring007fac88/2c98 produces1fb5; do not interchange them.",
+    "lower_acquisition_boundary": "Retained0041f184 selects MMIO base00704c00 or00704800 from descriptor flag0x80 via5de8, then reads base+0x280+2*U8(5b1c+channel). This proves an acquired ADC channel rather than an invented battery constant. It does not by itself identify an external connector pin, divider circuit or actual injector-terminal voltage.",
+    "voltage_units": "Axis voltageV=x_raw*13/128 (0.1015625) supported by host method92; canonical XDF rounds this to0.101563. Code passes1fb4 directly to the same byte-axis helper. Host A2L describesvb asRelay - Battery Voltage but at foreign RAM7f9fb6, not canonical7f9fb4: never relocate by name alone.",
+    "exact_equation": "D0=S16(LUT8(cal845a2e,descriptor845834,U8(1fb4))-32768); S16(323a)=ADD_S(D0,S16(7496)).",
+    "offset_unit": "ip_ti_add_dly stores biased unsigned words; signed_ms=(raw-32768)*0.004.Thus encoding a definedadditive_ms would be32768+additive_ms/0.004 before chosen quantization, NOT additive_ms/0.004 or percentdeadtime.7496 uses the same signed4us domain.",
+    "pressure_dimension_limit": "No3230/2b24/2aca pressure coordinate enters0043cce0.7496 is temperature/mass correction, not a substitute two-pressure offset surface. FIC offsets vary with pressure; the existing four calibration families alone do not exactly express generalD(V,deltaP) for variable delta. Do not silently collapse pressure dependence into the flow multiplier, which only multiplies requested-mass time before additive offsets.",
+    "physical_boundary": "Supplieroffset must be defined as the electrical-pulse intercept appropriate to the MSV70 driver and signed addend; opening delay alone, closing delay alone, normalized100%deadtime and a different ECU offset are not automatically identical."
+  },
+  "minimum_and_pulse": {
+    "sources": [
+      "private-static-export:decompiled:0043d02c",
+      "private-static-export:instructions:0043d02c"
+    ],
+    "preliminary": "Fori=U8(222a)..U8(222b),b=bit_i(0x2a): t=RMD(U16(411c+2i),U16(cal845aac+2b),16384); t=RMD(t,U16(3228),4096); t=RMD(t,U16(2a66+2i),32768); t=RMD(t,U16(310e+2i),4096); t=ADD_US(t,S16(311a+2i)); t=ADD_US(t,S16(323a)); t=ADD_US(t,S16(2d86+2i)); storeU16(3102+2i)=t.",
+    "minimum_table": "L=LUT8(cal845a8e,descriptor845834,U8(1fb4)); store323e=L. Units0.004ms/count,unsigned. All retained words325 so stock minimum1.300ms.",
+    "aggregation": "Tracks min/max using018028f6/018028f8 andU8(584b). If(2231&0x80)==0 or updatedcount>5: publish3238=max,7494=min, reset accumulators/count. Else carry min/max across scheduled slices and update7494/3238 as the source shows.7494 is therefore not necessarily merely the minimum of the current slice.",
+    "limiter": "Withcal845ae8==0,if7494<L setdelta=L-7494 andU16(30f6+2i)=ADD_U(U16(3102+2i),delta) for every selectedi; set2245=1. Else copypreliminary andclear2245. Instructions0043d270 zero-extenddelta beforeADD_U; the decompiler short local must not be misread as a signed negative delta above32767.",
+    "manual_override": "Ifcal845ae8!=0 copycal845abe to all selected final main-pulse outputs. Retained switch0,manualvalue0; these bytes establish nominal configuration, not runtime branch observation.",
+    "not_a_short_pulse_map": "Uniform delta preserves inter-cylinder duration differences until saturation but changes fuel quantity for all selected cylinders, including those already above L. FIC New/Original correction points are not values of this floor. Minimum must be a defined total-command duration at a stated allowed error/repeatability, not a guessed flow breakpoint or copied GM/Ford/Nissan MINPW.",
+    "not_hardware_command": "30f6..3100 are software main-pulse calculation outputs. Downstream selectors, timer conversion and dispatch remain as documented in msv70-injector-pulse-path.md. The4us raw domain and262.140ms u16 representation are not hardware duty safety limits."
+  },
+  "bank_and_pointer_selectors": {
+    "sources": [
+      "private-static-export:decompiled:0043b628",
+      "private-static-export:decompiled:00459738",
+      "private-static-export:decompiled:00458a44",
+      "pointer-bindings.json"
+    ],
+    "bank": "Fori0..5,bit_i(0x2a) yields0,1,0,1,0,1. This is software sequence-bank selection, NOT proof that odd physical cylinder numbers belong toone bank. The physical cylinder permutation and wiring must not be inferred fromthis mask.",
+    "wall_film": "s=(U8(2230)==0). Pointer family base00406810+s*0x6c contains27 pointer words. Source bytes resolve s=0 to opm_1 and s=1 to opm_2: therefore2230==0 selects opm_2, nonzero selects opm_1. Positive/negative fast/slow pointers are explicit in00458a44 via559b and branch offsets. All58 words through4068f4 are exported with exact component bindings. This selection does not change the direct844ac0 choice in00458918.",
+    "mass_correction": "00459738 evaluates cal8456be through descriptor8418e2 with1dc6. Result0 uses4068f0/4068f4 for bank indices0/1, resolving to ip_mff_cor_opm_2_1/_2. Nonzero uses4068e8/4068ec, resolving to ip_mff_cor_opm_1_1/_2. Bank slice2228/2229 and cylinder slice222a/222b remain runtime states.",
+    "activation_boundary": "Static pointer-family identities are closed. Current2230,1dc6 and scheduling states were not observed. These are not missing pointer semantics to ask the user to reverse-engineer. Physical cylinder permutation remains unproven if individual-injector corrections are contemplated."
+  },
+  "workbook_definition_review": {
+    "authoritative_source": "Supplier FIC 750-6049 workbook retained privately; its SHA-256 is retained in provenance. Neither the workbook nor extracted characterization dataset is included.",
+    "physical_rows": "The reviewed supplier workbook contains two nominal differential-pressure flow rows and voltage-dependent offset data. Numerical flow values and characterization cells are omitted because redistribution rights are not established. Cached precision does not establish measured accuracy.",
+    "important_context_correction": "A platform-specific percentage-offset block uses a normalization duration. It is not evidence of universal injector dead time or the MSV70 minimum-pulse value. Numerical normalization and cell contents are omitted.",
+    "additional_offset_cells": "Other platform-specific offset projections cover additional voltages. Their driver assumptions and measured-versus-extrapolated basis must be clarified before using them outside the supplied universal domain. Source values and cell projections are omitted.",
+    "small_pulse_cells": "The workbook labels paired small-pulse data New and Original without establishing forward versus inverse transformation, effective versus total pulse, pressure, voltage, driver or error criterion. No short-pulse lookup among the four reviewed MSV70 families consumes these pairs directly. Numerical pairs and cell coordinates are omitted.",
+    "pressure_label_conflict": "The nominal pressure row also has a second unit label that is not an exact conversion. The actual bench differential and units require clarification; numerical workbook labels and cell coordinates are omitted.",
+    "additional_info": "The workbook cites the public regulator-reference article linked below. The original review read it on 2026-09-05: it explains assumed versus actual differential pressure and platform-specific adaptation, but does not define the supplier New/Original mapping or MSV70 mappings.",
+    "link": "https://eficalibrator.files.wordpress.com/2021/10/adapting-fuel-injector-data-with-a-manifold-referenced-fuel-pressure-regulator.pdf"
+  },
+  "oem_pressure_characterization_requirement": {
+    "source": "private-source:oem-training-manual",
+    "citations": {
+      "page28": "Fuel filter and pressure regulator are at the left-hand tank service opening; N52 uses a 5 bar regulator.",
+      "pages29_31": "Pump delivery 95 l/h at 5 bar: generic OEM design statement, not a measurement of this pump.",
+      "pages31_32": "DME sends requested fuel volume; EKP maps to delivery voltage and controls pump speed from current ripple. This is not described as rail-pressure-sensor feedback.",
+      "page33": "Rail is non-return; injectors are supplied from Terminal 87 of the injector relay."
+    },
+    "decision": "Yes: retaining the documented OEM topology requires characterization above 4 bar differential over the actual non-boosted/high-vacuum envelope as well as the minimum boosted differential. The approximately 5..6 bar stock axis corroborates this requirement. Do not ask only for a 4 bar table because boost can lower differential pressure.",
+    "qualification": "Documented 5 bar is a hardware baseline, not a measurement on this car. Exact upper/lower differential, pump/regulator identity, head loss and transients remain user/physical inputs. A genuinely constant-differential system at a verified reference within 3..4 bar could change the above-4-bar requirement; no such hardware change is assumed or recommended here."
+  },
+  "remaining_inputs": {
+    "supplier": [
+      "Exact bench differential pressure and units for each supplied row; fluid identity, density and temperature; flow measurement basis; voltage at the injector; driver waveform/current; and offset definition.",
+      "Flow, voltage-dependent offsets, short-pulse and repeatability characterization above 4 bar sufficient for the retained OEM non-boosted envelope; include actual minimum boosted differential and cranking/running voltage envelope once specified. Do not extrapolate offsets using square-root flow scaling.",
+      "New/Original mapping direction; effective or total electrical duration; pressure/voltage/driver reference; whether offset is included; allowed linearity/repeatability error defining minimum usable pulse. Clarify MS3 100% normalization and the measurement or extrapolation basis of the extended Holley/MS3 voltage rows.",
+      "Per-injector serial/flow-match report if individual compensation is intended; fuel/material compatibility and electrical-driver compatibility of the delivered Bosch cores."
+    ],
+    "user_or_physical_evidence": [
+      "Actual fuel topology: pump/filter/regulator part identities, reference connection and changes from OEM; fuel type and temperature envelope.",
+      "Synchronized real rail gauge or absolute pressure, ambient/manifold absolute pressure and DME pressure states to establish differential pressure and model error. The modeled DME rail state cannot replace this independent evidence.",
+      "Actual injector-terminal voltage/current waveform compared with channel-0x17-derived 1fb4 and battery supply, including harness/relay drop, driver closing behavior and latency.",
+      "Physical fitment/retention, physical cylinder-index permutation when needed, runtime operating mode and slice selectors, naturally aspirated quantity/latency performance, then boosted duty/phase feasibility. No such actions requested or performed in this review."
+    ],
+    "offline_convention_decision": "Offline unit convention is now specified: mass1389/65535mg/stk per count, time1/250ms per count, wall denominator32768 and main-pulse bank denominator16384. Their rational coefficient scales are4369/758579200 and4369/379289600. A2L231 rounds its full-scale to0.37745; this explains its slight disagreement. Carry exact rational scaling into any future conversion rather than treating the six-decimal XDF slope as exact. No vehicle measurement is needed to resolve this representation issue.",
+    "mapping_architecture_decision": "Choose an actual differential-pressure reference and an explicit strategy for pressure-dependent offset with the stock voltage-only addend. Four field names alone cannot exactly implement arbitrary Q(deltaP), D(V,deltaP) and nonlinear correction. Supplier definitions must precede deciding whether a bounded approximation is acceptable. No firmware proposal is made."
+  },
+  "provenance": {
+    "retained_sources": [
+      {
+        "path": "private-static-export:decompiled:00458918",
+        "sha256": "83e217a592fa36eea623548fe4f53aefb6e37a8ebfc816b5c5bb99bd16e18bba",
+        "size_bytes": 557
+      },
+      {
+        "path": "private-static-export:decompiled:0043cc84",
+        "sha256": "a1ceae84e0b0b91bf89d5f09c095272a44b1d175ff5a785cdb54be71ce6795d7",
+        "size_bytes": 702
+      },
+      {
+        "path": "private-static-export:decompiled:0043cce0",
+        "sha256": "c7ea26814af2f83aaea60638b0c2e018b5e7a95c954a538d490c64f20f1bbcd3",
+        "size_bytes": 652
+      },
+      {
+        "path": "private-static-export:decompiled:0043d02c",
+        "sha256": "4c051b9bac9180134935294c2c6449d631503c812b31723ec4100fc4b44850cc",
+        "size_bytes": 3549
+      },
+      {
+        "path": "private-static-export:decompiled:0046ddf4",
+        "sha256": "b020c0a4976fb79a54dda55371bfc87dac4be1230d01734662f1d18f48846279",
+        "size_bytes": 892
+      },
+      {
+        "path": "private-static-export:decompiled:0043b628",
+        "sha256": "fb18e0b000b8eb1bfc19117f10fbf0406ba2cf6080c6cf66b6d2b5a738f79f45",
+        "size_bytes": 708
+      },
+      {
+        "path": "private-static-export:decompiled:004588e4",
+        "sha256": "1cedf067f82dfbfaef3913b0e2626706d3436ff8a5551bfffed4688ccf7d4551",
+        "size_bytes": 566
+      },
+      {
+        "path": "private-static-export:decompiled:00458a44",
+        "sha256": "9ddcc07b95cf220b3b39e92e67dbbce1287643f96f7ac3884c1a064ddc855d5b",
+        "size_bytes": 10584
+      },
+      {
+        "path": "private-static-export:decompiled:00459738",
+        "sha256": "634ed696d48829137c2598280a333e65d9058a07864a46cbedb4b2572a67aa3f",
+        "size_bytes": 2337
+      },
+      {
+        "path": "private-static-export:decompiled:00434c98",
+        "sha256": "6a79888eaf4cca7c31be7c4d44aeb1c020c0146f316179cc119f73d94a4a432c",
+        "size_bytes": 1236
+      },
+      {
+        "path": "private-static-export:decompiled:00432fc8",
+        "sha256": "0d387cc37c9ca5f21a867252a70f27a118bd9d141105a010d19ca88a79435d33",
+        "size_bytes": 5706
+      },
+      {
+        "path": "private-static-export:decompiled:000e49d0",
+        "sha256": "051512391c257507ba8daa8f2ee282e979dc6a2a2daea747c251a1009f07e27b",
+        "size_bytes": 1868
+      },
+      {
+        "path": "private-static-export:decompiled:00141818",
+        "sha256": "ee6a0414e52dac23c61509de435095f939dedd26ecbd4c87da705a5996cdc34a",
+        "size_bytes": 1209
+      },
+      {
+        "path": "private-static-export:decompiled:0010c838",
+        "sha256": "973fb59165452e74481a7e697f874f83329153a043d4ae72a7b9fef61c3017b8",
+        "size_bytes": 535
+      },
+      {
+        "path": "private-static-export:decompiled:0010c868",
+        "sha256": "1ca845dac0ee5155459cc12802fa9ac8e94b8a177a8ea695e2bde7acda5b012d",
+        "size_bytes": 612
+      },
+      {
+        "path": "private-static-export:decompiled:0040aeac",
+        "sha256": "81f424b41e6ff52fc2e1f48a6ad7d06fcfea66e5d03b9febfb4eba88f7010544",
+        "size_bytes": 1792
+      },
+      {
+        "path": "private-static-export:decompiled:0040ae48",
+        "sha256": "24167920e55d3ae174d95e3551e4fc7d2ba09779d684aa2de2d9dc57bec284c4",
+        "size_bytes": 940
+      },
+      {
+        "path": "private-static-export:decompiled:0040a694",
+        "sha256": "d2ce91eea36bfb192d01d7da6fe3c030e045b2c825120a147d694465c180d581",
+        "size_bytes": 5313
+      },
+      {
+        "path": "private-static-export:decompiled:0040b46c",
+        "sha256": "a5c8d981fb9fa0ca3a2f890a5be8a2bd620a30d598a7e52df38a80bc9e25f605",
+        "size_bytes": 2278
+      },
+      {
+        "path": "private-static-export:decompiled:0040a930",
+        "sha256": "ba2c4bbff1d6c4fc1bbe86ab6f3e55e7734900a4e4979294b73e77cfb86d7bfc",
+        "size_bytes": 9848
+      },
+      {
+        "path": "private-static-export:decompiled:00409920",
+        "sha256": "1130657c4747ec3c53104313464fbc8a24231b25003fde1850d236d729723ba3",
+        "size_bytes": 6266
+      },
+      {
+        "path": "private-static-export:decompiled:0041f184",
+        "sha256": "d5d288b71b7581142e7ca45cfa79975911d0a58b6c3912a0a7abe259e19c7e26",
+        "size_bytes": 2547
+      },
+      {
+        "path": "analysis/derived/msv70_calibration_components.csv",
+        "sha256": "dfdb4f77fc7b7e4b60b2033fa9605f6563d7dd92cc3108f2e3df0373a05babb6",
+        "size_bytes": 2440964
+      },
+      {
+        "path": "analysis/derived/msv70-ram-census/ram-census.csv",
+        "sha256": "b1e14ea56085f3571104e7406f95968c59872d97ee7535651ba1c255d2841867",
+        "size_bytes": 2199204
+      },
+      {
+        "path": "analysis/derived/msv70-host-inputs/a2l-compu-methods.jsonl",
+        "sha256": "eda5a10e20f6d18a8db7f2ed2be9660a44211bbe352d0274d96768bdc75f9a75",
+        "size_bytes": 201816
+      },
+      {
+        "path": "analysis/derived/msv70-host-inputs/a2l-measurements.jsonl",
+        "sha256": "d1f6666a775dc34eda2814e516ae52eb284d4a79c8591f9525fc03ede59f30bd",
+        "size_bytes": 6207779
+      },
+      {
+        "path": "analysis/derived/msv70-host-inputs/a2l-characteristics.jsonl",
+        "sha256": "ac9f3a8a50655e25e26c6af858d5478f46eb294b4ee1955fa5a00dc251df7e61",
+        "size_bytes": 3275281
+      },
+      {
+        "path": "private-source:supplier-workbook",
+        "sha256": "4ae57202a11005cf0d85c02c28d613988e2620d3e97b2b1fbde9255d0f1042ca",
+        "size_bytes": 305762
+      },
+      {
+        "path": "private-source:supplier-characterization-projection",
+        "sha256": "78d41068fa87544eb0bb3dea39c8fc17e97c40edeec1b4da853c2b9e1006534b",
+        "size_bytes": 4461
+      },
+      {
+        "path": "private-source:oem-training-manual",
+        "sha256": "d9eb9e9753724a78b94e8a575e2414d9919f9b003d019d3d33dc4e444d384b67",
+        "size_bytes": 1242940
+      },
+      {
+        "path": "analysis/ghidra/scripts/DecompileTargets.java",
+        "sha256": "d660fdada191d7dd07a586fb4dc4f689e43ab0b80529e51cc66a0e17540eb013",
+        "size_bytes": 2326
+      },
+      {
+        "path": "analysis/derived/review-2026-09-04-pressure-continuation/ExportPressureInstructions.java",
+        "sha256": "3cb1d817e71f88886a46f252ee91e9d3c0e20fc7169bbe90d9dd02552bc83959",
+        "size_bytes": 1698
+      }
+    ],
+    "derived_data_files": [
+      "calibration-source-nodes.json",
+      "pointer-bindings.json",
+      "unit-source-nodes.json",
+      "instruction-bytes.json"
+    ],
+    "headless": {
+      "ghidra": "12.0.4_PUBLIC",
+      "mode": [
+        "-readOnly",
+        "-noanalysis"
+      ],
+      "scripts": [
+        "analysis/ghidra/scripts/DecompileTargets.java",
+        "analysis/derived/review-2026-09-04-pressure-continuation/ExportPressureInstructions.java"
+      ],
+      "decompiled_functions": [
+        "00474b38",
+        "004097c0",
+        "0040a5c0",
+        "0040a6b4",
+        "0040b2d8",
+        "00479a7c",
+        "00474174",
+        "00474140",
+        "0040882c"
+      ],
+      "instruction_functions": [
+        "00458918",
+        "0043cc84",
+        "0043cce0",
+        "0043d02c",
+        "0046ddf4",
+        "00474b38",
+        "00474174",
+        "00474140",
+        "004097c0",
+        "0040a5c0",
+        "0040a6b4",
+        "0040b2d8"
+      ],
+      "observed_result": "Three read-only headless invocations completed and produced the stated source files; no firmware writes or analysis rerun."
+    },
+    "proof": "Canonical SHA256 computed; actual calibration and pointer bytes extracted;740 instruction-byte words bound to image offsets; existing C and new read-only C reviewed. These are static extraction results, not tests.",
+    "new_exports": [
+      {
+        "path": "private-static-export:decompiled:0040882c",
+        "sha256": "d46ed14657177a6f3ac43a9ee1aba7377fe29310c906c4f7544966aeab55ed7f",
+        "size_bytes": 4177
+      },
+      {
+        "path": "private-static-export:decompiled:004097c0",
+        "sha256": "8a5cc364646c5d8f21e2ffb7f092c695bc5adc338faf5931aacf58496a706b74",
+        "size_bytes": 5371
+      },
+      {
+        "path": "private-static-export:decompiled:0040a5c0",
+        "sha256": "36f9f0edd8568c268d54bc75f996379dafb1d7ac1158a1063ec78bfa9f4bf8d9",
+        "size_bytes": 4834
+      },
+      {
+        "path": "private-static-export:decompiled:0040a6b4",
+        "sha256": "d6410bd75d82431b1c7ab686dc535369c391761521b3e0d89de24fa4e7528e8c",
+        "size_bytes": 2787
+      },
+      {
+        "path": "private-static-export:decompiled:0040b2d8",
+        "sha256": "7d32a8bd43cb97134a598bb34c897b0f008cebbd1135e22781a164c946482a05",
+        "size_bytes": 2828
+      },
+      {
+        "path": "private-static-export:decompiled:00474140",
+        "sha256": "e86a205c104e3f3d243b3cec43b501ceb860509a3347ad4a1400a5f0bb08a487",
+        "size_bytes": 488
+      },
+      {
+        "path": "private-static-export:decompiled:00474174",
+        "sha256": "8a7914dcd923205325906f57479cfadc3fec08d7171d0fd3fa705693728015a5",
+        "size_bytes": 450
+      },
+      {
+        "path": "private-static-export:decompiled:00474b38",
+        "sha256": "8e9f3c52f340b6de2ef1155f59bb1ff53c494d9f1d45abced6a30ca9e8034dbe",
+        "size_bytes": 4730
+      },
+      {
+        "path": "private-static-export:decompiled:00479a7c",
+        "sha256": "ab854081a131c5ca88b603b22dc277db4a368a859d3037fa0b33bd9dab2b4c05",
+        "size_bytes": 6562
+      },
+      {
+        "path": "private-static-export:instructions:004097c0",
+        "sha256": "61373f3b4f728d8600877ab3772b37409a6c1821eecea64a19d742a470350df7",
+        "size_bytes": 2137
+      },
+      {
+        "path": "private-static-export:instructions:0040a5c0",
+        "sha256": "8320efad2e309954159e7d3455e0797cb657721214037144aa20ea8491a54803",
+        "size_bytes": 296
+      },
+      {
+        "path": "private-static-export:instructions:0040a6b4",
+        "sha256": "3eb12c8c6bc5f69ce4b7ea3cc5445e5bb104de1621ddff7fad9f30280ca2c0ea",
+        "size_bytes": 372
+      },
+      {
+        "path": "private-static-export:instructions:0040b2d8",
+        "sha256": "9a54204a660f4dba1236ecd01e5baccc0579fda1eb3679744e5af47dd2c255d6",
+        "size_bytes": 546
+      },
+      {
+        "path": "private-static-export:instructions:0043cc84",
+        "sha256": "ddd0bf5ff690884a69db25b96d7e9c24f9504c35be6e37e68af7ddcaffd9d928",
+        "size_bytes": 963
+      },
+      {
+        "path": "private-static-export:instructions:0043cce0",
+        "sha256": "5f587a06c8975d531d2a99ffacf1e846a3ab2568e54fdbd7de54b48f37cf1c1b",
+        "size_bytes": 765
+      },
+      {
+        "path": "private-static-export:instructions:0043d02c",
+        "sha256": "f756f3a7f4fa7f18e801c190fde95cf86fc06c82ea01660f0293261260961ec0",
+        "size_bytes": 6809
+      },
+      {
+        "path": "private-static-export:instructions:00458918",
+        "sha256": "f0db0b4bf4106bc5fda3956ae964c1fa8b1da482b0ede9baac7e5de893f65b23",
+        "size_bytes": 579
+      },
+      {
+        "path": "private-static-export:instructions:0046ddf4",
+        "sha256": "a2cdf5ed4dbd964fe3d0b53752ec8dd6f94b1db0b1669d943b63ad4fbe049fcd",
+        "size_bytes": 1423
+      },
+      {
+        "path": "private-static-export:instructions:00474140",
+        "sha256": "66c9b4631eb463f216887ac2d5e8d9b040d09439dd9093a09510f19dfb593c6f",
+        "size_bytes": 407
+      },
+      {
+        "path": "private-static-export:instructions:00474174",
+        "sha256": "5d29970efda1891869f90abf9a3370f9aee8402c2d936e591893a8bfb3cc2394",
+        "size_bytes": 407
+      },
+      {
+        "path": "private-static-export:instructions:00474b38",
+        "sha256": "6d59fed91a9dd5b4dd2d3469fd7bf0e7b4b10ab0848542c6983f5026ece0d336",
+        "size_bytes": 13908
+      }
+    ]
+  }
+}
